@@ -290,3 +290,16 @@ One of the following error codes will be returned after running VSG:
 |     2      |  An attempt was made to configure a rule which  |
 |            |  was deprecated.                                |
 +------------+-------------------------------------------------+
+
+pre-commit Integration
+######################
+
+Here is an example of ``.pre-commit-config.yaml`` file:
+
+.. code-block:: yaml
+
+  repos:
+    - repo: https://github.com/jeremiah-c-leary/vhdl-style-guide
+      rev: v3.18.0
+      hooks:
+        - id: vsg
