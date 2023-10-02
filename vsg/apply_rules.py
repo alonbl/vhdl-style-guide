@@ -106,7 +106,7 @@ def apply_rules(commandLineArguments, oConfig, tIndexFileName):
         oRules.fix(
             commandLineArguments.fix_phase, commandLineArguments.skip_phase, fix_only
         )
-        write_vhdl_file(oVhdlFile)
+        write_vhdl_file(oVhdlFile, oConfig.dConfig)
 
     oRules.clear_violations()
     oRules.check_rules(
@@ -130,10 +130,10 @@ def apply_rules(commandLineArguments, oConfig, tIndexFileName):
     return fExitStatus, testCase, dJsonEntry, sOutputStd, sOutputErr, bKeepProcessingFiles
 
 
-def write_vhdl_file(oVhdlFile):
+def write_vhdl_file(oVhdlFile, dConfig):
     tmpfile = f"{oVhdlFile.filename}.tmp"
     try:
-        with open(tmpfile, 'w', encoding='utf-8') as oFile:
+        with open(tmpfile, 'w', encoding='utf-8', newline=dConfig.get("linesep")) as oFile:
             for sLine in oVhdlFile.get_lines()[1:]:
                 oFile.write(sLine + '\n')
         os.replace(tmpfile, oVhdlFile.filename)

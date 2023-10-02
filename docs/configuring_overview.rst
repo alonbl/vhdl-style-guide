@@ -73,6 +73,17 @@ This option can be useful when running VSG over multiple files.
 
 Rule configurations can be specified for each file by following the format of the **rule** configuration.
 
+linesep
+-------
+
+The linesep is an optional settings for line separator.
+Default is platform specific.
+Logical values may be "\n" or "\r\n".
+
+.. code-block:: yaml
+
+   linesep: "\n"
+
 local_rules
 -----------
 
