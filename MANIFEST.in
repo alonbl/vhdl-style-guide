@@ -1,4 +1,1 @@
 include README.rst
-prune vsg/tests
-include vsg/styles/*.yaml
-include vsg/vhdlFile/indent/*.yaml
