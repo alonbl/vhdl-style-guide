@@ -25,7 +25,7 @@ context c1 -- Some other comment
 -- other comments
 ;
 
-context c1  -- Yet another commet
+context c1  -- Yet another comment, comet
   -- Some comment
 is
 

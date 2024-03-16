@@ -109,16 +109,16 @@
 33 |
 <class 'vsg.parser.blank_line'>
 --------------------------------------------------------------------------------
-34 | -- synopsys
+34 | -- synopsis
 <class 'vsg.parser.comment'>
 --------------------------------------------------------------------------------
-35 | -- synopsys something
+35 | -- synopsis something
 <class 'vsg.token.pragma.single'>
 --------------------------------------------------------------------------------
-36 | -- synopsys something else
+36 | -- synopsis something else
 <class 'vsg.token.pragma.single'>
 --------------------------------------------------------------------------------
-37 | -- synopsys something else entirely
+37 | -- synopsis something else entirely
 <class 'vsg.parser.comment'>
 --------------------------------------------------------------------------------
 38 |

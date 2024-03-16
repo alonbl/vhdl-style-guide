@@ -2,7 +2,7 @@
 -- synthesis translate_on
 architecture rtl of fifo is
 
-  -- synopsys something
+  -- synopsis something
   alias designator is name;
 
 -- Random comment
