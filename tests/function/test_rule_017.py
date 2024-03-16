@@ -1,4 +1,3 @@
-
 import os
 import unittest
 
@@ -8,18 +7,18 @@ from tests import utils
 
 sTestDir = os.path.dirname(__file__)
 
-lFile, eError =vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir,'rule_017_test_input.vhd'))
+lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "rule_017_test_input.vhd"))
 
 lExpected_lower = []
-lExpected_lower.append('')
-utils.read_file(os.path.join(sTestDir, 'rule_017_test_input.fixed_lower.vhd'), lExpected_lower)
+lExpected_lower.append("")
+utils.read_file(os.path.join(sTestDir, "rule_017_test_input.fixed_lower.vhd"), lExpected_lower)
 
 lExpected_upper = []
-lExpected_upper.append('')
-utils.read_file(os.path.join(sTestDir, 'rule_017_test_input.fixed_upper.vhd'), lExpected_upper)
+lExpected_upper.append("")
+utils.read_file(os.path.join(sTestDir, "rule_017_test_input.fixed_upper.vhd"), lExpected_upper)
+
 
 class test_function_rule(unittest.TestCase):
-
     def setUp(self):
         self.oFile = vhdlFile.vhdlFile(lFile)
         self.assertIsNone(eError)
@@ -27,8 +26,8 @@ class test_function_rule(unittest.TestCase):
     def test_rule_017_lower(self):
         oRule = function.rule_017()
         self.assertTrue(oRule)
-        self.assertEqual(oRule.name, 'function')
-        self.assertEqual(oRule.identifier, '017')
+        self.assertEqual(oRule.name, "function")
+        self.assertEqual(oRule.identifier, "017")
 
         lExpected = [18, 20, 22, 23, 25]
 
@@ -37,10 +36,10 @@ class test_function_rule(unittest.TestCase):
 
     def test_rule_017_upper(self):
         oRule = function.rule_017()
-        oRule.case = 'upper'
+        oRule.case = "upper"
         self.assertTrue(oRule)
-        self.assertEqual(oRule.name, 'function')
-        self.assertEqual(oRule.identifier, '017')
+        self.assertEqual(oRule.name, "function")
+        self.assertEqual(oRule.identifier, "017")
 
         lExpected = [4, 6, 8, 10, 18, 22, 23, 26]
 
@@ -61,7 +60,7 @@ class test_function_rule(unittest.TestCase):
 
     def test_fix_rule_017_upper(self):
         oRule = function.rule_017()
-        oRule.case = 'upper'
+        oRule.case = "upper"
 
         oRule.fix(self.oFile)
 
@@ -71,4 +70,3 @@ class test_function_rule(unittest.TestCase):
 
         oRule.analyze(self.oFile)
         self.assertEqual(oRule.violations, [])
-

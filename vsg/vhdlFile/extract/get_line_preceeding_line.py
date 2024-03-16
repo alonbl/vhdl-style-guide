@@ -1,4 +1,3 @@
-
 from vsg import parser
 
 from vsg.vhdlFile.extract import tokens
@@ -7,7 +6,6 @@ import bisect
 
 
 def get_line_preceeding_line(iLine, lAllTokens, iNumLines, oTokenMap, bSkipComments=False):
-
     lCarriageReturns = oTokenMap.get_token_indexes(parser.carriage_return)
 
     if not bSkipComments:
@@ -19,10 +17,9 @@ def get_line_preceeding_line(iLine, lAllTokens, iNumLines, oTokenMap, bSkipComme
             iStart = lCarriageReturns[iStartIndex] + 1
         iEnd = lCarriageReturns[iLine + iAdjust]
         lTemp = lAllTokens[iStart:iEnd]
-    #    print(f'{iLine} | {iStart} | {iEnd} | {lTemp}')
+        #    print(f'{iLine} | {iStart} | {iEnd} | {lTemp}')
         return tokens.New(iStart, iLine, lTemp)
     else:
-
         iStartIndex = _get_start_index(lCarriageReturns, iLine, oTokenMap)
 
         if iStartIndex == 0:
@@ -38,28 +35,28 @@ def get_line_preceeding_line(iLine, lAllTokens, iNumLines, oTokenMap, bSkipComme
 
 
 def _build_index_list(oTokenMap):
-        lTemp = oTokenMap.get_token_indexes(parser.comment).copy()
-        lTemp.extend(oTokenMap.get_token_indexes(parser.whitespace).copy())
-        lTemp.extend(oTokenMap.get_token_indexes(parser.carriage_return).copy())
-        lTemp.sort()
-        return lTemp
+    lTemp = oTokenMap.get_token_indexes(parser.comment).copy()
+    lTemp.extend(oTokenMap.get_token_indexes(parser.whitespace).copy())
+    lTemp.extend(oTokenMap.get_token_indexes(parser.carriage_return).copy())
+    lTemp.sort()
+    return lTemp
 
 
 def _get_start_index(lCarriageReturns, iLine, oTokenMap):
-        lTemp = _build_index_list(oTokenMap)
-        iCurrent = lCarriageReturns[iLine - 2]
-#        print(f'lCarraigeReturns = {lCarriageReturns}')
-#        print(f'Index = {iCurrent}')
-#        print(f'lTemp            = {lTemp}')
-        iTempIndex = lTemp.index(iCurrent) - 1
-#        print(f'iTempIndex = {iTempIndex}')
-        for i in range(iTempIndex, -1, -1):
-#            print(i)
-#            print(f'lTemp[i] | {iCurrent - 1}')
-            if lTemp[i] != iCurrent - 1:
-                break
-            iCurrent = lTemp[i]
-#        print(f'iCurrent = {iCurrent}')
-#        iStartIndex = lCarriageReturns.index(iCurrent)
-        iStartIndex = bisect.bisect_left(lCarriageReturns, iCurrent)
-        return iStartIndex
+    lTemp = _build_index_list(oTokenMap)
+    iCurrent = lCarriageReturns[iLine - 2]
+    #        print(f'lCarraigeReturns = {lCarriageReturns}')
+    #        print(f'Index = {iCurrent}')
+    #        print(f'lTemp            = {lTemp}')
+    iTempIndex = lTemp.index(iCurrent) - 1
+    #        print(f'iTempIndex = {iTempIndex}')
+    for i in range(iTempIndex, -1, -1):
+        #            print(i)
+        #            print(f'lTemp[i] | {iCurrent - 1}')
+        if lTemp[i] != iCurrent - 1:
+            break
+        iCurrent = lTemp[i]
+    #        print(f'iCurrent = {iCurrent}')
+    #        iStartIndex = lCarriageReturns.index(iCurrent)
+    iStartIndex = bisect.bisect_left(lCarriageReturns, iCurrent)
+    return iStartIndex

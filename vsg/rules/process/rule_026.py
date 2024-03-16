@@ -1,4 +1,3 @@
-
 from vsg import parser
 from vsg import violation
 
@@ -12,7 +11,7 @@ from vsg.vhdlFile import utils
 
 
 class rule_026(blank_line.Rule):
-    '''
+    """
     This rule checks for blank lines above the first declarative line, if it exists.
 
     |configuring_blank_lines_link|
@@ -39,33 +38,33 @@ class rule_026(blank_line.Rule):
          -- Keep track of the number of words in the FIFO
          variable word_count : integer;
        begin
-    '''
+    """
 
     def __init__(self):
         blank_line.Rule.__init__(self)
-        self.solution = 'Insert blank line below'
-        self.style = 'require_blank_line'
-        self.configuration.append('style')
+        self.solution = "Insert blank line below"
+        self.style = "require_blank_line"
+        self.configuration.append("style")
 
     def _get_tokens_of_interest(self, oFile):
         return oFile.get_tokens_bounded_by(token.process_keyword, token.begin_keyword)
 
     def _analyze(self, lToi):
-        if self.style == 'require_blank_line':
+        if self.style == "require_blank_line":
             _analyze_require_blank_line(self, lToi)
-        elif self.style == 'no_blank_line':
+        elif self.style == "no_blank_line":
             _analyze_no_blank_line(self, lToi)
 
     def _fix_violation(self, oViolation):
         lTokens = oViolation.get_tokens()
         dAction = oViolation.get_action()
-        if dAction['action'] == 'Insert':
-            rules_utils.insert_carriage_return(lTokens, dAction['index'])
-            rules_utils.insert_blank_line(lTokens, dAction['index'])
+        if dAction["action"] == "Insert":
+            rules_utils.insert_carriage_return(lTokens, dAction["index"])
+            rules_utils.insert_blank_line(lTokens, dAction["index"])
             oViolation.set_tokens(lTokens)
         else:
-            iStart = dAction['start']
-            iEnd = dAction['end']
+            iStart = dAction["start"]
+            iEnd = dAction["end"]
             lNewTokens = lTokens[:iStart]
             lNewTokens.extend(lTokens[iEnd:])
             oViolation.set_tokens(lTokens[:iStart] + lTokens[iEnd:])
@@ -82,12 +81,13 @@ def _analyze_require_blank_line(self, lToi):
             continue
 
         dAction = {}
-        dAction['action'] = 'Insert'
-        dAction['index'] = find_carriage_return(iSearch, lTokens) + 1
+        dAction["action"] = "Insert"
+        dAction["index"] = find_carriage_return(iSearch, lTokens) + 1
 
         oViolation = violation.New(iLine, oToi, self.solution)
         oViolation.set_action(dAction)
         self.add_violation(oViolation)
+
 
 def _analyze_no_blank_line(self, lToi):
     for oToi in lToi:
@@ -100,21 +100,21 @@ def _analyze_no_blank_line(self, lToi):
             continue
 
         dAction = {}
-        dAction['action'] = 'Remove'
-        dAction['start'] = iSearch
+        dAction["action"] = "Remove"
+        dAction["start"] = iSearch
         for iToken, oToken in enumerate(lTokens[iSearch:]):
             if isinstance(oToken, parser.carriage_return):
                 if not isinstance(lTokens[iSearch + iToken + 1], parser.blank_line):
-                    dAction['end'] = iSearch + iToken - 1
+                    dAction["end"] = iSearch + iToken - 1
                     break
 
         oViolation = violation.New(iLine, oToi, self.solution)
         oViolation.set_action(dAction)
         self.add_violation(oViolation)
 
+
 def are_there_process_declarative_items(lTokens):
     for iToken, oToken in enumerate(lTokens):
-
         if utils.are_next_consecutive_token_types_ignoring_whitespace([token.process_keyword, token.begin_keyword], iToken, lTokens):
             return False
         if utils.are_next_consecutive_token_types_ignoring_whitespace([token.close_parenthesis, token.begin_keyword], iToken, lTokens):

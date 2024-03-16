@@ -1,11 +1,10 @@
-
 from vsg import parser
 
 from vsg.rules import remove_spaces_before_token_rule
 
 
 class rule_003(remove_spaces_before_token_rule):
-    '''
+    """
     This rule checks for spaces before semicolons.
 
     **Violation**
@@ -19,9 +18,9 @@ class rule_003(remove_spaces_before_token_rule):
     .. code-block:: vhdl
 
        wr_en : in    std_logic;
-    '''
+    """
 
     def __init__(self):
         remove_spaces_before_token_rule.__init__(self, parser.semicolon)
-        self.solution = 'Remove spaces before semicolons.'
+        self.solution = "Remove spaces before semicolons."
         self.configuration_documentation_link = None

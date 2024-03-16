@@ -1,4 +1,3 @@
-
 import os
 import unittest
 
@@ -8,17 +7,16 @@ from tests import utils
 
 sTestDir = os.path.dirname(__file__)
 
-lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir,'rule_300_test_input.vhd'))
+lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "rule_300_test_input.vhd"))
 
 dIndentMap = utils.read_indent_file()
 
 lExpected = []
-lExpected.append('')
-utils.read_file(os.path.join(sTestDir, 'rule_300_test_input.fixed.vhd'), lExpected)
+lExpected.append("")
+utils.read_file(os.path.join(sTestDir, "rule_300_test_input.fixed.vhd"), lExpected)
 
 
 class test_if_generate_statement_rule(unittest.TestCase):
-
     def setUp(self):
         self.oFile = vhdlFile.vhdlFile(lFile)
         self.assertIsNone(eError)
@@ -27,8 +25,8 @@ class test_if_generate_statement_rule(unittest.TestCase):
     def test_rule_300(self):
         oRule = if_generate_statement.rule_300()
         self.assertTrue(oRule)
-        self.assertEqual(oRule.name, 'if_generate_statement')
-        self.assertEqual(oRule.identifier, '300')
+        self.assertEqual(oRule.name, "if_generate_statement")
+        self.assertEqual(oRule.identifier, "300")
 
         lExpected = [16, 23]
 

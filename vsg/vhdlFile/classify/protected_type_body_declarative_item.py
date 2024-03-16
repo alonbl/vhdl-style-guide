@@ -1,4 +1,3 @@
-
 from vsg.vhdlFile.classify import alias_declaration
 from vsg.vhdlFile.classify import attribute_declaration
 from vsg.vhdlFile.classify import attribute_specification
@@ -17,7 +16,7 @@ from vsg.vhdlFile.classify import variable_declaration
 
 
 def detect(iToken, lObjects):
-    '''
+    """
     protected_type_body_declarative_item ::=
         subprogram_declaration
       | subprogram_body
@@ -36,7 +35,7 @@ def detect(iToken, lObjects):
       | use_clause
       | group_template_declaration
       | group_declaration
-    '''
+    """
 
     iReturn = subprogram_declaration.detect(iToken, lObjects)
     if iReturn != iToken:

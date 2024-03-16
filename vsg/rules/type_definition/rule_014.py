@@ -1,4 +1,3 @@
-
 from vsg import parser
 from vsg import token
 
@@ -13,7 +12,7 @@ lNames.append(token.type_mark.name)
 
 
 class rule_014(Rule):
-    '''
+    """
     This rule checks for consistent capitalization of type names.
 
     **Violation**
@@ -31,7 +30,7 @@ class rule_014(Rule):
        type state_machine is (idle, write, read, done);
 
        signal sm : state_machine;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens, lNames)

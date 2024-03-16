@@ -1,4 +1,3 @@
-
 from vsg.rules import token_suffix
 
 from vsg import token
@@ -9,7 +8,7 @@ lTokens.append(token.full_type_declaration.identifier)
 
 
 class rule_600(token_suffix):
-    '''
+    """
     This rule checks for valid suffixes in user defined type identifiers.
     The default new type suffix is *\_t*.
 
@@ -26,9 +25,9 @@ class rule_600(token_suffix):
     .. code-block:: vhdl
 
        type my_type_t is range -5 to 5 ;
-    '''
+    """
 
     def __init__(self):
         token_suffix.__init__(self, lTokens)
-        self.suffixes = ['_t']
-        self.solution = 'Type identifiers'
+        self.suffixes = ["_t"]
+        self.solution = "Type identifiers"

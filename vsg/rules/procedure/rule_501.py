@@ -1,4 +1,3 @@
-
 from vsg.rules import token_case_with_prefix_suffix
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.procedure_specification.designator)
 
 
 class rule_501(token_case_with_prefix_suffix):
-    '''
+    """
     This rule checks the procedure designator has proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -24,8 +23,8 @@ class rule_501(token_case_with_prefix_suffix):
     .. code-block:: vhdl
 
        procedure average_samples is
-    '''
+    """
 
     def __init__(self):
         token_case_with_prefix_suffix.__init__(self, lTokens)
-        self.groups.append('case::name')
+        self.groups.append("case::name")

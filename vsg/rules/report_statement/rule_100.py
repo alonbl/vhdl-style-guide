@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules.whitespace_after_token import Rule
@@ -8,7 +7,7 @@ lTokens.append(token.report_statement.report_keyword)
 
 
 class rule_100(Rule):
-    '''
+    """
     This rule checks for a single space after the **report** keyword.
 
     |configuring_whitespace_rules_link|
@@ -24,6 +23,7 @@ class rule_100(Rule):
     .. code-block:: vhdl
 
         report "FIFO width is limited to 16 bits.";
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokens)

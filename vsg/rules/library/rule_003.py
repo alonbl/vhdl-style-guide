@@ -1,4 +1,3 @@
-
 from vsg.rules import previous_line
 from vsg.vhdlFile import utils
 
@@ -9,7 +8,7 @@ lTokens.append(token.library_clause.keyword)
 
 
 class rule_003(previous_line):
-    '''
+    """
     This rule checks for blank lines or comments above the **library** keyword.
 
     |configuring_previous_line_rules_link|
@@ -40,13 +39,13 @@ class rule_003(previous_line):
 
        library top_dsn;
        library fifo_dsn;
-    '''
+    """
 
     def __init__(self):
         previous_line.__init__(self, lTokens)
-        self.allow_library_clause = 'no'
-        self.configuration.append('allow_library_clause')
-        self.style = 'require_blank_line'
+        self.allow_library_clause = "no"
+        self.configuration.append("allow_library_clause")
+        self.style = "require_blank_line"
 
     def _set_allow_tokens(self):
         self.allow_library_clause = utils.convert_yes_no_option_to_boolean(self.allow_library_clause)

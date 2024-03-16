@@ -1,4 +1,3 @@
-
 import os
 import unittest
 
@@ -8,15 +7,14 @@ from tests import utils
 
 sTestDir = os.path.dirname(__file__)
 
-lFile, eError =vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir,'rule_401_test_input.vhd'))
+lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "rule_401_test_input.vhd"))
 
 lExpected = []
-lExpected.append('')
-utils.read_file(os.path.join(sTestDir, 'rule_401_test_input.fixed.vhd'), lExpected)
+lExpected.append("")
+utils.read_file(os.path.join(sTestDir, "rule_401_test_input.fixed.vhd"), lExpected)
 
 
 class test_generate_rule(unittest.TestCase):
-
     def setUp(self):
         self.oFile = vhdlFile.vhdlFile(lFile)
         self.assertIsNone(eError)
@@ -30,9 +28,9 @@ class test_generate_rule(unittest.TestCase):
         oRule.case_control_statements_ends_group = False
 
         self.assertTrue(oRule)
-        self.assertEqual(oRule.name, 'generate')
-        self.assertEqual(oRule.identifier, '401')
-        self.assertEqual(oRule.groups, ['alignment'])
+        self.assertEqual(oRule.name, "generate")
+        self.assertEqual(oRule.identifier, "401")
+        self.assertEqual(oRule.groups, ["alignment"])
 
         lExpected = [48, 49, 50, 51, 52]
 

@@ -1,4 +1,3 @@
-
 from vsg.rules import token_prefix as Rule
 
 from vsg.rules import utils
@@ -9,7 +8,7 @@ lTokens = []
 
 
 class rule_604(Rule):
-    '''
+    """
     This rule checks for valid prefixes on port identifiers for linkage ports.
 
     The default prefix is: *l\_*.
@@ -34,11 +33,11 @@ class rule_604(Rule):
          l_wr_en    : linkage    std_logic;
          l_rd_en    : linkage    std_logic
        );
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)
-        self.prefixes = ['l_']
+        self.prefixes = ["l_"]
 
     def _get_tokens_of_interest(self, oFile):
         lReturn = []

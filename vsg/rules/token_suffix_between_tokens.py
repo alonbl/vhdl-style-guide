@@ -1,11 +1,10 @@
-
 from vsg import violation
 
 from vsg.rules import token_suffix as Rule
 
 
 class token_suffix_between_tokens(Rule):
-    '''
+    """
     Checks the suffix of a token.
 
     Parameters
@@ -22,7 +21,7 @@ class token_suffix_between_tokens(Rule):
 
     lSuffixes: string list
        acceptable suffixes
-    '''
+    """
 
     def __init__(self, lTokens, oStart, oEnd):
         super().__init__(lTokens=lTokens)

@@ -1,4 +1,3 @@
-
 from vsg.rules import token_case
 
 from vsg import token
@@ -14,7 +13,7 @@ lTokens.append(token.ieee.std_logic_1164.types.unsigned)
 
 
 class rule_500(token_case):
-    '''
+    """
     This rule checks IEEE types have the proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -38,8 +37,8 @@ class rule_500(token_case):
          RD_EN    : in    std_logic;
          DATA     : inout std_logic_vector(31 downto 0)
        );
-    '''
+    """
 
     def __init__(self):
         token_case.__init__(self, lTokens)
-        self.groups.append('case::keyword')
+        self.groups.append("case::keyword")

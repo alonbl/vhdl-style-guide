@@ -1,4 +1,3 @@
-
 from vsg.rules import token_case as Rule
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.use_clause.library_name)
 
 
 class rule_500(Rule):
-    '''
+    """
     This rule checks the library name called out in the selected name has proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -28,9 +27,9 @@ class rule_500(Rule):
        use ieee.std_logic_1164.all;
 
        use my_lib.all;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)
-        self.groups.append('case::name')
-        self.configuration.append('case_exceptions')
+        self.groups.append("case::name")
+        self.configuration.append("case_exceptions")

@@ -1,4 +1,3 @@
-
 from vsg.rules import experiment as Rule
 
 from vsg.rules import option
@@ -14,7 +13,7 @@ lTokenPairs.append([token.selected_waveform_assignment.with_keyword, token.selec
 
 
 class rule_001(Rule):
-    '''
+    """
     This rule checks the structure of selected assignments.
 
     |configuring_selected_assignment_structure_rules_link|
@@ -33,7 +32,7 @@ class rule_001(Rule):
          addr := "0000" when 0,
                  "0001" when 1,
                  "1111" when others;
-    '''
+    """
 
     def __init__(self):
         Rule.__init__(self)
@@ -53,8 +52,8 @@ class rule_001(Rule):
 
 
 def newLineAfterWithKeywordOption():
-    oOption = option.New('new_line_after_with_keyword')
-    oOption.value = 'no'
+    oOption = option.New("new_line_after_with_keyword")
+    oOption.value = "no"
     oOption.analyze_function = analysis.check_for_carriage_return_after_token
 
     lOptions = []
@@ -69,9 +68,8 @@ def newLineAfterWithKeywordOption():
 
 
 def newLineBeforeSelectKeywordOption():
-
-    oOption = option.New('new_line_before_select_keyword')
-    oOption.value = 'no'
+    oOption = option.New("new_line_before_select_keyword")
+    oOption.value = "no"
     oOption.analyze_function = analysis.check_for_carriage_return_before_token
 
     lOptions = []
@@ -85,9 +83,8 @@ def newLineBeforeSelectKeywordOption():
 
 
 def newLineAfterSelectKeywordOption():
-
-    oOption = option.New('new_line_after_select_keyword')
-    oOption.value = 'yes'
+    oOption = option.New("new_line_after_select_keyword")
+    oOption.value = "yes"
     oOption.analyze_function = analysis.check_for_carriage_return_after_token
 
     lOptions = []
@@ -101,9 +98,8 @@ def newLineAfterSelectKeywordOption():
 
 
 def newLineBeforeAssignmentOption():
-
-    oOption = option.New('new_line_before_assignment')
-    oOption.value = 'no'
+    oOption = option.New("new_line_before_assignment")
+    oOption.value = "no"
     oOption.analyze_function = analysis.check_for_carriage_return_before_token
 
     lOptions = []
@@ -117,9 +113,8 @@ def newLineBeforeAssignmentOption():
 
 
 def newLineAfterAssignmentOption():
-
-    oOption = option.New('new_line_after_assignment')
-    oOption.value = 'no'
+    oOption = option.New("new_line_after_assignment")
+    oOption.value = "no"
     oOption.analyze_function = analysis.check_for_carriage_return_after_token
 
     lOptions = []
@@ -131,10 +126,10 @@ def newLineAfterAssignmentOption():
     oOption.analysis_options = lOptions
     return oOption
 
-def newLineBeforeWhenKeywordOption():
 
-    oOption = option.New('new_line_before_when_keyword')
-    oOption.value = 'no'
+def newLineBeforeWhenKeywordOption():
+    oOption = option.New("new_line_before_when_keyword")
+    oOption.value = "no"
     oOption.analyze_function = analysis.check_for_carriage_return_before_token
 
     lOptions = []
@@ -143,11 +138,11 @@ def newLineBeforeWhenKeywordOption():
 
     oOption.analysis_options = lOptions
     return oOption
+
 
 def newLineAfterWhenKeywordOption():
-
-    oOption = option.New('new_line_after_when_keyword')
-    oOption.value = 'no'
+    oOption = option.New("new_line_after_when_keyword")
+    oOption.value = "no"
     oOption.analyze_function = analysis.check_for_carriage_return_after_token
 
     lOptions = []
@@ -157,10 +152,10 @@ def newLineAfterWhenKeywordOption():
     oOption.analysis_options = lOptions
     return oOption
 
-def newLineBeforeCommaOption():
 
-    oOption = option.New('new_line_before_comma')
-    oOption.value = 'no'
+def newLineBeforeCommaOption():
+    oOption = option.New("new_line_before_comma")
+    oOption.value = "no"
     oOption.analyze_function = analysis.check_for_carriage_return_before_token
 
     lOptions = []
@@ -170,10 +165,10 @@ def newLineBeforeCommaOption():
     oOption.analysis_options = lOptions
     return oOption
 
-def newLineAfterCommaOption():
 
-    oOption = option.New('new_line_after_comma')
-    oOption.value = 'yes'
+def newLineAfterCommaOption():
+    oOption = option.New("new_line_after_comma")
+    oOption.value = "yes"
     oOption.analyze_function = analysis.check_for_carriage_return_after_token
 
     lOptions = []
@@ -183,10 +178,10 @@ def newLineAfterCommaOption():
     oOption.analysis_options = lOptions
     return oOption
 
-def newLineBeforeSemicolonOption():
 
-    oOption = option.New('new_line_before_semicolon')
-    oOption.value = 'no'
+def newLineBeforeSemicolonOption():
+    oOption = option.New("new_line_before_semicolon")
+    oOption.value = "no"
     oOption.analyze_function = analysis.check_for_carriage_return_before_token
 
     lOptions = []
@@ -198,10 +193,10 @@ def newLineBeforeSemicolonOption():
     oOption.analysis_options = lOptions
     return oOption
 
-def singleLineWithExpressionOption():
 
-    oOption = option.New('single_line_with_expression')
-    oOption.value = 'ignore'
+def singleLineWithExpressionOption():
+    oOption = option.New("single_line_with_expression")
+    oOption.value = "ignore"
     oOption.analyze_function = analysis.check_for_carriage_returns_between_tokens_ignoring_leading_and_trailing_whitespace
 
     lOptions = []

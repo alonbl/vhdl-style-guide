@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -9,7 +8,7 @@ lTokens.append(token.iteration_scheme.while_keyword)
 
 
 class rule_300(token_indent):
-    '''
+    """
     This rule checks for indentation of the **while** keyword.
     Proper indentation enhances comprehension.
 
@@ -32,7 +31,7 @@ class rule_300(token_indent):
          while (temp /= 0) loop
            temp := temp/2;
          end loop;
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

@@ -1,4 +1,3 @@
-
 from vsg.rules import token_suffix
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.variable_declaration.identifier)
 
 
 class rule_600(token_suffix):
-    '''
+    """
     This rule checks for valid suffix on variable identifiers.
     The default variable suffix is *\_v*.
 
@@ -25,9 +24,9 @@ class rule_600(token_suffix):
     .. code-block:: vhdl
 
        variable my_var_v : natural;
-    '''
+    """
 
     def __init__(self):
         token_suffix.__init__(self, lTokens)
-        self.suffixes = ['_v']
-        self.solution = 'Variable identifiers'
+        self.suffixes = ["_v"]
+        self.solution = "Variable identifiers"

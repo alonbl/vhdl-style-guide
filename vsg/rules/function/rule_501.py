@@ -1,4 +1,3 @@
-
 from vsg.rules import token_case as Rule
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.function_specification.return_keyword)
 
 
 class rule_501(Rule):
-    '''
+    """
     This rule checks the **return** keyword has proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -24,8 +23,8 @@ class rule_501(Rule):
     .. code-block:: vhdl
 
        function overflow (a: integer) return integer is
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)
-        self.groups.append('case::keyword')
+        self.groups.append("case::keyword")

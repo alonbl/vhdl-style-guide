@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules import token_case_with_prefix_suffix
@@ -10,7 +9,7 @@ lTokens.append(token.if_generate_statement.generate_label)
 
 
 class rule_005(token_case_with_prefix_suffix):
-    '''
+    """
     This rule checks the generate label has proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -26,8 +25,8 @@ class rule_005(token_case_with_prefix_suffix):
     .. code-block:: vhdl
 
        ram_array: for i in 0 to 7 generate
-    '''
+    """
 
     def __init__(self):
         token_case_with_prefix_suffix.__init__(self, lTokens)
-        self.groups.append('case::label')
+        self.groups.append("case::label")

@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.procedure_call.procedure_name)
 
 
 class rule_302(token_indent):
-    '''
+    """
     This rule checks the indent of the *procedure* name.
 
     **Violation**
@@ -26,7 +25,7 @@ class rule_302(token_indent):
        a <= b;
 
        WR_EN(parameter);
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

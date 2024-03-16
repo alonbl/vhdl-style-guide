@@ -1,4 +1,3 @@
-
 from vsg.rules import insert_carriage_return_after_token_if_it_is_not_followed_by_a_comment
 
 from vsg.token import port_clause as token
@@ -8,7 +7,7 @@ lTokens.append(token.open_parenthesis)
 
 
 class rule_016(insert_carriage_return_after_token_if_it_is_not_followed_by_a_comment):
-    '''
+    """
     This rule checks for a port definition on the same line as the **port** keyword.
 
     **Violation**
@@ -31,8 +30,8 @@ class rule_016(insert_carriage_return_after_token_if_it_is_not_followed_by_a_com
          OVERFLOW : out   std_logic;
          DATA     : inout std_logic
        );
-    '''
+    """
 
     def __init__(self):
         insert_carriage_return_after_token_if_it_is_not_followed_by_a_comment.__init__(self, lTokens)
-        self.solution = 'Move port parameter to the next line.'
+        self.solution = "Move port parameter to the next line."

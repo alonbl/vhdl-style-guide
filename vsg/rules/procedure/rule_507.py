@@ -1,4 +1,3 @@
-
 from vsg import parser
 from vsg import token
 
@@ -12,7 +11,7 @@ lNames.append(token.procedure_call.procedure_name)
 
 
 class rule_507(Rule):
-    '''
+    """
     This rule checks for consistent capitalization of procedure names.
 
     **Violation**
@@ -60,7 +59,7 @@ class rule_507(Rule):
          end process;
 
        end architecture rtl;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens, lNames)

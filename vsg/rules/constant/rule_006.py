@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules.whitespace_before_token import Rule
@@ -8,7 +7,7 @@ lTokens.append(token.constant_declaration.colon)
 
 
 class rule_006(Rule):
-    '''
+    """
     This rule checks for at least a single space before the colon.
 
     |configuring_whitespace_rules_link|
@@ -26,7 +25,8 @@ class rule_006(Rule):
 
        constant size : integer := 1;
        constant width     : integer := 32;
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokens)
-        self.number_of_spaces = '>=1'
+        self.number_of_spaces = ">=1"

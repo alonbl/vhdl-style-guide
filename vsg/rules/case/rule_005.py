@@ -1,11 +1,10 @@
-
 from vsg.rules.whitespace_before_token import Rule
 
 from vsg.token import case_statement_alternative as token
 
 
 class rule_005(Rule):
-    '''
+    """
     This rule checks for a single space before the **=>** operator.
 
     |configuring_whitespace_rules_link|
@@ -25,6 +24,7 @@ class rule_005(Rule):
       case data is
 
         when 3 =>
-    '''
+    """
+
     def __init__(self):
         super().__init__([token.assignment])

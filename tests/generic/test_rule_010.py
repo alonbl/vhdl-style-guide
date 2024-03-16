@@ -1,4 +1,3 @@
-
 import os
 import unittest
 
@@ -8,19 +7,18 @@ from tests import utils
 
 sTestDir = os.path.dirname(__file__)
 
-lFile, eError =vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir,'rule_010_test_input.vhd'))
+lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "rule_010_test_input.vhd"))
 
 lExpected = []
-lExpected.append('')
-utils.read_file(os.path.join(sTestDir, 'rule_010_test_input.fixed.vhd'), lExpected)
+lExpected.append("")
+utils.read_file(os.path.join(sTestDir, "rule_010_test_input.fixed.vhd"), lExpected)
 
 lExpected_move_left = []
-lExpected_move_left.append('')
-utils.read_file(os.path.join(sTestDir, 'rule_010_test_input.fixed_move_left.vhd'), lExpected_move_left)
+lExpected_move_left.append("")
+utils.read_file(os.path.join(sTestDir, "rule_010_test_input.fixed_move_left.vhd"), lExpected_move_left)
 
 
 class test_generic_rule(unittest.TestCase):
-
     def setUp(self):
         self.oFile = vhdlFile.vhdlFile(lFile)
         self.assertIsNone(eError)
@@ -28,9 +26,9 @@ class test_generic_rule(unittest.TestCase):
     def test_rule_010(self):
         oRule = generic.rule_010()
         self.assertTrue(oRule)
-        self.assertEqual(oRule.name, 'generic')
-        self.assertEqual(oRule.identifier, '010')
-        self.assertEqual(oRule.groups, ['structure'])
+        self.assertEqual(oRule.name, "generic")
+        self.assertEqual(oRule.identifier, "010")
+        self.assertEqual(oRule.groups, ["structure"])
 
         lExpected = [19]
 
@@ -51,7 +49,7 @@ class test_generic_rule(unittest.TestCase):
 
     def test_rule_010_move_left(self):
         oRule = generic.rule_010()
-        oRule.action = 'move_left'
+        oRule.action = "move_left"
 
         lExpected = [5]
 
@@ -60,7 +58,7 @@ class test_generic_rule(unittest.TestCase):
 
     def test_fix_rule_010_move_left(self):
         oRule = generic.rule_010()
-        oRule.action = 'move_left'
+        oRule.action = "move_left"
 
         oRule.fix(self.oFile)
 

@@ -1,11 +1,9 @@
-
 from vsg.vhdlFile.extract import utils
 
 from vsg.vhdlFile.extract.get_line_preceeding_line import get_line_preceeding_line
 
 
 def get_line_above_line_starting_with_token_with_hierarchy(lTokens, lAllTokens, lHierarchy, oTokenMap, bIncludeComments=False):
-
     lReturn = []
 
     lTokenIndexes = utils.get_indexes_of_token_list(lTokens, oTokenMap)

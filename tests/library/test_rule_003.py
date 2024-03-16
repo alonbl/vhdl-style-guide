@@ -1,4 +1,3 @@
-
 import os
 import unittest
 
@@ -8,31 +7,30 @@ from tests import utils
 
 sTestDir = os.path.dirname(__file__)
 
-lFile, eError =vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir,'rule_003_test_input.vhd'))
+lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "rule_003_test_input.vhd"))
 
 lExpected_default = []
-lExpected_default.append('')
-utils.read_file(os.path.join(sTestDir, 'rule_003_test_input.fixed_default.vhd'), lExpected_default)
+lExpected_default.append("")
+utils.read_file(os.path.join(sTestDir, "rule_003_test_input.fixed_default.vhd"), lExpected_default)
 
 lExpected_allow_library_clause = []
-lExpected_allow_library_clause.append('')
-utils.read_file(os.path.join(sTestDir, 'rule_003_test_input.fixed_allow_library_clause.vhd'), lExpected_allow_library_clause)
+lExpected_allow_library_clause.append("")
+utils.read_file(os.path.join(sTestDir, "rule_003_test_input.fixed_allow_library_clause.vhd"), lExpected_allow_library_clause)
 
 
 class test_library_rule(unittest.TestCase):
-
     def setUp(self):
         self.oFile = vhdlFile.vhdlFile(lFile)
         self.assertIsNone(eError)
 
     def test_rule_003(self):
         oRule = library.rule_003()
-        oRule.style = 'no_code'
-        oRule.allow_library_clause = 'no'
+        oRule.style = "no_code"
+        oRule.allow_library_clause = "no"
 
         self.assertTrue(oRule)
-        self.assertEqual(oRule.name, 'library')
-        self.assertEqual(oRule.identifier, '003')
+        self.assertEqual(oRule.name, "library")
+        self.assertEqual(oRule.identifier, "003")
 
         lExpected = [3, 6, 7]
 
@@ -41,8 +39,8 @@ class test_library_rule(unittest.TestCase):
 
     def test_fix_rule_003(self):
         oRule = library.rule_003()
-        oRule.style = 'no_code'
-        oRule.allow_library_clause = 'no'
+        oRule.style = "no_code"
+        oRule.allow_library_clause = "no"
 
         oRule.fix(self.oFile)
 
@@ -55,7 +53,7 @@ class test_library_rule(unittest.TestCase):
 
     def test_rule_003_w_allow_library_clause(self):
         oRule = library.rule_003()
-        oRule.allow_library_clause = 'yes'
+        oRule.allow_library_clause = "yes"
 
         lExpected = [5]
 
@@ -64,7 +62,7 @@ class test_library_rule(unittest.TestCase):
 
     def test_fix_rule_003_w_allow_library_clause(self):
         oRule = library.rule_003()
-        oRule.allow_library_clause = 'yes'
+        oRule.allow_library_clause = "yes"
 
         oRule.fix(self.oFile)
 

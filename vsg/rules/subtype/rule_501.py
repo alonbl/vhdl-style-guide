@@ -1,4 +1,3 @@
-
 from vsg.rules import token_case
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.subtype_declaration.identifier)
 
 
 class rule_501(token_case):
-    '''
+    """
     This rule checks the identifier has proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -28,8 +27,8 @@ class rule_501(token_case):
        subtype interface is record
        subtype interface is record
        subtype interface is record
-    '''
+    """
 
     def __init__(self):
         token_case.__init__(self, lTokens)
-        self.groups.append('case::name')
+        self.groups.append("case::name")

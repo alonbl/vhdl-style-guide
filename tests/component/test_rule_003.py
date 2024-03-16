@@ -1,4 +1,3 @@
-
 import os
 import unittest
 
@@ -8,15 +7,14 @@ from tests import utils
 
 sTestDir = os.path.dirname(__file__)
 
-lFile, eError =vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir,'rule_003_test_input.vhd'))
+lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "rule_003_test_input.vhd"))
 
 lExpected = []
-lExpected.append('')
-utils.read_file(os.path.join(sTestDir, 'rule_003_test_input.fixed.vhd'), lExpected)
+lExpected.append("")
+utils.read_file(os.path.join(sTestDir, "rule_003_test_input.fixed.vhd"), lExpected)
 
 
 class test_component_rule(unittest.TestCase):
-
     def setUp(self):
         self.oFile = vhdlFile.vhdlFile(lFile)
         self.assertIsNone(eError)
@@ -26,8 +24,8 @@ class test_component_rule(unittest.TestCase):
         oRule.allow_comments = True
 
         self.assertTrue(oRule)
-        self.assertEqual(oRule.name, 'component')
-        self.assertEqual(oRule.identifier, '003')
+        self.assertEqual(oRule.name, "component")
+        self.assertEqual(oRule.identifier, "003")
 
         lExpected = [15]
 

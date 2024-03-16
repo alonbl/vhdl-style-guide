@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules.whitespace_between_token_pairs import Rule
@@ -12,7 +11,7 @@ lTokens.append([token.block_statement.guard_close_parenthesis, token.block_state
 
 
 class rule_100(Rule):
-    '''
+    """
     This rule checks for a single space between the following block elements:  label, label colon, **block** keyword, guard open parenthesis, guart close parenthesis, and **is** keywords.
 
     |configuring_whitespace_rules_link|
@@ -30,6 +29,7 @@ class rule_100(Rule):
 
        block_label : block (guard_condition) is
        block_label : block is
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokens)

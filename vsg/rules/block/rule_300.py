@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.block_statement.block_label)
 
 
 class rule_300(token_indent):
-    '''
+    """
     This rule checks the indent of the block label.
 
     **Violation**
@@ -26,7 +25,7 @@ class rule_300(token_indent):
        a <= b;
 
        block_label : block is
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

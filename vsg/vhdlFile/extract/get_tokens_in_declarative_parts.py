@@ -1,4 +1,3 @@
-
 from vsg import parser
 from vsg.vhdlFile import utils
 
@@ -13,7 +12,6 @@ from vsg.vhdlFile.extract import get_tokens_in_protected_type_body_declarative_p
 
 
 def get_tokens_in_declarative_parts(lAllTokens, oTokenMap):
-
     lProtectedType = get_tokens_in_protected_type_body_declarative_part.extract(lAllTokens, oTokenMap)
     lArchitecture = get_tokens_in_architecture_declarative_part.extract(lAllTokens, oTokenMap)
     lPackageBody = get_tokens_in_package_body_declarative_part.extract(lAllTokens, oTokenMap)

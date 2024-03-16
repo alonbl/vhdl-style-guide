@@ -1,4 +1,3 @@
-
 from vsg.rules import insert_token_right_of_token_if_it_does_not_exist_between_tokens_using_value_from_token as Rule
 
 from vsg import token
@@ -14,7 +13,7 @@ oValueToken = token.procedure_specification.procedure_keyword
 
 
 class rule_012(Rule):
-    '''
+    """
     This rule checks the procedure keyword exist in the closing of the procedure specification.
 
     |configuring_optional_items_link|
@@ -34,12 +33,12 @@ class rule_012(Rule):
        procedure proc is
 
        end procedure proc;
-    '''
+    """
 
     def __init__(self):
         super().__init__(oInsertToken, oAnchorToken, oLeftToken, oRightToken, oValueToken)
-        self.solution = 'procedure keyword'
-        self.groups.append('structure::optional')
+        self.solution = "procedure keyword"
+        self.groups.append("structure::optional")
         self.filter_tokens.append(token.subprogram_declaration.semicolon)
 
     def _get_add_tokens_of_interest(self, oFile):

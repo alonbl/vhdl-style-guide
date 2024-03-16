@@ -1,4 +1,3 @@
-
 from vsg.rules import blank_lines_between_token_pairs
 
 from vsg import token
@@ -10,7 +9,7 @@ lTokenPairs.append([token.concurrent_selected_signal_assignment.with_keyword, to
 
 
 class rule_010(blank_lines_between_token_pairs):
-    '''
+    """
     This rule removes blank lines within concurrent signal assignments.
 
     **Violation**
@@ -37,7 +36,7 @@ class rule_010(blank_lines_between_token_pairs):
        w_foo <= I_FOO when ((I_BAR = '1') and
                             (I_CRUFT = '1')) else
                 '0';
-    '''
+    """
 
     def __init__(self):
         blank_lines_between_token_pairs.__init__(self, lTokenPairs)

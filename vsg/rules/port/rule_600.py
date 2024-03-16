@@ -1,4 +1,3 @@
-
 from vsg.rules import token_prefix as Rule
 
 from vsg.rules import utils
@@ -9,7 +8,7 @@ lTokens = []
 
 
 class rule_600(Rule):
-    '''
+    """
     This rule checks for valid prefixes on port identifiers for input ports.
 
     The default prefix is: *i\_*.
@@ -34,11 +33,11 @@ class rule_600(Rule):
          i_wr_en    : in    std_logic;
          i_rd_en    : in    std_logic
        );
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)
-        self.prefixes = ['i_']
+        self.prefixes = ["i_"]
 
     def _get_tokens_of_interest(self, oFile):
         lReturn = []

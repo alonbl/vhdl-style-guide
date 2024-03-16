@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.process_statement.end_keyword)
 
 
 class rule_006(token_indent):
-    '''
+    """
     This rule checks the indent of the **end process** keywords.
 
     **Violation**
@@ -32,7 +31,7 @@ class rule_006(token_indent):
        begin
 
        end process proc_a;
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

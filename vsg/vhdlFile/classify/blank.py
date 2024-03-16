@@ -1,9 +1,7 @@
-
 from vsg import parser
 
 
 def classify(lObjects, oOptions):
-
     if is_blank_line(lObjects, oOptions):
         lObjects.append(parser.blank_line())
 

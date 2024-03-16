@@ -1,4 +1,3 @@
-
 from vsg.rules import multiline_alignment_between_tokens
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokenPairs.append([token.concurrent_simple_signal_assignment.assignment, token.
 
 
 class rule_003(multiline_alignment_between_tokens):
-    '''
+    """
     This rule checks alignment of multiline concurrent simple signal assignments.
     Succesive lines should align to the space after the assignment operator.
     However, there is a special case if there are parenthesis in the assignment.
@@ -36,7 +35,7 @@ class rule_003(multiline_alignment_between_tokens):
 
        n_foo <= resize(unsigned(I_FOO) +
                        unsigned(I_BAR), q_foo'length);
-    '''
+    """
 
     def __init__(self):
         multiline_alignment_between_tokens.__init__(self, lTokenPairs)

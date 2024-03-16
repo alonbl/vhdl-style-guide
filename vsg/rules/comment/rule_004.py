@@ -1,4 +1,3 @@
-
 from vsg import parser
 
 from vsg.rules.whitespace_before_token import Rule
@@ -8,7 +7,7 @@ lTokens.append(parser.comment)
 
 
 class rule_004(Rule):
-    '''
+    """
     This rule checks for at least a single space before inline comments.
 
     |configuring_whitespace_rules_link|
@@ -26,8 +25,8 @@ class rule_004(Rule):
 
        wr_en <= '1'; --Write data
        rd_en <= '1';   -- Read data
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)
-        self.number_of_spaces = '>=1'
+        self.number_of_spaces = ">=1"

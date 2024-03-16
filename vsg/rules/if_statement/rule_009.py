@@ -1,4 +1,3 @@
-
 from vsg.rules import multiline_alignment_between_tokens
 
 from vsg import token
@@ -9,7 +8,7 @@ lTokenPairs.append([token.if_statement.elsif_keyword, token.if_statement.then_ke
 
 
 class rule_009(multiline_alignment_between_tokens):
-    '''
+    """
     This rule checks the alignment of multiline boolean expressions.
 
     |configuring_multiline_indent_rules_link|
@@ -27,7 +26,7 @@ class rule_009(multiline_alignment_between_tokens):
 
        if (a = '0' and b = '1' and
            c = '0') then
-    '''
+    """
 
     def __init__(self):
         multiline_alignment_between_tokens.__init__(self, lTokenPairs)

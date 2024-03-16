@@ -1,4 +1,3 @@
-
 from vsg.rules import remove_excessive_blank_lines_below_line_ending_with_token
 
 from vsg import token
@@ -16,7 +15,7 @@ lOverrides.append(token.iteration_scheme.for_keyword)
 
 
 class rule_006(remove_excessive_blank_lines_below_line_ending_with_token):
-    '''
+    """
     This rule checks for blank lines after the **then** keyword.
 
     **Violation**
@@ -34,7 +33,8 @@ class rule_006(remove_excessive_blank_lines_below_line_ending_with_token):
 
       if (a = '1') then
         b <= '0'
-    '''
+    """
+
     def __init__(self):
         remove_excessive_blank_lines_below_line_ending_with_token.__init__(self, lTokens, iAllow=0, lOverrides=lOverrides)
         self.configuration_documentation_link = None

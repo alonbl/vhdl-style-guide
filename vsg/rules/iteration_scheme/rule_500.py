@@ -1,4 +1,3 @@
-
 from vsg.rules import token_case as Rule
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.iteration_scheme.while_keyword)
 
 
 class rule_500(Rule):
-    '''
+    """
     This rule checks the **while** keyword has proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -24,8 +23,8 @@ class rule_500(Rule):
     .. code-block:: vhdl
 
        while (condition) loop
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)
-        self.groups.append('case::keyword')
+        self.groups.append("case::keyword")

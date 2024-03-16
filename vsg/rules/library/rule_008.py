@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.use_clause.keyword)
 
 
 class rule_008(token_indent):
-    '''
+    """
     This rule checks the indent of the **use** keyword.
 
     |configuring_use_clause_indenting_link|
@@ -28,7 +27,7 @@ class rule_008(token_indent):
        library ieee;
          use ieee.std_logic_1164.all;
          use ieee.std_logic_unsigned.all;
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

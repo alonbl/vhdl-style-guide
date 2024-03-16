@@ -1,11 +1,10 @@
-
 from vsg import parser
 from vsg.rule_group import length
 from vsg import violation
 
 
 class file_length(length.Rule):
-    '''
+    """
     Checks the length of the file.
 
     Parameters
@@ -17,7 +16,7 @@ class file_length(length.Rule):
     identifier : string
        unique identifier.  Usually in the form of 00N.
 
-    '''
+    """
 
     def __init__(self):
         length.Rule.__init__(self)
@@ -28,6 +27,6 @@ class file_length(length.Rule):
 
     def _analyze(self, lToi):
         if len(lToi) > self.length:
-            sSolution = 'Reduce file length to less than ' + str(self.length) + ' lines'
+            sSolution = "Reduce file length to less than " + str(self.length) + " lines"
             oViolation = violation.New(self.length, None, sSolution)
             self.add_violation(oViolation)

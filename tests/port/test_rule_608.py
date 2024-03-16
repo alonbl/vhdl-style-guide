@@ -1,4 +1,3 @@
-
 import os
 import unittest
 
@@ -8,11 +7,10 @@ from tests import utils
 
 sTestDir = os.path.dirname(__file__)
 
-lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir,'rule_608_test_input.vhd'))
+lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "rule_608_test_input.vhd"))
 
 
 class test_port_rule(unittest.TestCase):
-
     def setUp(self):
         self.oFile = vhdlFile.vhdlFile(lFile)
         self.assertIsNone(eError)
@@ -20,8 +18,8 @@ class test_port_rule(unittest.TestCase):
     def test_rule_608(self):
         oRule = port.rule_608()
         self.assertTrue(oRule)
-        self.assertEqual(oRule.name, 'port')
-        self.assertEqual(oRule.identifier, '608')
+        self.assertEqual(oRule.name, "port")
+        self.assertEqual(oRule.identifier, "608")
 
         lExpected = [16]
 

@@ -1,4 +1,3 @@
-
 from vsg.rules import token_case_in_range_bounded_by_tokens
 
 from vsg import token
@@ -12,7 +11,7 @@ oEnd = token.component_instantiation_statement.semicolon
 
 
 class rule_001(token_case_in_range_bounded_by_tokens):
-    '''
+    """
     This rule checks the **generic map** keywords have proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -28,8 +27,8 @@ class rule_001(token_case_in_range_bounded_by_tokens):
     .. code-block:: vhdl
 
        generic map (
-    '''
+    """
 
     def __init__(self):
         token_case_in_range_bounded_by_tokens.__init__(self, lTokens, oStart, oEnd)
-        self.groups.append('case::keyword')
+        self.groups.append("case::keyword")

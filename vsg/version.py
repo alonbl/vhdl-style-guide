@@ -3,6 +3,7 @@ import importlib.metadata
 from pathlib import Path
 from typing import Final
 
+
 @functools.cache
 def get_distribution() -> importlib.metadata.Distribution:
     try:
@@ -18,6 +19,6 @@ def get_version() -> str:
 
 
 def print_version(oCommandLineArguments):
-    if (oCommandLineArguments.version):
-        print('VHDL Style Guide (VSG) version: ' + get_version())
+    if oCommandLineArguments.version:
+        print("VHDL Style Guide (VSG) version: " + get_version())
         exit(0)

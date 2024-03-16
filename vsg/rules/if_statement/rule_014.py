@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.if_statement.end_keyword)
 
 
 class rule_014(token_indent):
-    '''
+    """
     This rule checks the indent of the **end if** keyword.
 
     **Violation**
@@ -34,7 +33,7 @@ class rule_014(token_indent):
       else
         e <= '0';
       end if;
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -9,7 +8,7 @@ lTokens.append(token.exit_statement.exit_keyword)
 
 
 class rule_300(token_indent):
-    '''
+    """
     This rule checks the indent of the **exit** keyword.
 
     **Violation**
@@ -27,7 +26,7 @@ class rule_300(token_indent):
        end if;
 
        exit;
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

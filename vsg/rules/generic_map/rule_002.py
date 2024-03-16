@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules import token_case_formal_part_of_association_element_in_map_between_tokens
@@ -6,11 +5,11 @@ from vsg.rules import token_case_formal_part_of_association_element_in_map_betwe
 oStart = token.component_instantiation_statement.instantiation_label
 oEnd = token.component_instantiation_statement.semicolon
 
-sMapType = 'generic'
+sMapType = "generic"
 
 
 class rule_002(token_case_formal_part_of_association_element_in_map_between_tokens):
-    '''
+    """
     This rule checks generic names have proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -32,10 +31,11 @@ class rule_002(token_case_formal_part_of_association_element_in_map_between_toke
            depth => 512,
            width => 32
          )
-    '''
+    """
+
     def __init__(self):
         token_case_formal_part_of_association_element_in_map_between_tokens.__init__(self, sMapType, oStart, oEnd)
-        self.configuration.append('prefix_exceptions')
-        self.configuration.append('suffix_exceptions')
-        self.configuration.append('case_exceptions')
-        self.groups.append('case::name')
+        self.configuration.append("prefix_exceptions")
+        self.configuration.append("suffix_exceptions")
+        self.configuration.append("case_exceptions")
+        self.groups.append("case::name")

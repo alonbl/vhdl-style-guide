@@ -1,4 +1,3 @@
-
 from vsg.vhdlFile.classify import block_statement
 from vsg.vhdlFile.classify import component_instantiation_statement
 from vsg.vhdlFile.classify import concurrent_assertion_statement
@@ -9,7 +8,7 @@ from vsg.vhdlFile.classify import process_statement
 
 
 def detect(iToken, lObjects):
-    '''
+    """
     concurrent_statement ::=
         block_statement
       | process_statement
@@ -19,7 +18,7 @@ def detect(iToken, lObjects):
       | component_instantiation_statement
       | generate_statement
       | PSL_PSL_Directive
-    '''
+    """
 
     iCurrent = process_statement.detect(iToken, lObjects)
     if iCurrent != iToken:

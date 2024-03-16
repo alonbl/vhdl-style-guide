@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules.whitespace_between_token_pairs import Rule
@@ -10,7 +9,7 @@ lTokens.append([token.if_generate_statement.label_colon, token.if_generate_state
 
 
 class rule_014(Rule):
-    '''
+    """
     This rule checks for a single space between the colon and the **for** keyword.
 
     |configuring_whitespace_rules_link|
@@ -28,6 +27,7 @@ class rule_014(Rule):
 
        ram_array : for i in 0 to 7 generate
        ram_array : for i in 0 to 7 generate
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokens)

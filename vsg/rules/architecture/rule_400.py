@@ -1,4 +1,3 @@
-
 from vsg.rules import align_tokens_in_region_between_tokens_unless_between_tokens as Rule
 
 from vsg import token
@@ -11,7 +10,7 @@ lUnless.append([token.subprogram_body.is_keyword, token.subprogram_body.begin_ke
 
 
 class rule_400(Rule):
-    '''
+    """
     This rule checks the colons are in the same column for all attribute specifications.
 
     |configuring_keyword_alignment_rules_link|
@@ -31,9 +30,9 @@ class rule_400(Rule):
          attribute mark_debug of wr_en        : signal is "true";
          attribute mark_debug of almost_empty : signal is "true";
          attribute mark_debug of full         : signal is "true";
-    '''
+    """
 
     def __init__(self):
         super().__init__(lAlign, token.architecture_body.is_keyword, token.architecture_body.begin_keyword, lUnless)
-        self.solution = 'Align colon.'
-        self.configuration.remove('separate_generic_port_alignment')
+        self.solution = "Align colon."
+        self.configuration.remove("separate_generic_port_alignment")

@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules.whitespace_between_token_pairs import Rule
@@ -10,7 +9,7 @@ lTokens.append([token.subprogram_kind.procedure_keyword, token.subprogram_body.d
 
 
 class rule_101(Rule):
-    '''
+    """
     This rule checks for a single space between the **end** and **procedure** keywords and procedure designator.
 
     |configuring_whitespace_rules_link|
@@ -30,6 +29,7 @@ class rule_101(Rule):
        end procedure average_samples;
        end procedure;
        end average_samples;
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokens)

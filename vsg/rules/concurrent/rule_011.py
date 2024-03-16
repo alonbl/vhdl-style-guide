@@ -1,4 +1,3 @@
-
 from vsg.rules import multiline_simple_structure as Rule
 
 from vsg import token
@@ -9,7 +8,7 @@ lTokenPairs.append([token.concurrent_conditional_signal_assignment.assignment, t
 
 
 class rule_011(Rule):
-    '''
+    """
     This rule checks the structure of simple and conditional concurrent statements.
 
     |configuring_simple_multiline_structure_rules_link|
@@ -37,7 +36,7 @@ class rule_011(Rule):
        w_foo <= I_FOO when ((I_BAR = '1') and
                             (I_CRUFT = '1')) else
                 '0';
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokenPairs)

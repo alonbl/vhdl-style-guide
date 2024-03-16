@@ -1,4 +1,3 @@
-
 from vsg.rules import utils as rules_utils
 
 from vsg.vhdlFile import utils
@@ -6,11 +5,11 @@ from vsg.vhdlFile import utils
 
 def fix_violation(oViolation):
     dAction = oViolation.get_action()
-    if dAction['action'] == 'add_new_line':
+    if dAction["action"] == "add_new_line":
         add_new_line(oViolation)
-    elif dAction['action'] == 'remove_new_line':
+    elif dAction["action"] == "remove_new_line":
         remove_new_line(oViolation)
-    elif dAction['action'] == 'add_new_line_and_remove_carraige_returns':
+    elif dAction["action"] == "add_new_line_and_remove_carraige_returns":
         add_new_line_and_remove_carraige_returns(oViolation)
 
 

@@ -1,5 +1,3 @@
-
-
 from vsg import parser
 
 from vsg.rules import utils as rules_utils
@@ -8,7 +6,7 @@ from vsg.rules.whitespace_between_tokens import Rule as WhitespaceRule
 
 
 class Rule(WhitespaceRule):
-    '''
+    """
     Checks for a at least a single space before a token.
 
     Parameters
@@ -22,7 +20,7 @@ class Rule(WhitespaceRule):
 
     token : token object
        reference token check for a whitespace before
-    '''
+    """
 
     def __init__(self, lTokens):
         WhitespaceRule.__init__(self)

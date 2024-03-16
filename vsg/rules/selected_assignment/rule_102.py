@@ -1,4 +1,3 @@
-
 from vsg.rules.whitespace_after_token import Rule
 
 from vsg import token
@@ -11,7 +10,7 @@ lTokens.append(token.selected_waveform_assignment.select_keyword)
 
 
 class rule_102(Rule):
-    '''
+    """
     This rule checks for a single space after the **select** keyword.
 
     |configuring_whitespace_rules_link|
@@ -33,7 +32,7 @@ class rule_102(Rule):
          "0000" when 0,
          "0001" when 1,
          "1111" when others;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)

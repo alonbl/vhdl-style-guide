@@ -1,4 +1,3 @@
-
 from vsg.rules import insert_token_right_of_token_if_it_does_not_exist_between_tokens_using_value_from_token as Rule
 
 from vsg import token
@@ -14,7 +13,7 @@ oValueToken = token.function_specification.function_keyword
 
 
 class rule_018(Rule):
-    '''
+    """
     This rule checks the function keyword exist in the closing of the function specification.
 
     |configuring_optional_items_link|
@@ -34,12 +33,12 @@ class rule_018(Rule):
        function func return integer is
 
        end function func;
-    '''
+    """
 
     def __init__(self):
         super().__init__(oInsertToken, oAnchorToken, oLeftToken, oRightToken, oValueToken)
-        self.solution = 'function keyword'
-        self.groups.append('structure::optional')
+        self.solution = "function keyword"
+        self.groups.append("structure::optional")
         self.filter_tokens.append(token.subprogram_declaration.semicolon)
 
     def _get_add_tokens_of_interest(self, oFile):

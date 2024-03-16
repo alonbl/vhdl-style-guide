@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules import number_of_lines_between_tokens
@@ -10,11 +9,11 @@ iLines = 500
 
 
 class rule_003(number_of_lines_between_tokens):
-    '''
+    """
     This rule checks the length of a process statement.
 
     |configuring_length_rules_link|
-    '''
+    """
 
     def __init__(self):
         number_of_lines_between_tokens.__init__(self, oLeftToken, oRightToken, iLines)

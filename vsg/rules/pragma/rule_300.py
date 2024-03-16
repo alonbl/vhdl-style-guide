@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent as Rule
 
 from vsg import token
@@ -10,7 +9,7 @@ lTokens.append(token.pragma.single)
 
 
 class rule_300(Rule):
-    '''
+    """
     This rule checks the indent of pragmas.
 
     |configuring_pragmas_link|
@@ -40,7 +39,7 @@ class rule_300(Rule):
          -- synthesis translate_on
 
        begin
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)

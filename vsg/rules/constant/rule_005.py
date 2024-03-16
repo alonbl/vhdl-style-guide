@@ -1,4 +1,3 @@
-
 from vsg.rules.whitespace_after_token import Rule
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.constant_declaration.colon)
 
 
 class rule_005(Rule):
-    '''
+    """
     This rule checks for a single space after the colon.
 
     |configuring_whitespace_rules_link|
@@ -26,7 +25,7 @@ class rule_005(Rule):
 
        constant size  : integer := 1;
        constant width : integer := 32;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)

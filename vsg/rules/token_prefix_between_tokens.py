@@ -1,4 +1,3 @@
-
 from vsg import parser
 from vsg import violation
 
@@ -7,7 +6,7 @@ from vsg.rules import token_prefix as Rule
 
 
 class token_prefix_between_tokens(Rule):
-    '''
+    """
     Checks the prefix for words between tokens.
 
     Parameters
@@ -24,7 +23,7 @@ class token_prefix_between_tokens(Rule):
 
     lPrefixes : string list
        acceptable prefixes
-    '''
+    """
 
     def __init__(self, lTokens, oStart, oEnd):
         super().__init__(lTokens=lTokens)

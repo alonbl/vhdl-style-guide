@@ -1,4 +1,3 @@
-
 from vsg.rules import token_suffix
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.function_specification.designator)
 
 
 class rule_601(token_suffix):
-    '''
+    """
     This rule checks for valid suffixes on function designators.
     Default signal suffix is *\_f*.
 
@@ -25,9 +24,9 @@ class rule_601(token_suffix):
     .. code-block:: vhdl
 
        function read_data_f
-    '''
+    """
 
     def __init__(self):
         token_suffix.__init__(self, lTokens)
-        self.suffixes = ['_f']
-        self.solution = 'Function designator'
+        self.suffixes = ["_f"]
+        self.solution = "Function designator"

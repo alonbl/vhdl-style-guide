@@ -1,4 +1,3 @@
-
 from vsg.vhdlFile.classify import subprogram_declaration
 from vsg.vhdlFile.classify import subprogram_instantiation_declaration
 from vsg.vhdlFile.classify import package_declaration
@@ -18,7 +17,7 @@ from vsg.vhdlFile.classify import use_clause
 
 
 def detect(iToken, lObjects):
-    '''
+    """
     package_declarative_item ::=
         subprogram_declaration
       | subprogram_instantiation_declaration
@@ -40,7 +39,7 @@ def detect(iToken, lObjects):
       | group_declaration
       | PSL_Property_Declaration
       | PSL_Sequence_Declaration
-    '''
+    """
 
     iReturn = subprogram_declaration.detect(iToken, lObjects)
     if iReturn != iToken:

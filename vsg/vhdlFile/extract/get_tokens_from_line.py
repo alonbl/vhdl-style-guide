@@ -1,4 +1,3 @@
-
 from vsg import parser
 
 from vsg.vhdlFile.extract import tokens

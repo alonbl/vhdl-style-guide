@@ -1,11 +1,10 @@
-
 from vsg.rules.whitespace_between_tokens import Rule
 
 from vsg.token import loop_statement as token
 
 
 class rule_100(Rule):
-    '''
+    """
     This rule checks that a single space exists between the **end** and **loop** keywords
 
     |configuring_whitespace_rules_link|
@@ -23,7 +22,8 @@ class rule_100(Rule):
 
          end loop;
          end loop;
-    '''
+    """
+
     def __init__(self):
         Rule.__init__(self)
         self.left_token = token.end_keyword

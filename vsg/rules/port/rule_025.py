@@ -1,4 +1,3 @@
-
 from vsg.rules import token_suffix_between_tokens
 
 from vsg import token
@@ -11,7 +10,7 @@ lTokens.append(token.interface_unknown_declaration.identifier)
 
 
 class rule_025(token_suffix_between_tokens):
-    '''
+    """
     This rule checks for valid suffixes on port identifiers.
     The default port suffixes are *_i*, *_o*, *_io*.
 
@@ -38,8 +37,8 @@ class rule_025(token_suffix_between_tokens):
          overflow_o : out   std_logic;
          data_io    : inout std_logic
        );
-    '''
+    """
 
     def __init__(self):
         token_suffix_between_tokens.__init__(self, lTokens, token.port_clause.open_parenthesis, token.port_clause.close_parenthesis)
-        self.suffixes = ['_i', '_o', '_io']
+        self.suffixes = ["_i", "_o", "_io"]

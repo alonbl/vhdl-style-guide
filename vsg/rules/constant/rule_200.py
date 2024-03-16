@@ -1,4 +1,3 @@
-
 from vsg.rules import blank_line_below_line_ending_with_token as Rule
 
 from vsg import token
@@ -11,7 +10,7 @@ lAllowTokens.append(token.constant_declaration.constant_keyword)
 
 
 class rule_200(Rule):
-    '''
+    """
     This rule checks for a blank line below a constant declaration unless there is another constant definition.
 
     |configuring_blank_lines_link|
@@ -35,9 +34,9 @@ class rule_200(Rule):
 
        constant width  : integer := 32;
        constant height : integer := 4;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens, lAllowTokens)
         self.disable = True
-        self.configuration.remove('style')
+        self.configuration.remove("style")

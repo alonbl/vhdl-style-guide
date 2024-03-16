@@ -1,4 +1,3 @@
-
 from vsg.rules import token_case
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.process_statement.is_keyword)
 
 
 class rule_013(token_case):
-    '''
+    """
     This rule checks the **is** keyword has proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -30,8 +29,8 @@ class rule_013(token_case):
                          rd_full, wr_full
                         ) is
        begin
-    '''
+    """
 
     def __init__(self):
         token_case.__init__(self, lTokens)
-        self.groups.append('case::keyword')
+        self.groups.append("case::keyword")

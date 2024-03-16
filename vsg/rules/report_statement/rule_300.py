@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -9,7 +8,7 @@ lTokens.append(token.report_statement.severity_keyword)
 
 
 class rule_300(token_indent):
-    '''
+    """
     This rule checks indent of multiline report statements.
 
     **Violation**
@@ -25,7 +24,7 @@ class rule_300(token_indent):
 
         report "FIFO width is limited to 16 bits."
           severity FAILURE;
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

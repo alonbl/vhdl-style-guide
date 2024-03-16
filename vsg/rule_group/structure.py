@@ -1,9 +1,8 @@
-
 from vsg import rule
 
 
 class Rule(rule.Rule):
-    '''
+    """
     Class for assigning rules to the structure group.
 
     Parameters
@@ -14,10 +13,10 @@ class Rule(rule.Rule):
 
     identifier : string
        unique identifier.  Usually in the form of 00N.
-    '''
+    """
 
     def __init__(self):
         rule.Rule.__init__(self)
         self.phase = 1
-        self.groups.append('structure')
-        self.configuration_documentation_link = 'configuring_simple_multiline_structure_rules_link'
+        self.groups.append("structure")
+        self.configuration_documentation_link = "configuring_simple_multiline_structure_rules_link"

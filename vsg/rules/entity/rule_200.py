@@ -1,4 +1,3 @@
-
 from vsg.rules.blank_line_above_line_starting_with_token_when_between_tokens import Rule
 
 from vsg.token import generic_clause as token
@@ -9,7 +8,7 @@ lTokens.append(token.generic_keyword)
 
 
 class rule_200(Rule):
-    '''
+    """
     This rule checks for blank lines above the **generic** keyword in entity specifications.
 
     |configuring_blank_lines_link|
@@ -30,8 +29,9 @@ class rule_200(Rule):
 
        entity fifo is
          generic (
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokens)
-        self.style = 'no_blank_line'
+        self.style = "no_blank_line"
         self.lBetweenTokenPairs = [between.entity_keyword, between.semicolon]

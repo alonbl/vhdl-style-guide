@@ -1,4 +1,3 @@
-
 from vsg.rules.whitespace_between_token_pairs import Rule
 
 from vsg import token
@@ -9,7 +8,7 @@ lTokenPairs.append([token.incomplete_type_declaration.type_keyword, token.incomp
 
 
 class rule_100(Rule):
-    '''
+    """
     This rule checks for a single space before the identifier.
 
     |configuring_whitespace_rules_link|
@@ -25,7 +24,8 @@ class rule_100(Rule):
     .. code-block:: vhdl
 
        type t_my_type is range -5 to 5;
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokenPairs)
         self.disable = True

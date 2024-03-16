@@ -1,4 +1,3 @@
-
 from vsg.rules import insert_token_left_of_token_if_it_does_not_exist_between_tokens_using_value_from_token as Rule
 
 from vsg.token import record_type_definition as token
@@ -12,7 +11,7 @@ oValueToken = ft_token.identifier
 
 
 class rule_005(Rule):
-    '''
+    """
     This rule checks for the optional simple name in the **end record** statement.
 
     |configuring_optional_items_link|
@@ -34,10 +33,10 @@ class rule_005(Rule):
          a : std_logic;
          b : std_logic;
        end record t_record;
-    '''
+    """
 
     def __init__(self):
         super().__init__(oInsertToken, oAnchorToken, oLeftToken, oRightToken, oValueToken)
         self.subphase = 1
-        self.solution = 'record type simple name'
-        self.groups.append('structure::optional')
+        self.solution = "record type simple name"
+        self.groups.append("structure::optional")

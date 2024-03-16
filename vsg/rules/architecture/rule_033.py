@@ -1,11 +1,10 @@
-
 from vsg.rules.whitespace_between_tokens import Rule
 
 from vsg.token import architecture_body as token
 
 
 class rule_033(Rule):
-    '''
+    """
     This rule checks for a single space between the entity_name and the **is** keyword.
 
     |configuring_whitespace_rules_link|
@@ -21,7 +20,8 @@ class rule_033(Rule):
     .. code-block:: vhdl
 
        architecture rtl of fifo is
-    '''
+    """
+
     def __init__(self):
         Rule.__init__(self)
         self.left_token = token.entity_name

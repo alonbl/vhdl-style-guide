@@ -1,4 +1,3 @@
-
 from vsg.rules import token_case_in_range_bounded_by_tokens as Rule
 
 from vsg import token
@@ -12,7 +11,7 @@ oEndToken = token.case_generate_alternative.assignment
 
 
 class rule_501(Rule):
-    '''
+    """
     This rule checks the *others* keyword has proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -28,8 +27,8 @@ class rule_501(Rule):
     .. code-block:: vhdl
 
        when others =>
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens, oStartToken, oEndToken)
-        self.groups.append('case::keyword')
+        self.groups.append("case::keyword")

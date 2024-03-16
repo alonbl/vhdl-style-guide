@@ -1,4 +1,3 @@
-
 from vsg import parser
 from vsg import token
 
@@ -12,7 +11,7 @@ lNames.append(parser.todo)
 
 
 class rule_013(Rule):
-    '''
+    """
     This rule checks for consistent capitalization of constant names.
 
     **Violation**
@@ -72,7 +71,7 @@ class rule_013(Rule):
          end process PROC_NAME;
 
        end architecture RTL;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens, lNames)

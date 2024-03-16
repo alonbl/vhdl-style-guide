@@ -1,4 +1,3 @@
-
 from vsg.rules import multiline_alignment_between_tokens
 
 from vsg import token
@@ -9,7 +8,7 @@ lTokenPairs.append([token.conditional_variable_assignment.assignment, token.cond
 
 
 class rule_004(multiline_alignment_between_tokens):
-    '''
+    """
     This rule checks the alignment of multiline variable assignments.
 
     |configuring_multiline_indent_rules_link|
@@ -27,7 +26,7 @@ class rule_004(multiline_alignment_between_tokens):
 
          counter := 1 + 4 + 10 + 25 +
                     30 + 35;
-    '''
+    """
 
     def __init__(self):
         multiline_alignment_between_tokens.__init__(self, lTokenPairs)

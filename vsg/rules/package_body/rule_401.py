@@ -1,4 +1,3 @@
-
 from vsg.rules import align_tokens_in_region_between_tokens_unless_between_tokens as Rule
 
 from vsg import token
@@ -19,7 +18,7 @@ lUnless.append([token.subprogram_body.is_keyword, token.subprogram_body.begin_ke
 
 
 class rule_401(Rule):
-    '''
+    """
     This rule checks the colons are in the same column for all declarations in the package body declarative part.
 
     |configuring_keyword_alignment_rules_link|
@@ -47,10 +46,10 @@ class rule_401(Rule):
          constant c_period : time;
 
        end package my_package;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lAlign, oStart, oEnd, lUnless)
-        self.solution = 'Align colon.'
+        self.solution = "Align colon."
         self.subphase = 3
-        self.configuration.remove('separate_generic_port_alignment')
+        self.configuration.remove("separate_generic_port_alignment")

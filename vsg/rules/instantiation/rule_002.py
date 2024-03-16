@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules.whitespace_between_token_pairs import Rule
@@ -11,7 +10,7 @@ lTokens.append([token.component_instantiation_statement.label_colon, token.insta
 
 
 class rule_002(Rule):
-    '''
+    """
     This rule checks for a single space after the colon.
 
     |configuring_whitespace_rules_link|
@@ -27,6 +26,7 @@ class rule_002(Rule):
     .. code-block:: vhdl
 
        U_FIFO : FIFO
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokens)

@@ -1,4 +1,3 @@
-
 import os
 import unittest
 
@@ -8,23 +7,22 @@ from tests import utils
 
 sTestDir = os.path.dirname(__file__)
 
-lFile, eError =vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir,'rule_012_test_input.vhd'))
+lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "rule_012_test_input.vhd"))
 
 
 class test_procedure_rule(unittest.TestCase):
-
     def setUp(self):
         self.oFile = vhdlFile.vhdlFile(lFile)
         self.assertIsNone(eError)
 
     def test_rule_012_add(self):
         oRule = procedure.rule_012()
-        oRule.action = 'add'
+        oRule.action = "add"
 
         self.assertTrue(oRule)
-        self.assertEqual(oRule.name, 'procedure')
-        self.assertEqual(oRule.identifier, '012')
-        self.assertEqual(oRule.groups, ['structure', 'structure::optional'])
+        self.assertEqual(oRule.name, "procedure")
+        self.assertEqual(oRule.identifier, "012")
+        self.assertEqual(oRule.groups, ["structure", "structure::optional"])
 
         lExpected = [10, 33]
 
@@ -33,15 +31,15 @@ class test_procedure_rule(unittest.TestCase):
 
     def test_fix_rule_012_add(self):
         oRule = procedure.rule_012()
-        oRule.action = 'add'
+        oRule.action = "add"
 
         oRule.fix(self.oFile)
 
         lActual = self.oFile.get_lines()
 
         lExpected = []
-        lExpected.append('')
-        utils.read_file(os.path.join(sTestDir, 'rule_012_test_input.fixed_add.vhd'), lExpected)
+        lExpected.append("")
+        utils.read_file(os.path.join(sTestDir, "rule_012_test_input.fixed_add.vhd"), lExpected)
 
         self.assertEqual(lExpected, lActual)
 
@@ -50,7 +48,7 @@ class test_procedure_rule(unittest.TestCase):
 
     def test_rule_012_remove(self):
         oRule = procedure.rule_012()
-        oRule.action = 'remove'
+        oRule.action = "remove"
 
         lExpected = [6, 42]
 
@@ -59,15 +57,15 @@ class test_procedure_rule(unittest.TestCase):
 
     def test_fix_rule_012_remove(self):
         oRule = procedure.rule_012()
-        oRule.action = 'remove'
+        oRule.action = "remove"
 
         oRule.fix(self.oFile)
 
         lActual = self.oFile.get_lines()
 
         lExpected = []
-        lExpected.append('')
-        utils.read_file(os.path.join(sTestDir, 'rule_012_test_input.fixed_remove.vhd'), lExpected)
+        lExpected.append("")
+        utils.read_file(os.path.join(sTestDir, "rule_012_test_input.fixed_remove.vhd"), lExpected)
 
         self.assertEqual(lExpected, lActual)
 

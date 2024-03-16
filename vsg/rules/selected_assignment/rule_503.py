@@ -1,4 +1,3 @@
-
 from vsg.rules import token_case as Rule
 
 from vsg import token
@@ -9,7 +8,7 @@ lTokens.append(token.selected_expressions.when_keyword)
 
 
 class rule_503(Rule):
-    '''
+    """
     This rule checks the **when** keyword has proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -31,8 +30,8 @@ class rule_503(Rule):
          "0000" when 0,
          "0001" when 1,
          "1111" when others;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)
-        self.groups.append('case::keyword')
+        self.groups.append("case::keyword")

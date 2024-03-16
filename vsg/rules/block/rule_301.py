@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.block_statement.begin_keyword)
 
 
 class rule_301(token_indent):
-    '''
+    """
     This rule checks the indent of the **begin** keyword.
 
     **Violation**
@@ -26,7 +25,7 @@ class rule_301(token_indent):
        block_label : block is
 
        begin
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent as Rule
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.alias_declaration.alias_keyword)
 
 
 class rule_300(Rule):
-    '''
+    """
     This rule checks the indent of the **alias** keyword.
 
     **Violation**
@@ -26,7 +25,7 @@ class rule_300(Rule):
        signal sig1 : integer;
 
        alias is name;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)

@@ -1,4 +1,3 @@
-
 from vsg.rules import insert_carriage_return_after_token_if_it_is_not_followed_by_a_comment as Rule
 
 from vsg.token import record_type_definition as token
@@ -8,7 +7,7 @@ lTokens.append(token.record_keyword)
 
 
 class rule_002(Rule):
-    '''
+    """
     This rule checks for code after the **record** keyword.
 
     **Violation**
@@ -27,8 +26,8 @@ class rule_002(Rule):
          a : std_logic;
          b : std_logic;
        end record;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)
-        self.solution = 'Move code after the begin to the next line.'
+        self.solution = "Move code after the begin to the next line."

@@ -1,4 +1,3 @@
-
 from vsg import parser
 from vsg import violation
 
@@ -8,7 +7,7 @@ from vsg.vhdlFile import utils
 
 
 class remove_carriage_return_after_token(structure.Rule):
-    '''
+    """
     Checks for a carriage return within the next two tokens after the one given.
 
     Parameters
@@ -25,7 +24,7 @@ class remove_carriage_return_after_token(structure.Rule):
 
     lPrefixes : string list
        acceptable prefixes
-    '''
+    """
 
     def __init__(self, lTokens, bInsertSpace=False):
         structure.Rule.__init__(self)
@@ -39,7 +38,7 @@ class remove_carriage_return_after_token(structure.Rule):
     def _analyze(self, lToi):
         for oToi in lToi:
             lTokens = oToi.get_tokens()
-            for iToken, oToken in enumerate(lTokens[:len(lTokens)]):
+            for iToken, oToken in enumerate(lTokens[: len(lTokens)]):
                 if iToken < 3:
                     if isinstance(oToken, parser.carriage_return):
                         oViolation = violation.New(oToi.get_line_number(), oToi, self.solution)

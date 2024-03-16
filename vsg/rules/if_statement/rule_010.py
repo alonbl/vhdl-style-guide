@@ -1,4 +1,3 @@
-
 from vsg.rules import remove_excessive_blank_lines_above_line_starting_with_token
 
 from vsg import token
@@ -12,7 +11,7 @@ lOverrides.append(token.loop_statement.semicolon)
 
 
 class rule_010(remove_excessive_blank_lines_above_line_starting_with_token):
-    '''
+    """
     This rule checks for blank lines before the **else** keyword.
 
     **Violation**
@@ -30,8 +29,9 @@ class rule_010(remove_excessive_blank_lines_above_line_starting_with_token):
 
         d <= '1';
       else
-    '''
+    """
+
     def __init__(self):
         remove_excessive_blank_lines_above_line_starting_with_token.__init__(self, lTokens, iAllow=0, lOverrides=lOverrides)
-        self.solution = 'Remove blank line(s) before the *else* keyword.'
+        self.solution = "Remove blank line(s) before the *else* keyword."
         self.configuration_documentation_link = None

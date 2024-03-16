@@ -1,4 +1,3 @@
-
 from vsg.rules import split_line_at_token
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.library_clause.keyword)
 
 
 class rule_010(split_line_at_token):
-    '''
+    """
     This rule checks the **library** keyword is on its own line.
 
     **Violation**
@@ -23,8 +22,8 @@ class rule_010(split_line_at_token):
 
        context c1 is
          library ieee; use ieee.std_logic_1164.all; end context c1;
-    '''
+    """
 
     def __init__(self):
         split_line_at_token.__init__(self, lTokens)
-        self.solution = 'Move *library* to it\'s own line.'
+        self.solution = "Move *library* to it's own line."

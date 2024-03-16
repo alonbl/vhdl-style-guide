@@ -1,4 +1,3 @@
-
 from vsg.rules import split_line_at_token_if_on_same_line_as_token_if_token_pair_are_not_on_the_same_line
 
 from vsg import token
@@ -11,7 +10,7 @@ lTokenPair = [token.full_type_declaration.type_keyword, token.full_type_declarat
 
 
 class rule_009(split_line_at_token_if_on_same_line_as_token_if_token_pair_are_not_on_the_same_line):
-    '''
+    """
     This rule checks for an enumerate type after the open parenthesis on multiline enumerated types.
 
     **Violation**
@@ -34,7 +33,7 @@ class rule_009(split_line_at_token_if_on_same_line_as_token_if_token_pair_are_no
          read,
          done
        );
-    '''
+    """
 
     def __init__(self):
         split_line_at_token_if_on_same_line_as_token_if_token_pair_are_not_on_the_same_line.__init__(self, oToken, oSameLineToken, lTokenPair)

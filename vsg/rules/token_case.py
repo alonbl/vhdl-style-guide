@@ -1,11 +1,10 @@
-
 from vsg.rule_group import case
 from vsg.rules import case_utils
 from vsg.rules import utils
 
 
 class token_case(case.Rule):
-    '''
+    """
     Checks the case for words.
 
     Parameters
@@ -19,14 +18,14 @@ class token_case(case.Rule):
 
     lTokens : list of token types
        The token types to check the case on.
-    '''
+    """
 
     def __init__(self, lTokens):
         case.Rule.__init__(self)
         self.solution = None
         self.phase = 6
-        self.case = 'lower'
-        self.configuration.append('case')
+        self.case = "lower"
+        self.configuration.append("case")
         self.lTokens = lTokens
         self.prefix_exceptions = []
         self.suffix_exceptions = []
@@ -48,6 +47,6 @@ class token_case(case.Rule):
     def _fix_violation(self, oViolation):
         lTokens = oViolation.get_tokens()
         dAction = oViolation.get_action()
-        if dAction['value'] is not None:
-            lTokens[0].set_value(dAction['value'])
+        if dAction["value"] is not None:
+            lTokens[0].set_value(dAction["value"])
             oViolation.set_tokens(lTokens)

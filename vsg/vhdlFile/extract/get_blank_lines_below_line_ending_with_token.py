@@ -1,4 +1,3 @@
-
 from vsg import parser
 
 from vsg.vhdlFile.extract import tokens
@@ -6,7 +5,6 @@ from vsg.vhdlFile.extract import utils
 
 
 def get_blank_lines_below_line_ending_with_token(lTokens, lHierarchy, lAllTokens, oTokenMap):
-
     lReturn = []
 
     lIndexes = _get_indexes_with_hierarchy(lTokens, lAllTokens, oTokenMap, lHierarchy)
@@ -31,7 +29,6 @@ def get_blank_lines_below_line_ending_with_token(lTokens, lHierarchy, lAllTokens
 
 
 def _get_indexes_with_hierarchy(lTokens, lAllTokens, oTokenMap, lHierarchy):
-
     lTokenIndexes = utils.get_indexes_of_token_list(lTokens, oTokenMap)
 
     if lHierarchy is None:

@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent as Rule
 
 from vsg import token
@@ -11,7 +10,7 @@ lTokens.append(token.selected_waveform_assignment.with_keyword)
 
 
 class rule_300(Rule):
-    '''
+    """
     This rule checks the indent of the **with** keyword.
 
     **Violation**
@@ -35,7 +34,7 @@ class rule_300(Rule):
          "0000" when 0,
          "0001" when 1,
          "1111" when others;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)

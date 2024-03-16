@@ -1,4 +1,3 @@
-
 from vsg.token import signal_assignment_statement as token
 
 from vsg.vhdlFile import utils
@@ -9,12 +8,12 @@ from vsg.vhdlFile.classify import simple_signal_assignment
 
 
 def detect(iToken, lObjects):
-    '''
+    """
     signal_assignment_statement ::=
         [ label : ] simple_signal_assignment
       | [ label : ] conditional_signal_assignment
       | [ label : ] selected_signal_assignment
-    '''
+    """
 
     iCurrent = iToken
 

@@ -1,12 +1,10 @@
-
-
 from vsg.rules import move_token_next_to_another_token as Rule
 
 from vsg.token import full_type_declaration as token
 
 
 class rule_017(Rule):
-    '''
+    """
     This rule checks the identifier is on the same line as the type keyword.
 
     **Violation**
@@ -22,8 +20,8 @@ class rule_017(Rule):
 
        type t_record
        is
-    '''
+    """
 
     def __init__(self):
         super().__init__(token.type_keyword, token.identifier)
-        self.solution = 'Ensure identifier is on the same line as the *type* keyword.'
+        self.solution = "Ensure identifier is on the same line as the *type* keyword."

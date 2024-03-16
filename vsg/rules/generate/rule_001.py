@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -10,7 +9,7 @@ lTokens.append(token.if_generate_statement.generate_label)
 
 
 class rule_001(token_indent):
-    '''
+    """
     This rule checks the indent of the generate declaration.
 
     **Violation**
@@ -34,7 +33,7 @@ class rule_001(token_indent):
          ram_array : for i in 0 to 7 generate
 
          ram_array : for i in 0 to 7 generate
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

@@ -1,4 +1,3 @@
-
 from vsg.rules import multiline_structure as Rule
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokenPairs.append([token.simple_waveform_assignment.target, token.simple_wavefo
 
 
 class rule_009(Rule):
-    '''
+    """
     This rule checks the structure of multiline simple sequential signal assignments that contain arrays.
 
     |configuring_array_multiline_structure_rules_link|
@@ -29,7 +28,7 @@ class rule_009(Rule):
          65535,
          32768
        );
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokenPairs)

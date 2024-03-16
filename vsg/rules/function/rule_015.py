@@ -1,4 +1,3 @@
-
 from vsg.rules import align_tokens_in_region_between_tokens_unless_between_tokens
 
 from vsg import token
@@ -18,7 +17,7 @@ lUnless.append([token.procedure_specification.procedure_keyword, token.subprogra
 
 
 class rule_015(align_tokens_in_region_between_tokens_unless_between_tokens):
-    '''
+    """
     This rule checks the identifiers for all declarations are aligned in the function declarative part.
 
     |configuring_identifier_alignment_rules_link|
@@ -38,10 +37,12 @@ class rule_015(align_tokens_in_region_between_tokens_unless_between_tokens):
        variable var1     : natural;
        signal   sig1     : natural;
        constant c_period : time;
-    '''
+    """
 
     def __init__(self):
-        align_tokens_in_region_between_tokens_unless_between_tokens.__init__(self, lAlign, token.subprogram_body.is_keyword, token.subprogram_body.begin_keyword, lUnless)
-        self.solution = 'Align identifer.'
-        self.configuration_documentation_link = 'configuring_identifier_alignment_rules_link'
-        self.configuration.remove('separate_generic_port_alignment')
+        align_tokens_in_region_between_tokens_unless_between_tokens.__init__(
+            self, lAlign, token.subprogram_body.is_keyword, token.subprogram_body.begin_keyword, lUnless
+        )
+        self.solution = "Align identifer."
+        self.configuration_documentation_link = "configuring_identifier_alignment_rules_link"
+        self.configuration.remove("separate_generic_port_alignment")

@@ -7,29 +7,28 @@ from vsg import rule_list
 from vsg import severity
 from tests import utils
 
-sSourceDir = os.path.join(os.path.dirname(__file__),'..','..','code_examples','c16')
+sSourceDir = os.path.join(os.path.dirname(__file__), "..", "..", "code_examples", "c16")
 
 dIndentMap = utils.read_indent_file()
 
-lBaudGen, eBaudGenError = vhdlFile.utils.read_vhdlfile(os.path.join(sSourceDir, 'BaudGen.vhd'))
+lBaudGen, eBaudGenError = vhdlFile.utils.read_vhdlfile(os.path.join(sSourceDir, "BaudGen.vhd"))
 oBaudGen = vhdlFile.vhdlFile(lBaudGen)
 oBaudGen.set_indent_map(dIndentMap)
 
-lBoardCpu, eBoardCpuError = vhdlFile.utils.read_vhdlfile(os.path.join(sSourceDir, 'Board_cpu.vhd'))
+lBoardCpu, eBoardCpuError = vhdlFile.utils.read_vhdlfile(os.path.join(sSourceDir, "Board_cpu.vhd"))
 oBoardCpu = vhdlFile.vhdlFile(lBoardCpu)
 oBoardCpu.set_indent_map(dIndentMap)
 
-lDataCore, eDataCoreError = vhdlFile.utils.read_vhdlfile(os.path.join(sSourceDir, 'data_core.vhd'))
+lDataCore, eDataCoreError = vhdlFile.utils.read_vhdlfile(os.path.join(sSourceDir, "data_core.vhd"))
 oDataCore = vhdlFile.vhdlFile(lDataCore)
 oDataCore.set_indent_map(dIndentMap)
 
-oConfig = utils.read_configuration(os.path.join(os.path.dirname(__file__),'..','..','..','..','vsg','styles', 'jcl.yaml'))
+oConfig = utils.read_configuration(os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", "vsg", "styles", "jcl.yaml"))
 
 oSeverityList = severity.create_list({})
 
 
 class testCodeExample(unittest.TestCase):
-
     def setUp(self):
         self.assertIsNone(eBaudGenError)
         self.assertIsNone(eBoardCpuError)
@@ -40,9 +39,9 @@ class testCodeExample(unittest.TestCase):
         oRuleList.configure(oConfig)
         oRuleList.fix()
 
-        lExpected = ['']
+        lExpected = [""]
 
-        utils.read_file(os.path.join(os.path.dirname(__file__),'BaudGen.fixed.vhd'), lExpected)
+        utils.read_file(os.path.join(os.path.dirname(__file__), "BaudGen.fixed.vhd"), lExpected)
 
         self.assertEqual(lExpected, oBaudGen.get_lines())
 
@@ -51,9 +50,9 @@ class testCodeExample(unittest.TestCase):
         oRuleList.configure(oConfig)
         oRuleList.fix()
 
-        lExpected = ['']
+        lExpected = [""]
 
-        utils.read_file(os.path.join(os.path.dirname(__file__),'Board_cpu.fixed.vhd'), lExpected)
+        utils.read_file(os.path.join(os.path.dirname(__file__), "Board_cpu.fixed.vhd"), lExpected)
 
         self.assertEqual(lExpected, oBoardCpu.get_lines())
 
@@ -62,8 +61,8 @@ class testCodeExample(unittest.TestCase):
         oRuleList.configure(oConfig)
         oRuleList.fix()
 
-        lExpected = ['']
+        lExpected = [""]
 
-        utils.read_file(os.path.join(os.path.dirname(__file__),'data_core.fixed.vhd'), lExpected)
+        utils.read_file(os.path.join(os.path.dirname(__file__), "data_core.fixed.vhd"), lExpected)
 
         self.assertEqual(lExpected, oDataCore.get_lines())

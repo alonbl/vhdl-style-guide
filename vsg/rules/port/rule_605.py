@@ -1,4 +1,3 @@
-
 from vsg.rules import token_suffix as Rule
 
 from vsg.rules import utils
@@ -9,7 +8,7 @@ lTokens = []
 
 
 class rule_605(Rule):
-    '''
+    """
     This rule checks for valid suffixes on port identifiers for input ports.
 
     The default suffix is: *_i*.
@@ -34,11 +33,11 @@ class rule_605(Rule):
          wr_en_i    : in    std_logic;
          rd_en_i    : in    std_logic
        );
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)
-        self.suffixes = ['_i']
+        self.suffixes = ["_i"]
 
     def _get_tokens_of_interest(self, oFile):
         lReturn = []

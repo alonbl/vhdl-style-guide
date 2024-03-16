@@ -1,4 +1,3 @@
-
 from vsg.rules import multiline_structure as Rule
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokenPairs.append([token.constant_declaration.constant_keyword, token.constant_
 
 
 class rule_016(Rule):
-    '''
+    """
     This rule checks the structure of multiline constants that contain arrays.
 
     |configuring_array_multiline_structure_rules_link|
@@ -31,7 +30,7 @@ class rule_016(Rule):
          65535,
          32768
        );
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokenPairs)

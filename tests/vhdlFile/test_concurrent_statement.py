@@ -6,18 +6,15 @@ from vsg import vhdlFile
 from tests import utils
 
 
-sTestDir = os.path.join(os.path.dirname(__file__),   'concurrent_statement')
-lFile, eError =vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, 'classification_test_input.vhd'))
+sTestDir = os.path.join(os.path.dirname(__file__), "concurrent_statement")
+lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "classification_test_input.vhd"))
 oFile = vhdlFile.vhdlFile(lFile)
 
 
 class test_token(unittest.TestCase):
-
-
     def test_classification(self):
-
         lExpected = []
-        utils.read_file(os.path.join(sTestDir, 'classification_results.txt'), lExpected, False)
+        utils.read_file(os.path.join(sTestDir, "classification_results.txt"), lExpected, False)
 
         lActual = []
 
@@ -25,4 +22,3 @@ class test_token(unittest.TestCase):
             lActual.append(str(oObject))
 
         self.assertEqual(lExpected, lActual)
-

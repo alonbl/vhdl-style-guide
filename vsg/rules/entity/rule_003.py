@@ -1,11 +1,10 @@
-
 from vsg.rules import previous_line
 
 from vsg.token import entity_declaration as token
 
 
 class rule_003(previous_line):
-    '''
+    """
     This rule checks for blank lines or comments above the entity keyword.
 
     |configuring_previous_line_rules_link|
@@ -24,7 +23,7 @@ class rule_003(previous_line):
        library ieee;
 
        entity fifo is
-    '''
+    """
 
     def __init__(self):
         previous_line.__init__(self, [token.entity_keyword])

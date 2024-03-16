@@ -1,4 +1,3 @@
-
 from vsg import parser
 from vsg import token
 
@@ -26,7 +25,7 @@ lNames.append(token.simple_release_assignment.target)
 
 
 class rule_014(Rule):
-    '''
+    """
     This rule checks for consistent capitalization of signal names.
 
     **Violation**
@@ -78,7 +77,7 @@ class rule_014(Rule):
          end process proc_name;
 
        end architecture rtl;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens, lNames)

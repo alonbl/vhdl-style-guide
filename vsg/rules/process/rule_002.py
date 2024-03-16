@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules.whitespace_between_token_pairs import Rule
@@ -10,7 +9,7 @@ lTokens.append([token.process_statement.process_keyword, token.process_statement
 
 
 class rule_002(Rule):
-    '''
+    """
     This rule checks for a single space after the **process** keyword.
 
     |configuring_whitespace_rules_link|
@@ -30,6 +29,7 @@ class rule_002(Rule):
        proc_a : process (rd_en, wr_en, data_in, data_out,
 
        proc_a : process (rd_en, wr_en, data_in, data_out,
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokens)

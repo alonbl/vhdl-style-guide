@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules import token_suffix
@@ -9,7 +8,7 @@ lTokens.append(token.block_statement.end_block_label)
 
 
 class rule_600(token_suffix):
-    '''
+    """
     This rule checks for valid suffixes on block labels.
     The default suffix is *_blk*.
 
@@ -26,8 +25,8 @@ class rule_600(token_suffix):
     .. code-block:: vhdl
 
        block_label_blk : block is
-    '''
+    """
 
     def __init__(self):
         token_suffix.__init__(self, lTokens)
-        self.suffixes = ['_blk']
+        self.suffixes = ["_blk"]

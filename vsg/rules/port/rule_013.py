@@ -1,4 +1,3 @@
-
 from vsg.rules import insert_carriage_return_after_token_if_it_is_not_followed_by_a_comment_when_between_tokens as Rule
 
 from vsg import token
@@ -11,7 +10,7 @@ lTokenPairs.append([token.port_clause.open_parenthesis, token.port_clause.close_
 
 
 class rule_013(Rule):
-    '''
+    """
     This rule checks for multiple ports declared on a single line.
 
     **Violation**
@@ -33,8 +32,8 @@ class rule_013(Rule):
          OVERFLOW : out   std_logic;
          DATA     : inout std_logic
        );
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens, lTokenPairs)
-        self.solution = 'Move multiple ports to their own lines.'
+        self.solution = "Move multiple ports to their own lines."

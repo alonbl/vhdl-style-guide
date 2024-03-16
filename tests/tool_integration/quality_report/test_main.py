@@ -14,41 +14,38 @@ from vsg import __main__
 
 
 class testMain(unittest.TestCase):
-
     def setUp(self):
-        if os.path.isfile('deleteme.json'):
-            os.remove('deleteme.json')
+        if os.path.isfile("deleteme.json"):
+            os.remove("deleteme.json")
 
-        if os.path.isfile('actual.json'):
-            os.remove('actual.json')
+        if os.path.isfile("actual.json"):
+            os.remove("actual.json")
 
     def tearDown(self):
-        if os.path.isfile('deleteme.json'):
-            os.remove('deleteme.json')
+        if os.path.isfile("deleteme.json"):
+            os.remove("deleteme.json")
 
-        if os.path.isfile('actual.json'):
-            os.remove('actual.json')
+        if os.path.isfile("actual.json"):
+            os.remove("actual.json")
 
-
-    @mock.patch('sys.stdout')
+    @mock.patch("sys.stdout")
     def test_multiple_configuration_w_multiple_filelists(self, mock_stdout):
-
-        sExpected = 'ERROR: tests/tool_integration/quality_report/example.vhd(4)entity_015 -- Add *entity* keyword'
-        sExpected += '\n'
-        sExpected += 'ERROR: tests/tool_integration/quality_report/example.vhd(4)entity_019 -- Add entity simple name'
-        sExpected += '\n'
-        sExpected += 'ERROR: tests/tool_integration/quality_report/example.vhd(8)architecture_010 -- Add architecture keyword.'
-        sExpected += '\n'
-        sExpected += 'ERROR: tests/tool_integration/quality_report/example.vhd(8)architecture_024 -- Add architecture simple name'
+        sExpected = "ERROR: tests/tool_integration/quality_report/example.vhd(4)entity_015 -- Add *entity* keyword"
+        sExpected += "\n"
+        sExpected += "ERROR: tests/tool_integration/quality_report/example.vhd(4)entity_019 -- Add entity simple name"
+        sExpected += "\n"
+        sExpected += "ERROR: tests/tool_integration/quality_report/example.vhd(8)architecture_010 -- Add architecture keyword."
+        sExpected += "\n"
+        sExpected += "ERROR: tests/tool_integration/quality_report/example.vhd(8)architecture_024 -- Add architecture simple name"
         lExpected = []
         lExpected.append(mock.call(sExpected))
-        lExpected.append(mock.call('\n'))
+        lExpected.append(mock.call("\n"))
 
-        sys.argv = ['vsg']
-        sys.argv.extend(['--output_format', 'syntastic'])
-        sys.argv.extend(['-f', 'tests/tool_integration/quality_report/example.vhd'])
-        sys.argv.extend(['-p 1'])
-        sys.argv.extend(['--quality_report', 'actual.json'])
+        sys.argv = ["vsg"]
+        sys.argv.extend(["--output_format", "syntastic"])
+        sys.argv.extend(["-f", "tests/tool_integration/quality_report/example.vhd"])
+        sys.argv.extend(["-p 1"])
+        sys.argv.extend(["--quality_report", "actual.json"])
 
         try:
             __main__.main()
@@ -56,6 +53,5 @@ class testMain(unittest.TestCase):
             pass
 
         mock_stdout.write.assert_has_calls(lExpected)
-        self.assertTrue(os.path.isfile('actual.json'))
-        self.assertTrue(filecmp.cmp('actual.json', os.path.join('tests', 'tool_integration', 'quality_report', 'expected.json')))
-
+        self.assertTrue(os.path.isfile("actual.json"))
+        self.assertTrue(filecmp.cmp("actual.json", os.path.join("tests", "tool_integration", "quality_report", "expected.json")))

@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.context_reference.keyword)
 
 
 class rule_001(token_indent):
-    '''
+    """
     This rule checks the indent of the **context** keyword.
 
     **Violation**
@@ -24,7 +23,7 @@ class rule_001(token_indent):
 
        library ieee;
          context c1;
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

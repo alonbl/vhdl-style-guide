@@ -1,4 +1,3 @@
-
 from vsg.rules import split_line_at_token_when_between_tokens
 
 from vsg import token
@@ -11,7 +10,7 @@ oEnd = token.component_instantiation_statement.semicolon
 
 
 class rule_005(split_line_at_token_when_between_tokens):
-    '''
+    """
     This rule checks the **port map** keywords are on their own line.
 
     **Violation**
@@ -26,8 +25,8 @@ class rule_005(split_line_at_token_when_between_tokens):
 
        U_FIFO : FIFO
          port map (
-    '''
+    """
 
     def __init__(self):
         split_line_at_token_when_between_tokens.__init__(self, lTokens, oStart, oEnd)
-        self.solution = 'Place *port map* keywords on the next line by itself'
+        self.solution = "Place *port map* keywords on the next line by itself"

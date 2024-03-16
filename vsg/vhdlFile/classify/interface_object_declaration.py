@@ -1,4 +1,3 @@
-
 from vsg.vhdlFile.classify import interface_constant_declaration
 from vsg.vhdlFile.classify import interface_file_declaration
 from vsg.vhdlFile.classify import interface_signal_declaration
@@ -7,13 +6,13 @@ from vsg.vhdlFile.classify import interface_variable_declaration
 
 
 def detect(iCurrent, lObjects):
-    '''
+    """
     interface_object_declaration ::=
         interface_constant_declaration
       | interface_signal_declaration
       | interface_variable_declaration
       | interface_file_declaration
-    '''
+    """
 
     iReturn = interface_constant_declaration.detect(iCurrent, lObjects)
     if iReturn != iCurrent:

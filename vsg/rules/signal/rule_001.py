@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.signal_declaration.signal_keyword)
 
 
 class rule_001(token_indent):
-    '''
+    """
     This rule checks the indent of signal declarations.
 
     **Violation**
@@ -32,7 +31,7 @@ class rule_001(token_indent):
          signal rd_en : std_logic;
 
        begin
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

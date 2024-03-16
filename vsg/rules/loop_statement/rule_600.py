@@ -1,4 +1,3 @@
-
 from vsg.rules import token_prefix
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.loop_statement.loop_label)
 
 
 class rule_600(token_prefix):
-    '''
+    """
     This rule checks for valid prefixes on loop labels.
     The default prefix is *loop\_*.
 
@@ -25,9 +24,9 @@ class rule_600(token_prefix):
     .. code-block:: vhdl
 
        loop_label : for index in 4 to 23 loop
-    '''
+    """
 
     def __init__(self):
         token_prefix.__init__(self, lTokens)
-        self.prefixes = ['loop_']
-        self.solution = 'Loop labels'
+        self.prefixes = ["loop_"]
+        self.solution = "Loop labels"

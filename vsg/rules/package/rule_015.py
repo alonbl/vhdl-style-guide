@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.package_declaration.end_keyword)
 
 
 class rule_015(token_indent):
-    '''
+    """
     This rule checks the indent of the end package declaration.
 
     **Violation**
@@ -26,7 +25,7 @@ class rule_015(token_indent):
        package fifo_pkg is
 
        end package fifo_pkg;
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)

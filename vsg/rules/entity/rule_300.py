@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent as Rule
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.entity_declaration.begin_keyword)
 
 
 class rule_300(Rule):
-    '''
+    """
     This rule checks the indent of the **begin** keyword.
 
     **Violation**
@@ -26,7 +25,7 @@ class rule_300(Rule):
        entity FIFO is
 
        begin
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)

@@ -1,4 +1,3 @@
-
 from vsg.rules import multiline_alignment_between_tokens
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokenPairs.append([token.process_statement.open_parenthesis, token.process_stat
 
 
 class rule_020(multiline_alignment_between_tokens):
-    '''
+    """
     This rule checks the indentation of multiline sensitivity lists.
 
     |configuring_multiline_indent_rules_link|
@@ -31,7 +30,7 @@ class rule_020(multiline_alignment_between_tokens):
                          overflow, underflow
                         ) is
        begin
-    '''
+    """
 
     def __init__(self):
         multiline_alignment_between_tokens.__init__(self, lTokenPairs, True)

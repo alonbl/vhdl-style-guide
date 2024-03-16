@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules import token_case as Rule
@@ -8,7 +7,7 @@ lTokens.append(token.case_generate_statement.case_keyword)
 
 
 class rule_500(Rule):
-    '''
+    """
     This rule checks the *case* keyword has proper case.
 
     |configuring_uppercase_and_lowercase_rules_link|
@@ -24,8 +23,8 @@ class rule_500(Rule):
     .. code-block:: vhdl
 
        case expression generate
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens)
-        self.groups.append('case::keyword')
+        self.groups.append("case::keyword")

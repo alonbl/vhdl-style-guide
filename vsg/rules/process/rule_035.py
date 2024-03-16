@@ -1,4 +1,3 @@
-
 from vsg.rules import align_tokens_in_region_between_tokens_skipping_lines_starting_with_tokens
 
 from vsg import parser
@@ -15,7 +14,7 @@ lSkip.append(parser.comment)
 
 
 class rule_035(align_tokens_in_region_between_tokens_skipping_lines_starting_with_tokens):
-    '''
+    """
     This rule checks the alignment of inline comments between the process begin and end process lines.
     |configuring_keyword_alignment_rules_link|
 
@@ -44,13 +43,13 @@ class rule_035(align_tokens_in_region_between_tokens_skipping_lines_starting_wit
          c <= '1'; -- Enable
 
        end process proc_1;
-    '''
+    """
 
     def __init__(self):
         align_tokens_in_region_between_tokens_skipping_lines_starting_with_tokens.__init__(self, lAlign, oStart, oEnd, lSkip)
-        self.solution = 'Align comment.'
+        self.solution = "Align comment."
         self.subphase = 3
-        self.blank_line_ends_group = 'no'
-        self.comment_line_ends_group = 'no'
-        self.compact_alignment = 'no'
-        self.include_lines_without_comments = 'yes'
+        self.blank_line_ends_group = "no"
+        self.comment_line_ends_group = "no"
+        self.compact_alignment = "no"
+        self.include_lines_without_comments = "yes"

@@ -1,4 +1,3 @@
-
 from vsg.rules import token_indent
 
 from vsg import token
@@ -8,7 +7,7 @@ lTokens.append(token.enumeration_type_definition.enumeration_literal)
 
 
 class rule_005(token_indent):
-    '''
+    """
     This rule checks the indent of multiline enumerated types.
 
     **Violation**
@@ -30,8 +29,8 @@ class rule_005(token_indent):
          write,
          read,
          done);
-    '''
+    """
 
     def __init__(self):
         token_indent.__init__(self, lTokens)
-        self.solution = 'Ensure proper indentation.'
+        self.solution = "Ensure proper indentation."

@@ -1,4 +1,3 @@
-
 from vsg import parser
 
 from vsg.vhdlFile import utils
@@ -7,20 +6,20 @@ from vsg.token import direction
 
 
 def classify(iToken, lObjects):
-    '''
+    """
     expression ::=
         condition_operator primary
       | logical_expression
-    '''
+    """
     return utils.assign_token(lObjects, iToken, parser.todo)
 
 
 def classify_until(lUntils, iToken, lObjects, oType=parser.todo):
-    '''
+    """
     expression ::=
         condition_operator primary
       | logical_expression
-    '''
+    """
     iCurrent = iToken
     iStop = len(lObjects) - 1
     iOpenParenthesis = 0
@@ -32,9 +31,9 @@ def classify_until(lUntils, iToken, lObjects, oType=parser.todo):
         iPrevious = iCurrent
         iCurrent = utils.find_next_token(iCurrent, lObjects)
         if utils.token_is_open_parenthesis(iCurrent, lObjects):
-           iOpenParenthesis += 1
+            iOpenParenthesis += 1
         if utils.token_is_close_parenthesis(iCurrent, lObjects):
-           iCloseParenthesis += 1
+            iCloseParenthesis += 1
 
         if iOpenParenthesis < iCloseParenthesis:
             break

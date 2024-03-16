@@ -1,5 +1,3 @@
-
-
 from vsg import parser
 from vsg import violation
 
@@ -8,7 +6,7 @@ from vsg.rules import utils as rules_utils
 
 
 class split_line_at_token_when_between_tokens(structure.Rule):
-    '''
+    """
     Checks the case for words.
 
     Parameters
@@ -28,7 +26,7 @@ class split_line_at_token_when_between_tokens(structure.Rule):
 
     oEnd : token type
        The end of the range
-    '''
+    """
 
     def __init__(self, lTokens, oStart, oEnd):
         structure.Rule.__init__(self)

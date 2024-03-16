@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules.whitespace_between_token_pairs import Rule
@@ -10,7 +9,7 @@ lTokens.append([token.if_generate_statement.end_generate_keyword, token.if_gener
 
 
 class rule_013(Rule):
-    '''
+    """
     This rule checks for a single space after the **generate** keyword and the label in the **end generate** keywords.
 
     |configuring_whitespace_rules_link|
@@ -26,6 +25,7 @@ class rule_013(Rule):
     .. code-block:: vhdl
 
        end generate ram_array;
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokens)

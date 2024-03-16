@@ -1,4 +1,3 @@
-
 import os
 import unittest
 
@@ -8,11 +7,10 @@ from tests import utils
 
 sTestDir = os.path.dirname(__file__)
 
-lFile, eError =vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir,'rule_002_test_input.vhd'))
+lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "rule_002_test_input.vhd"))
 
 
 class test_length_rule(unittest.TestCase):
-
     def setUp(self):
         self.oFile = vhdlFile.vhdlFile(lFile)
         self.assertIsNone(eError)
@@ -20,8 +18,8 @@ class test_length_rule(unittest.TestCase):
     def test_rule_002_default(self):
         oRule = length.rule_002()
         self.assertTrue(oRule)
-        self.assertEqual(oRule.name, 'length')
-        self.assertEqual(oRule.identifier, '002')
+        self.assertEqual(oRule.name, "length")
+        self.assertEqual(oRule.identifier, "002")
 
         lExpected = []
 
@@ -36,4 +34,3 @@ class test_length_rule(unittest.TestCase):
 
         oRule.analyze(self.oFile)
         self.assertEqual(lExpected, utils.extract_violation_lines_from_violation_object(oRule.violations))
-

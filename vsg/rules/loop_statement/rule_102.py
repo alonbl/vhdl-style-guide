@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules.whitespace_before_token import Rule
@@ -8,7 +7,7 @@ lTokens.append(token.loop_statement.loop_keyword)
 
 
 class rule_102(Rule):
-    '''
+    """
     This rule checks for a single space before the **loop** keyword.
 
     |configuring_whitespace_rules_link|
@@ -26,6 +25,7 @@ class rule_102(Rule):
 
       for x in (0 to 30) loop
       for x in (0 to 30) loop
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokens)

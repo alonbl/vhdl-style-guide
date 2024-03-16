@@ -1,4 +1,3 @@
-
 from vsg.rules import insert_carriage_return_after_token_if_it_is_not_followed_by_a_comment
 
 from vsg.token import loop_statement as token
@@ -8,7 +7,7 @@ lTokens.append(token.loop_keyword)
 
 
 class rule_001(insert_carriage_return_after_token_if_it_is_not_followed_by_a_comment):
-    '''
+    """
     This rule checks for code after the **loop** keyword.
 
     **Violation**
@@ -23,8 +22,8 @@ class rule_001(insert_carriage_return_after_token_if_it_is_not_followed_by_a_com
 
        loop
          a <= b;
-    '''
+    """
 
     def __init__(self):
         insert_carriage_return_after_token_if_it_is_not_followed_by_a_comment.__init__(self, lTokens)
-        self.solution = 'Move code after **loop** to the next line.'
+        self.solution = "Move code after **loop** to the next line."

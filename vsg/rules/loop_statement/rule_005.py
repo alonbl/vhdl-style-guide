@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules import remove_carriage_return_after_token as Rule
@@ -8,7 +7,7 @@ lTokens.append(token.loop_statement.label_colon)
 
 
 class rule_005(Rule):
-    '''
+    """
     This rule checks the loop label and the **while**, **for** or **loop** keywords are on the same line.
 
     **Violation**
@@ -33,8 +32,8 @@ class rule_005(Rule):
        LOOP_LABEL: while condition loop
 
        LOOP_LABEL: for x in range(15 downto 0) loop
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens, bInsertSpace=True)
-        self.solution = 'Merge line below with label.'
+        self.solution = "Merge line below with label."

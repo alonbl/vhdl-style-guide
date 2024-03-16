@@ -1,4 +1,3 @@
-
 from vsg import token
 
 from vsg.rules.whitespace_between_token_pairs import Rule
@@ -9,7 +8,7 @@ lTokens.append([token.package_declaration.identifier, token.package_declaration.
 
 
 class rule_002(Rule):
-    '''
+    """
     This rule checks for a single space between **package** and **is** keywords.
 
     |configuring_whitespace_rules_link|
@@ -25,6 +24,7 @@ class rule_002(Rule):
     .. code-block:: vhdl
 
        package FIFO_PKG is
-    '''
+    """
+
     def __init__(self):
         super().__init__(lTokens)

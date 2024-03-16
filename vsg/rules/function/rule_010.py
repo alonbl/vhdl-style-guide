@@ -1,4 +1,3 @@
-
 from vsg import parser
 from vsg import token
 
@@ -13,7 +12,7 @@ lNames.append(parser.todo)
 
 
 class rule_010(Rule):
-    '''
+    """
     This rule checks for consistent capitalization of function names.
 
     **Violation**
@@ -57,7 +56,7 @@ class rule_010(Rule):
          end process;
 
        end architecture rtl;
-    '''
+    """
 
     def __init__(self):
         super().__init__(lTokens, lNames)

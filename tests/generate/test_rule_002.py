@@ -1,4 +1,3 @@
-
 import os
 import unittest
 
@@ -8,19 +7,18 @@ from tests import utils
 
 sTestDir = os.path.dirname(__file__)
 
-lFile, eError =vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir,'rule_002_test_input.vhd'))
+lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "rule_002_test_input.vhd"))
 
 lExpected = []
-lExpected.append('')
-utils.read_file(os.path.join(sTestDir, 'rule_002_test_input.fixed.vhd'), lExpected)
+lExpected.append("")
+utils.read_file(os.path.join(sTestDir, "rule_002_test_input.fixed.vhd"), lExpected)
 
 lExpected_w_0_spaces = []
-lExpected_w_0_spaces.append('')
-utils.read_file(os.path.join(sTestDir, 'rule_002_test_input.fixed_w_0_spaces.vhd'), lExpected_w_0_spaces)
+lExpected_w_0_spaces.append("")
+utils.read_file(os.path.join(sTestDir, "rule_002_test_input.fixed_w_0_spaces.vhd"), lExpected_w_0_spaces)
 
 
 class test_generate_rule(unittest.TestCase):
-
     def setUp(self):
         self.oFile = vhdlFile.vhdlFile(lFile)
         self.assertIsNone(eError)
@@ -28,8 +26,8 @@ class test_generate_rule(unittest.TestCase):
     def test_rule_002(self):
         oRule = generate.rule_002()
         self.assertTrue(oRule)
-        self.assertEqual(oRule.name, 'generate')
-        self.assertEqual(oRule.identifier, '002')
+        self.assertEqual(oRule.name, "generate")
+        self.assertEqual(oRule.identifier, "002")
 
         lExpected = [20, 24, 28]
 
@@ -69,4 +67,3 @@ class test_generate_rule(unittest.TestCase):
 
         oRule.analyze(self.oFile)
         self.assertEqual(oRule.violations, [])
-
