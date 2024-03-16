@@ -133,7 +133,9 @@ class rule_002(alignment.Rule):
                     iToken = -1
                     if self.comment_line_ends_group:
                         if utils.are_next_consecutive_token_types(
-                            [parser.whitespace, parser.comment], iIndex + 1, lTokens
+                            [parser.whitespace, parser.comment],
+                            iIndex + 1,
+                            lTokens,
                         ) or utils.are_next_consecutive_token_types([parser.comment], iIndex + 1, lTokens):
                             add_adjustments_to_dAnalysis(dAnalysis, self.compact_alignment)
                             for iKey in list(dAnalysis.keys()):
@@ -208,11 +210,15 @@ def detect_clock_definition(iToken, oToken, lTokens):
             return False
         if (
             utils.are_next_consecutive_token_types_ignoring_whitespace(
-                [parser.open_parenthesis, token.ieee.std_logic_1164.function.rising_edge], iToken + 1, lTokens
+                [parser.open_parenthesis, token.ieee.std_logic_1164.function.rising_edge],
+                iToken + 1,
+                lTokens,
             )
             or utils.are_next_consecutive_token_types_ignoring_whitespace([token.ieee.std_logic_1164.function.rising_edge], iToken + 1, lTokens)
             or utils.are_next_consecutive_token_types_ignoring_whitespace(
-                [parser.open_parenthesis, token.ieee.std_logic_1164.function.falling_edge], iToken + 1, lTokens
+                [parser.open_parenthesis, token.ieee.std_logic_1164.function.falling_edge],
+                iToken + 1,
+                lTokens,
             )
             or utils.are_next_consecutive_token_types_ignoring_whitespace([token.ieee.std_logic_1164.function.falling_edge], iToken + 1, lTokens)
             or utils.are_next_consecutive_token_types_ignoring_whitespace(

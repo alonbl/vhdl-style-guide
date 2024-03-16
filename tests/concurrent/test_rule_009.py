@@ -42,7 +42,8 @@ utils.read_file(
 lExpected_align_left_no_align_paren_no_align_when_yes = []
 lExpected_align_left_no_align_paren_no_align_when_yes.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_009_test_input.fixed_align_left_no_align_paren_no_align_when_yes.vhd"), lExpected_align_left_no_align_paren_no_align_when_yes
+    os.path.join(sTestDir, "rule_009_test_input.fixed_align_left_no_align_paren_no_align_when_yes.vhd"),
+    lExpected_align_left_no_align_paren_no_align_when_yes,
 )
 
 # 00101
@@ -102,7 +103,8 @@ utils.read_file(
 lExpected_align_left_no_align_paren_yes_align_when_yes = []
 lExpected_align_left_no_align_paren_yes_align_when_yes.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_009_test_input.fixed_align_left_no_align_paren_yes_align_when_yes.vhd"), lExpected_align_left_no_align_paren_yes_align_when_yes
+    os.path.join(sTestDir, "rule_009_test_input.fixed_align_left_no_align_paren_yes_align_when_yes.vhd"),
+    lExpected_align_left_no_align_paren_yes_align_when_yes,
 )
 
 # 01101
@@ -162,7 +164,8 @@ utils.read_file(
 lExpected_align_left_yes_align_paren_no_align_when_yes = []
 lExpected_align_left_yes_align_paren_no_align_when_yes.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_009_test_input.fixed_align_left_yes_align_paren_no_align_when_yes.vhd"), lExpected_align_left_yes_align_paren_no_align_when_yes
+    os.path.join(sTestDir, "rule_009_test_input.fixed_align_left_yes_align_paren_no_align_when_yes.vhd"),
+    lExpected_align_left_yes_align_paren_no_align_when_yes,
 )
 
 # 10101

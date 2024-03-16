@@ -61,7 +61,10 @@ def parse_command_line_arguments():
     parser.add_argument("-ap", "--all_phases", default=False, action="store_true", help="Do not stop when a violation is detected.")
     parser.add_argument("--fix_only", action="store", help="Restrict fixing via JSON file.")
     parser.add_argument(
-        "--stdin", action="store_true", default=False, help="Read VHDL input from stdin, disables all other file selections, disables multiprocessing"
+        "--stdin",
+        action="store_true",
+        default=False,
+        help="Read VHDL input from stdin, disables all other file selections, disables multiprocessing",
     )
     parser.add_argument("--force_fix", action="store_true", default=False, help="ALPHA: Apply fixes if syntax errors are detected.")
 

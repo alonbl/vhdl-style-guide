@@ -28,7 +28,8 @@ utils.read_file(os.path.join(sTestDir, "rule_013_test_input.fixed_last_close_par
 lExpected_interface_list_semicolon__remove_new_line = []
 lExpected_interface_list_semicolon__remove_new_line.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_013_test_input.fixed_interface_list_semicolon__remove_new_line.vhd"), lExpected_interface_list_semicolon__remove_new_line
+    os.path.join(sTestDir, "rule_013_test_input.fixed_interface_list_semicolon__remove_new_line.vhd"),
+    lExpected_interface_list_semicolon__remove_new_line,
 )
 
 lExpected_interface_element__add_new_line = []

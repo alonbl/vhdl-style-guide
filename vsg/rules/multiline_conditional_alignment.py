@@ -99,26 +99,67 @@ class multiline_conditional_alignment(alignment.Rule):
             iFirstIndent = _find_first_indent(self.align_left, dActualIndent, self.indent_size, iAssignColumn)
 
             dExpectedIndent, lStructure = _apply_align_left_option(
-                self.align_left, lStructure, dActualIndent, bStartsWithParen, self.indent_size, iAssignColumn, iFirstIndent
+                self.align_left,
+                lStructure,
+                dActualIndent,
+                bStartsWithParen,
+                self.indent_size,
+                iAssignColumn,
+                iFirstIndent,
             )
             dExpectedIndent, lStructure = _apply_align_paren_option(
-                self.align_paren, lStructure, dExpectedIndent, bStartsWithParen, self.indent_size, iAssignColumn, iFirstIndent
+                self.align_paren,
+                lStructure,
+                dExpectedIndent,
+                bStartsWithParen,
+                self.indent_size,
+                iAssignColumn,
+                iFirstIndent,
             )
             dExpectedIndent, lStructure = _apply_align_when_keywords_option(
-                self.align_when_keywords, lStructure, dExpectedIndent, bStartsWithParen, self.indent_size, iAssignColumn, iFirstIndent
+                self.align_when_keywords,
+                lStructure,
+                dExpectedIndent,
+                bStartsWithParen,
+                self.indent_size,
+                iAssignColumn,
+                iFirstIndent,
             )
             dExpectedIndent, lStructure = _apply_align_paren_option(
-                self.align_paren, lStructure, dExpectedIndent, bStartsWithParen, self.indent_size, iAssignColumn, iFirstIndent
+                self.align_paren,
+                lStructure,
+                dExpectedIndent,
+                bStartsWithParen,
+                self.indent_size,
+                iAssignColumn,
+                iFirstIndent,
             )
             dExpectedIndent, lStructure = _apply_wrap_at_when_option(
-                self.wrap_at_when, lStructure, dExpectedIndent, bStartsWithParen, self.indent_size, iAssignColumn, iFirstIndent
+                self.wrap_at_when,
+                lStructure,
+                dExpectedIndent,
+                bStartsWithParen,
+                self.indent_size,
+                iAssignColumn,
+                iFirstIndent,
             )
             if self.wrap_at_when == "yes" and self.align_paren == "yes":
                 dExpectedIndent, lStructure = _apply_align_paren_after_when(
-                    lStructure, dExpectedIndent, bStartsWithParen, self.indent_size, iAssignColumn, iFirstIndent
+                    lStructure,
+                    dExpectedIndent,
+                    bStartsWithParen,
+                    self.indent_size,
+                    iAssignColumn,
+                    iFirstIndent,
                 )
             dExpectedIndent, lStructure = _apply_align_else_keywords_option(
-                self.align_else_keywords, lStructure, dExpectedIndent, bStartsWithParen, self.indent_size, iAssignColumn, iFirstIndent
+                self.align_else_keywords,
+                lStructure,
+                dExpectedIndent,
+                bStartsWithParen,
+                self.indent_size,
+                iAssignColumn,
+                iFirstIndent,
             )
 
             #            print(f'lStructure = {lStructure}')

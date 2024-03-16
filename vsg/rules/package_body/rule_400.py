@@ -37,7 +37,11 @@ class rule_400(align_tokens_in_region_between_tokens_unless_between_tokens):
 
     def __init__(self):
         align_tokens_in_region_between_tokens_unless_between_tokens.__init__(
-            self, lAlign, token.package_body.is_keyword, token.package_body.end_keyword, lUnless
+            self,
+            lAlign,
+            token.package_body.is_keyword,
+            token.package_body.end_keyword,
+            lUnless,
         )
         self.solution = "Align identifer."
         self.configuration_documentation_link = "configuring_identifier_alignment_rules_link"

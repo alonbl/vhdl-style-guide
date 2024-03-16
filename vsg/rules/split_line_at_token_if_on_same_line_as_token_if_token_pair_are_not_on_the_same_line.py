@@ -50,7 +50,9 @@ class split_line_at_token_if_on_same_line_as_token_if_token_pair_are_not_on_the_
                     iLine += 1
                 if isinstance(oToken, self.oSameLineToken):
                     if utils.are_next_consecutive_token_types([parser.whitespace, self.oToken], iToken + 1, lTokens) or utils.are_next_consecutive_token_types(
-                        [self.oToken], iToken + 1, lTokens
+                        [self.oToken],
+                        iToken + 1,
+                        lTokens,
                     ):
                         sSolution = self.solution
                         oViolation = violation.New(iLine, oToi, sSolution)

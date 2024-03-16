@@ -115,7 +115,7 @@ class testJunitClasses(unittest.TestCase):
 
         dExpected = []
         dExpected.append(
-            '<testsuite errors="0" hostname="' + sHostname + '" failures="9" timestamp="' + oTestsuite.timestamp + '" tests="3" time="TS_Time" name="TS_Name">'
+            '<testsuite errors="0" hostname="' + sHostname + '" failures="9" timestamp="' + oTestsuite.timestamp + '" tests="3" time="TS_Time" name="TS_Name">',
         )
         dExpected.append("  <properties>")
         dExpected.append("  </properties>")
@@ -215,7 +215,7 @@ class testJunitClasses(unittest.TestCase):
             + sHostname
             + '" failures="9" timestamp="'
             + oTestsuite.timestamp
-            + '" tests="3" time="TS_Time0" name="TS_Name0">'
+            + '" tests="3" time="TS_Time0" name="TS_Name0">',
         )
         dExpected.append("  <properties>")
         dExpected.append("  </properties>")
@@ -280,7 +280,7 @@ class testJunitClasses(unittest.TestCase):
             + sHostname
             + '" failures="9" timestamp="'
             + oTestsuite.timestamp
-            + '" tests="3" time="TS_Time1" name="TS_Name1">'
+            + '" tests="3" time="TS_Time1" name="TS_Name1">',
         )
         dExpected.append("  <properties>")
         dExpected.append("  </properties>")
@@ -361,7 +361,7 @@ class testJunitClasses(unittest.TestCase):
             + sHostname
             + '" failures="0" timestamp="'
             + oTestsuite.timestamp
-            + '" tests="3" time="TS_Time0" name="TS_Name0">'
+            + '" tests="3" time="TS_Time0" name="TS_Name0">',
         )
         dExpected.append("  <properties>")
         dExpected.append("  </properties>")
@@ -381,7 +381,7 @@ class testJunitClasses(unittest.TestCase):
             + sHostname
             + '" failures="0" timestamp="'
             + oTestsuite.timestamp
-            + '" tests="3" time="TS_Time1" name="TS_Name1">'
+            + '" tests="3" time="TS_Time1" name="TS_Name1">',
         )
         dExpected.append("  <properties>")
         dExpected.append("  </properties>")
@@ -405,5 +405,6 @@ class testJunitClasses(unittest.TestCase):
         self.assertEqual("&apos;", junit.escape_xml_characters("'"))
         self.assertEqual("&amp;", junit.escape_xml_characters("&"))
         self.assertEqual(
-            "&amp;&lt;&gt;&amp;&gt;&lt;&apos;&quot;&amp;&quot;&apos;&gt;&quot;&gt;&lt;&amp;&apos;&quot;", junit.escape_xml_characters('&<>&><\'"&"\'>"><&\'"')
+            "&amp;&lt;&gt;&amp;&gt;&lt;&apos;&quot;&amp;&quot;&apos;&gt;&quot;&gt;&lt;&amp;&apos;&quot;",
+            junit.escape_xml_characters('&<>&><\'"&"\'>"><&\'"'),
         )

@@ -90,7 +90,9 @@ class rule_008(alignment.Rule):
                 if bStartFound:
                     if isinstance(oToken, parser.carriage_return):
                         if utils.are_next_consecutive_token_types(
-                            [parser.whitespace, parser.comment], iIndex + 1, lTokens
+                            [parser.whitespace, parser.comment],
+                            iIndex + 1,
+                            lTokens,
                         ) or utils.are_next_consecutive_token_types([parser.comment], iIndex + 1, lTokens):
                             add_adjustments_to_dAnalysis(dAnalysis, self.compact_alignment)
                             for iKey in list(dAnalysis.keys()):

@@ -24,7 +24,10 @@ class rule_010(insert_token_right_of_token_if_it_does_not_exist_before_token):
 
     def __init__(self):
         insert_token_right_of_token_if_it_does_not_exist_before_token.__init__(
-            self, token.end_architecture_keyword("architecture"), token.end_keyword, token.semicolon
+            self,
+            token.end_architecture_keyword("architecture"),
+            token.end_keyword,
+            token.semicolon,
         )
         self.solution = "architecture keyword."
         self.groups.append("structure::optional")

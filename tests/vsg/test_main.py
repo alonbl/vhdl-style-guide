@@ -137,7 +137,7 @@ class testMain(unittest.TestCase):
         lExpected.append(mock.call("ERROR: Invalid configuration file: tests/vsg/config_error.json"))
         lExpected.append(mock.call("\n"))
         lExpected.append(
-            mock.call("while parsing a flow node\nexpected the node content, but found ','\n  in \"tests/vsg/config_error.json\", line 2, column 16")
+            mock.call("while parsing a flow node\nexpected the node content, but found ','\n  in \"tests/vsg/config_error.json\", line 2, column 16"),
         )
         lExpected.append(mock.call("\n"))
 
@@ -265,8 +265,8 @@ class testMain(unittest.TestCase):
         lExpected = []
         lExpected.append(
             mock.call(
-                "ERROR: encountered FileNotFoundError, No such file or directory tests/vsg/invalid_local_rule_directory when trying to open local rules file."
-            )
+                "ERROR: encountered FileNotFoundError, No such file or directory tests/vsg/invalid_local_rule_directory when trying to open local rules file.",
+            ),
         )
         lExpected.append(mock.call("\n"))
 

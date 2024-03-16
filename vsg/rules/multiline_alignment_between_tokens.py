@@ -123,7 +123,14 @@ class multiline_alignment_between_tokens(alignment.Rule):
 
             if not align_paren(self) and align_left(self):
                 dExpectedIndent = _analyze_align_left_yes_align_paren_no(
-                    iFirstLine, iLastLine, lParens, self.indent_size, dActualIndent, bStartsWithParen, self.bIgnoreStartParen, self.override
+                    iFirstLine,
+                    iLastLine,
+                    lParens,
+                    self.indent_size,
+                    dActualIndent,
+                    bStartsWithParen,
+                    self.bIgnoreStartParen,
+                    self.override,
                 )
             elif align_paren(self) and not align_left(self):
                 dExpectedIndent = _analyze_align_left_no_align_paren_yes(
@@ -140,11 +147,26 @@ class multiline_alignment_between_tokens(alignment.Rule):
                 )
             elif align_paren(self) and align_left(self):
                 dExpectedIndent = _analyze_align_paren_yes_align_left_yes(
-                    iFirstLine, iLastLine, lParens, dActualIndent, self.indent_size, bStartsWithParen, iAssignColumn, self.bIgnoreStartParen, self.bConstraint
+                    iFirstLine,
+                    iLastLine,
+                    lParens,
+                    dActualIndent,
+                    self.indent_size,
+                    bStartsWithParen,
+                    iAssignColumn,
+                    self.bIgnoreStartParen,
+                    self.bConstraint,
                 )
             elif not align_paren(self) and not align_left(self):
                 dExpectedIndent = _analyze_align_paren_no_align_left_no(
-                    iFirstLine, iLastLine, lParens, dActualIndent, self.indent_size, bStartsWithParen, iAssignColumn, self.bIgnoreStartParen
+                    iFirstLine,
+                    iLastLine,
+                    lParens,
+                    dActualIndent,
+                    self.indent_size,
+                    bStartsWithParen,
+                    iAssignColumn,
+                    self.bIgnoreStartParen,
                 )
 
             #            print(f'Actual = {dActualIndent}')
@@ -304,7 +326,16 @@ def _analyze_align_left_yes_align_paren_no(iFirstLine, iLastLine, lParens, iInde
 
 
 def _analyze_align_left_no_align_paren_yes(
-    iFirstLine, iLastLine, lParens, dActualIndent, iIndentStep, bStartsWithParen, iAssignColumn, iFirstTokenLength, bIgnoreStartParen, iIndentAfterParen
+    iFirstLine,
+    iLastLine,
+    lParens,
+    dActualIndent,
+    iIndentStep,
+    bStartsWithParen,
+    iAssignColumn,
+    iFirstTokenLength,
+    bIgnoreStartParen,
+    iIndentAfterParen,
 ):
     #    print('--> _analyze_align_left_no_align_paren_yes <-' + '-'*70)
     dExpectedIndent = {}
@@ -383,7 +414,15 @@ def convert_numbers_to_spaces(dExpectedIndent):
 
 
 def _analyze_align_paren_yes_align_left_yes(
-    iFirstLine, iLastLine, lParens, dActualIndent, iIndentStep, bStartsWithParen, iAssignColumn, bIgnoreStartParen, bConstraint
+    iFirstLine,
+    iLastLine,
+    lParens,
+    dActualIndent,
+    iIndentStep,
+    bStartsWithParen,
+    iAssignColumn,
+    bIgnoreStartParen,
+    bConstraint,
 ):
     #    print('--> _analyze_align_paren_yes_align_left_yes <-' + '-'*70)
     dExpectedIndent = {}

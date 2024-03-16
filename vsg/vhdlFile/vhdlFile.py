@@ -221,7 +221,13 @@ class vhdlFile:
         return extract.get_tokens_matching_in_range_bounded_by_tokens(lTokens, oStart, oEnd, self.lAllObjects, self.oTokenMap)
 
     def get_tokens_bounded_by(
-        self, oLeft, oRight, include_trailing_whitespace=False, bExcludeLastToken=False, bIncludeTillEndOfLine=False, bIncludeTillBeginningOfLine=False
+        self,
+        oLeft,
+        oRight,
+        include_trailing_whitespace=False,
+        bExcludeLastToken=False,
+        bIncludeTillEndOfLine=False,
+        bIncludeTillBeginningOfLine=False,
     ):
         return extract.get_tokens_bounded_by(
             oLeft,
@@ -236,7 +242,13 @@ class vhdlFile:
 
     def get_tokens_bounded_by_token_when_between_tokens(self, oLeft, oRight, oStart, oEnd, include_trailing_whitespace=False):
         return extract.get_tokens_bounded_by_token_when_between_tokens(
-            oLeft, oRight, oStart, oEnd, self.lAllObjects, self.oTokenMap, include_trailing_whitespace
+            oLeft,
+            oRight,
+            oStart,
+            oEnd,
+            self.lAllObjects,
+            self.oTokenMap,
+            include_trailing_whitespace,
         )
 
     def get_tokens_bounded_by_tokens_if_token_is_between_them(self, oLeft, oRight, oToken):
@@ -289,7 +301,11 @@ class vhdlFile:
 
     def get_tokens_between_tokens_inclusive_while_storing_value_from_token(self, left_token, right_token, value_token):
         return extract.get_tokens_between_tokens_inclusive_while_storing_value_from_token(
-            left_token, right_token, value_token, self.lAllObjects, self.oTokenMap
+            left_token,
+            right_token,
+            value_token,
+            self.lAllObjects,
+            self.oTokenMap,
         )
 
     def get_tokens_between_non_whitespace_token_and_token(self, right_token):
@@ -303,7 +319,10 @@ class vhdlFile:
 
     def get_consecutive_lines_starting_with_token_and_stopping_when_token_starting_line_is_found(self, search_token, stop_token):
         return extract.get_consecutive_lines_starting_with_token_and_stopping_when_token_starting_line_is_found(
-            search_token, stop_token, self.lAllObjects, self.oTokenMap
+            search_token,
+            stop_token,
+            self.lAllObjects,
+            self.oTokenMap,
         )
 
     def get_tokens_where_line_starts_with_token_until_ending_token_is_found(self, start_token, stop_token):
@@ -317,7 +336,13 @@ class vhdlFile:
 
     def get_token_and_n_tokens_before_it_in_between_tokens_unless_token_is_found(self, lTokens, iTokens, oStart, oEnd, oStop):
         return extract.get_token_and_n_tokens_before_it_in_between_tokens_unless_token_is_found(
-            lTokens, iTokens, oStart, oEnd, oStop, self.lAllObjects, self.oTokenMap
+            lTokens,
+            iTokens,
+            oStart,
+            oEnd,
+            oStop,
+            self.lAllObjects,
+            self.oTokenMap,
         )
 
     def get_token_and_n_tokens_after_it(self, lTokens, iTokens):
@@ -351,10 +376,21 @@ class vhdlFile:
         return extract.get_lines_with_length_that_exceed_column(iColumn, self.lAllObjects, self.oTokenMap)
 
     def get_tokens_starting_with_token_and_ending_with_one_of_possible_tokens(
-        self, lStartTokens, lEndTokens, bIncludeStartToken=False, bIncludeEndToken=True, bEarliestDetect=False
+        self,
+        lStartTokens,
+        lEndTokens,
+        bIncludeStartToken=False,
+        bIncludeEndToken=True,
+        bEarliestDetect=False,
     ):
         return extract.get_tokens_starting_with_token_and_ending_with_one_of_possible_tokens(
-            lStartTokens, lEndTokens, self.lAllObjects, self.oTokenMap, bIncludeStartToken, bIncludeEndToken, bEarliestDetect
+            lStartTokens,
+            lEndTokens,
+            self.lAllObjects,
+            self.oTokenMap,
+            bIncludeStartToken,
+            bIncludeEndToken,
+            bEarliestDetect,
         )
 
     def get_tokens_between_indexes(self, iStartIndex, iEndIndex):

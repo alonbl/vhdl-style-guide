@@ -128,11 +128,15 @@ def detect_clock_definition(iToken, oToken, lTokens):
             return False
         if (
             utils.are_next_consecutive_token_types_ignoring_whitespace(
-                [parser.open_parenthesis, token.ieee.std_logic_1164.function.rising_edge], iToken + 1, lTokens
+                [parser.open_parenthesis, token.ieee.std_logic_1164.function.rising_edge],
+                iToken + 1,
+                lTokens,
             )
             or utils.are_next_consecutive_token_types_ignoring_whitespace([token.ieee.std_logic_1164.function.rising_edge], iToken + 1, lTokens)
             or utils.are_next_consecutive_token_types_ignoring_whitespace(
-                [parser.open_parenthesis, token.ieee.std_logic_1164.function.falling_edge], iToken + 1, lTokens
+                [parser.open_parenthesis, token.ieee.std_logic_1164.function.falling_edge],
+                iToken + 1,
+                lTokens,
             )
             or utils.are_next_consecutive_token_types_ignoring_whitespace([token.ieee.std_logic_1164.function.falling_edge], iToken + 1, lTokens)
             or utils.are_next_consecutive_token_types_ignoring_whitespace(

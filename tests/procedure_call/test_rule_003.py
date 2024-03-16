@@ -28,7 +28,8 @@ utils.read_file(os.path.join(sTestDir, "rule_003_test_input.fixed_last_close_par
 lExpected_association_list_comma__remove_new_line = []
 lExpected_association_list_comma__remove_new_line.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_003_test_input.fixed_association_list_comma__remove_new_line.vhd"), lExpected_association_list_comma__remove_new_line
+    os.path.join(sTestDir, "rule_003_test_input.fixed_association_list_comma__remove_new_line.vhd"),
+    lExpected_association_list_comma__remove_new_line,
 )
 
 lExpected_association_element__add_new_line = []

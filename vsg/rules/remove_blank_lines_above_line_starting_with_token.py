@@ -37,7 +37,9 @@ class remove_blank_lines_above_line_starting_with_token(blank_line.Rule):
                     iLine += 1
                     for oSearchToken in self.lTokens:
                         if utils.are_next_consecutive_token_types(
-                            [parser.whitespace, oSearchToken], iToken + 1, lTokens
+                            [parser.whitespace, oSearchToken],
+                            iToken + 1,
+                            lTokens,
                         ) or utils.are_next_consecutive_token_types([oSearchToken], iToken + 1, lTokens):
                             oViolation = violation.New(iLine, oToi, self.solution)
                             dAction = {}

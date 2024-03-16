@@ -35,7 +35,10 @@ class rule_411(align_tokens_in_region_between_tokens):
 
     def __init__(self):
         align_tokens_in_region_between_tokens.__init__(
-            self, lAlign, token.procedure_specification.open_parenthesis, token.procedure_specification.close_parenthesis
+            self,
+            lAlign,
+            token.procedure_specification.open_parenthesis,
+            token.procedure_specification.close_parenthesis,
         )
         self.solution = "Align :."
         self.configuration.remove("case_control_statements_ends_group")

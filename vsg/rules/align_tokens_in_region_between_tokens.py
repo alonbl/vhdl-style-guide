@@ -137,7 +137,9 @@ class align_tokens_in_region_between_tokens(alignment.Rule):
                     iToken = -1
                     if self.comment_line_ends_group:
                         if utils.are_next_consecutive_token_types(
-                            [parser.whitespace, parser.comment], iIndex + 1, lTokens
+                            [parser.whitespace, parser.comment],
+                            iIndex + 1,
+                            lTokens,
                         ) or utils.are_next_consecutive_token_types([parser.comment], iIndex + 1, lTokens):
                             alignment_utils.check_for_violations(self, dAnalysis, oFile)
                             dAnalysis = {}

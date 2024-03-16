@@ -68,7 +68,9 @@ class rule_012(alignment.Rule):
 
                     if self.comment_line_ends_group:
                         if utils.are_next_consecutive_token_types(
-                            [parser.whitespace, parser.comment], iToken + 1, lTokens
+                            [parser.whitespace, parser.comment],
+                            iToken + 1,
+                            lTokens,
                         ) or utils.are_next_consecutive_token_types([parser.comment], iToken + 1, lTokens):
                             add_adjustments_to_dAnalysis(dAnalysis, self.compact_alignment)
                             for iKey in list(dAnalysis.keys()):

@@ -7,7 +7,7 @@ from vsg import rule_list, severity, vhdlFile
 dIndentMap = utils.read_indent_file()
 
 lIteration, eIterationError = vhdlFile.utils.read_vhdlfile(
-    os.path.join(os.path.dirname(__file__), "..", "..", "code_examples", "turbocodes", "iteration_synth.vhd")
+    os.path.join(os.path.dirname(__file__), "..", "..", "code_examples", "turbocodes", "iteration_synth.vhd"),
 )
 oIteration = vhdlFile.vhdlFile(lIteration)
 oIteration.set_indent_map(dIndentMap)

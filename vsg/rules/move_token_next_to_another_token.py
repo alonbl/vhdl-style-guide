@@ -39,7 +39,9 @@ class move_token_next_to_another_token(structure.Rule):
         for oToi in lToi:
             lTokens = oToi.get_tokens()
             if not utils.are_next_consecutive_token_types([parser.whitespace, self.token_to_move], 1, lTokens) and not utils.are_next_consecutive_token_types(
-                [self.token_to_move], 1, lTokens
+                [self.token_to_move],
+                1,
+                lTokens,
             ):
                 oViolation = violation.New(oToi.get_line_number(), oToi, self.solution)
                 oViolation.set_remap()

@@ -77,7 +77,7 @@ class testVsg(unittest.TestCase):
         lExpected.append("")
 
         lActual = subprocess.check_output(
-            ["bin/vsg", "--configuration", "tests/vsg/config_3.json", "--output_format", "syntastic", "-f", "tests/vsg/entity1.vhd"]
+            ["bin/vsg", "--configuration", "tests/vsg/config_3.json", "--output_format", "syntastic", "-f", "tests/vsg/entity1.vhd"],
         )
         lActual = str(lActual.decode("utf-8")).split("\n")
         self.assertEqual(lActual, lExpected)
@@ -98,7 +98,7 @@ class testVsg(unittest.TestCase):
                     "syntastic",
                     "-f",
                     "tests/vsg/entity1.vhd",
-                ]
+                ],
             )
         except subprocess.CalledProcessError as e:
             lActual = str(e.output.decode("utf-8")).split("\n")
@@ -113,7 +113,7 @@ class testVsg(unittest.TestCase):
         lExpected.append("")
 
         lActual = subprocess.check_output(
-            ["bin/vsg", "--configuration", "tests/vsg/config_4.json", "tests/vsg/config_3.json", "--output_format", "syntastic", "-f", "tests/vsg/entity1.vhd"]
+            ["bin/vsg", "--configuration", "tests/vsg/config_4.json", "tests/vsg/config_3.json", "--output_format", "syntastic", "-f", "tests/vsg/entity1.vhd"],
         )
         lActual = str(lActual.decode("utf-8")).split("\n")
         self.assertEqual(lActual, lExpected)
@@ -138,7 +138,7 @@ class testVsg(unittest.TestCase):
                     "tests/vsg/entity1.vhd",
                     "--junit",
                     "tests/vsg/config_error.actual.xml",
-                ]
+                ],
             )
         except subprocess.CalledProcessError as e:
             lActual = str(e.output.decode("utf-8")).split("\n")
@@ -166,7 +166,7 @@ class testVsg(unittest.TestCase):
 
         try:
             subprocess.check_output(
-                ["bin/vsg", "--style", "jcl", "-f", "tests/vsg/entity_architecture.vhd", "-of", "syntastic", "-lr", "tests/vsg/local_rules"]
+                ["bin/vsg", "--style", "jcl", "-f", "tests/vsg/entity_architecture.vhd", "-of", "syntastic", "-lr", "tests/vsg/local_rules"],
             )
             iExitStatus = 0
         except subprocess.CalledProcessError as e:
@@ -185,7 +185,7 @@ class testVsg(unittest.TestCase):
 
         try:
             lActual = subprocess.check_output(
-                ["bin/vsg", "-f", "tests/vsg/entity_architecture.vhd", "-of", "syntastic", "-lr", "tests/vsg/invalid_local_rule_directory"]
+                ["bin/vsg", "-f", "tests/vsg/entity_architecture.vhd", "-of", "syntastic", "-lr", "tests/vsg/invalid_local_rule_directory"],
             )
         except subprocess.CalledProcessError as e:
             lActual = str(e.output.decode("utf-8")).split("\n")
@@ -267,7 +267,7 @@ class testVsg(unittest.TestCase):
         lExpected.append("")
 
         lActual = subprocess.check_output(
-            ["bin/vsg", "--configuration", "tests/vsg/config_3.yaml", "--output_format", "syntastic", "-f", "tests/vsg/entity1.vhd"]
+            ["bin/vsg", "--configuration", "tests/vsg/config_3.yaml", "--output_format", "syntastic", "-f", "tests/vsg/entity1.vhd"],
         )
         lActual = str(lActual.decode("utf-8")).split("\n")
         self.assertEqual(lActual, lExpected)
@@ -288,7 +288,7 @@ class testVsg(unittest.TestCase):
                     "syntastic",
                     "-f",
                     "tests/vsg/entity1.vhd",
-                ]
+                ],
             )
         except subprocess.CalledProcessError as e:
             lActual = str(e.output.decode("utf-8")).split("\n")
@@ -303,7 +303,7 @@ class testVsg(unittest.TestCase):
         lExpected.append("")
 
         lActual = subprocess.check_output(
-            ["bin/vsg", "--configuration", "tests/vsg/config_4.yaml", "tests/vsg/config_3.yaml", "--output_format", "syntastic", "-f", "tests/vsg/entity1.vhd"]
+            ["bin/vsg", "--configuration", "tests/vsg/config_4.yaml", "tests/vsg/config_3.yaml", "--output_format", "syntastic", "-f", "tests/vsg/entity1.vhd"],
         )
         lActual = str(lActual.decode("utf-8")).split("\n")
         self.assertEqual(lActual, lExpected)
@@ -404,7 +404,8 @@ class testVsg(unittest.TestCase):
 
         try:
             subprocess.check_output(
-                ["bin/vsg", "-f", "tests/vsg/entity_architecture.vhd", "-of", "summary", "-lr", "tests/vsg/local_rules"], stderr=subprocess.PIPE
+                ["bin/vsg", "-f", "tests/vsg/entity_architecture.vhd", "-of", "summary", "-lr", "tests/vsg/local_rules"],
+                stderr=subprocess.PIPE,
             )
             iExitStatus = 0
         except subprocess.CalledProcessError as e:
@@ -552,7 +553,7 @@ class testVsg(unittest.TestCase):
 
         try:
             subprocess.check_output(
-                ["bin/vsg", "--configuration", "tests/vsg/config_file_rules.yaml", "-f", "tests/vsg/entity2.vhd", "--output_format", "syntastic"]
+                ["bin/vsg", "--configuration", "tests/vsg/config_file_rules.yaml", "-f", "tests/vsg/entity2.vhd", "--output_format", "syntastic"],
             )
         except subprocess.CalledProcessError as e:
             lActual = str(e.output.decode("utf-8")).split("\n")
@@ -567,7 +568,7 @@ class testVsg(unittest.TestCase):
 
         try:
             subprocess.check_output(
-                ["bin/vsg", "--configuration", "tests/vsg/config_file_rules.yaml", "-f", "tests/vsg/entity1.vhd", "--output_format", "syntastic"]
+                ["bin/vsg", "--configuration", "tests/vsg/config_file_rules.yaml", "-f", "tests/vsg/entity1.vhd", "--output_format", "syntastic"],
             )
         except subprocess.CalledProcessError as e:
             lActual = str(e.output.decode("utf-8")).split("\n")

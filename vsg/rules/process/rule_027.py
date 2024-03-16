@@ -108,7 +108,9 @@ def _analyze_no_blank_line(self, lToi):
         if utils.are_next_consecutive_token_types_ignoring_whitespace([token.begin_keyword, token.process_keyword], 0, lTokens):
             continue
         if not utils.are_next_consecutive_token_types(
-            [token.begin_keyword, parser.whitespace, parser.carriage_return, parser.blank_line], 0, lTokens
+            [token.begin_keyword, parser.whitespace, parser.carriage_return, parser.blank_line],
+            0,
+            lTokens,
         ) and not utils.are_next_consecutive_token_types([token.begin_keyword, parser.carriage_return, parser.blank_line], 0, lTokens):
             continue
         dAction = {}

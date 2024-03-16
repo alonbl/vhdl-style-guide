@@ -41,13 +41,15 @@ utils.read_file(os.path.join(sTestDir, "rule_012_test_input.fixed_align_left_tru
 lExpected_align_left_false_align_paren_true_smart_tabs = []
 lExpected_align_left_false_align_paren_true_smart_tabs.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_012_test_input.fixed_align_left_false_align_paren_true_smart_tabs.vhd"), lExpected_align_left_false_align_paren_true_smart_tabs
+    os.path.join(sTestDir, "rule_012_test_input.fixed_align_left_false_align_paren_true_smart_tabs.vhd"),
+    lExpected_align_left_false_align_paren_true_smart_tabs,
 )
 
 lExpected_align_left_true_align_paren_true_smart_tabs = []
 lExpected_align_left_true_align_paren_true_smart_tabs.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_012_test_input.fixed_align_left_true_align_paren_true_smart_tabs.vhd"), lExpected_align_left_true_align_paren_true_smart_tabs
+    os.path.join(sTestDir, "rule_012_test_input.fixed_align_left_true_align_paren_true_smart_tabs.vhd"),
+    lExpected_align_left_true_align_paren_true_smart_tabs,
 )
 
 lExpected_align_left_false_align_paren_true_indent_step_2_smart_tabs = []
@@ -60,7 +62,8 @@ utils.read_file(
 lExpected_align_left_true_indent_step_2_smart_tabs = []
 lExpected_align_left_true_indent_step_2_smart_tabs.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_012_test_input.fixed_align_left_true_indent_step_2_smart_tabs.vhd"), lExpected_align_left_true_indent_step_2_smart_tabs
+    os.path.join(sTestDir, "rule_012_test_input.fixed_align_left_true_indent_step_2_smart_tabs.vhd"),
+    lExpected_align_left_true_indent_step_2_smart_tabs,
 )
 
 

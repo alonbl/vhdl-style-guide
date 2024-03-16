@@ -12,7 +12,8 @@ lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(sTestDir, "rule_017_te
 lExpected_record_constraint_open_paren__add_new_line = []
 lExpected_record_constraint_open_paren__add_new_line.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_017_test_input.fixed_record_constraint_open_paren__add_new_line.vhd"), lExpected_record_constraint_open_paren__add_new_line
+    os.path.join(sTestDir, "rule_017_test_input.fixed_record_constraint_open_paren__add_new_line.vhd"),
+    lExpected_record_constraint_open_paren__add_new_line,
 )
 
 lExpected_record_constraint_open_paren__remove_new_line = []
@@ -25,7 +26,8 @@ utils.read_file(
 lExpected_record_constraint_close_paren__add_new_line = []
 lExpected_record_constraint_close_paren__add_new_line.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_017_test_input.fixed_record_constraint_close_paren__add_new_line.vhd"), lExpected_record_constraint_close_paren__add_new_line
+    os.path.join(sTestDir, "rule_017_test_input.fixed_record_constraint_close_paren__add_new_line.vhd"),
+    lExpected_record_constraint_close_paren__add_new_line,
 )
 
 lExpected_record_constraint_close_paren__remove_new_line = []
@@ -38,19 +40,22 @@ utils.read_file(
 lExpected_record_constraint_comma__remove_new_line = []
 lExpected_record_constraint_comma__remove_new_line.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_017_test_input.fixed_record_constraint_comma__remove_new_line.vhd"), lExpected_record_constraint_comma__remove_new_line
+    os.path.join(sTestDir, "rule_017_test_input.fixed_record_constraint_comma__remove_new_line.vhd"),
+    lExpected_record_constraint_comma__remove_new_line,
 )
 
 lExpected_record_constraint_element__add_new_line = []
 lExpected_record_constraint_element__add_new_line.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_017_test_input.fixed_record_constraint_element__add_new_line.vhd"), lExpected_record_constraint_element__add_new_line
+    os.path.join(sTestDir, "rule_017_test_input.fixed_record_constraint_element__add_new_line.vhd"),
+    lExpected_record_constraint_element__add_new_line,
 )
 
 lExpected_record_constraint_element__remove_new_line = []
 lExpected_record_constraint_element__remove_new_line.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_017_test_input.fixed_record_constraint_element__remove_new_line.vhd"), lExpected_record_constraint_element__remove_new_line
+    os.path.join(sTestDir, "rule_017_test_input.fixed_record_constraint_element__remove_new_line.vhd"),
+    lExpected_record_constraint_element__remove_new_line,
 )
 
 lExpected_array_constraint__all_in_one_line = []
@@ -60,7 +65,8 @@ utils.read_file(os.path.join(sTestDir, "rule_017_test_input.fixed_array_constrai
 lExpected_array_constraint__one_line_per_dimension = []
 lExpected_array_constraint__one_line_per_dimension.append("")
 utils.read_file(
-    os.path.join(sTestDir, "rule_017_test_input.fixed_array_constraint__one_line_per_dimension.vhd"), lExpected_array_constraint__one_line_per_dimension
+    os.path.join(sTestDir, "rule_017_test_input.fixed_array_constraint__one_line_per_dimension.vhd"),
+    lExpected_array_constraint__one_line_per_dimension,
 )
 
 lExpected_exception__one = []
