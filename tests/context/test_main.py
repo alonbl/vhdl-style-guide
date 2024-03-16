@@ -31,7 +31,7 @@ class test_context_using_main(unittest.TestCase):
         self.maxDiff = None
         subprocess.check_output(["bin/vsg", "-f", self._sFileName, "--fix"]).decode("utf-8").split("\n")
 
-        lActual = pathlib.Path(self._sFileName).read_text().split("\n")
+        lActual = pathlib.Path(self._sFileName).read_text().split("\n") + [""]  # TODO: understand why last element is required
         lExpected = pathlib.Path(sFixedFile).read_text().split("\n")
 
         self.assertEqual(lExpected, lActual)

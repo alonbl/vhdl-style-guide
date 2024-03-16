@@ -139,8 +139,7 @@ def write_vhdl_file(oVhdlFile, dConfig):
     tmpfile = f"{oVhdlFile.filename}.tmp"
     try:
         with open(tmpfile, "w", encoding="utf-8", newline=dConfig.get("linesep")) as oFile:
-            for sLine in oVhdlFile.get_lines()[1:]:
-                oFile.write(sLine + "\n")
+            oFile.write("\n".join(oVhdlFile.get_lines()[1:]))
         os.replace(tmpfile, oVhdlFile.filename)
     except PermissionError as err:
         print(err, "Could not write fixes back to file.")
