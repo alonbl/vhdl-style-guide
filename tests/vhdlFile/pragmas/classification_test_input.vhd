@@ -31,12 +31,12 @@ entity FIFO is
 -- RTL_SYNTHESIS OFF
 -- RTL_SYNTHESIS something
 
--- synopsis 
+-- synopsis
 -- synopsis something
 -- synopsis something else
 -- synopsis something else entirely
 
--- xilinx 
+-- xilinx
 -- xilinx something
 -- xilinx something else
 -- xilinx something else entirely
