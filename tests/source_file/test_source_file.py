@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 import os
 import pathlib
+import subprocess
+import sys
 import unittest
 from unittest import mock
-import sys
-import subprocess
+
 sys.path.append('vsg')
 
-from vsg.rules import source_file
-from vsg import vhdlFile
-from vsg import __main__
 from tests import utils
+from vsg import __main__, vhdlFile
+from vsg.rules import source_file
 
 sNoPermissionFile = 'no_permission.vhd'
 sEmptyFile = 'empty_file.vhd'
