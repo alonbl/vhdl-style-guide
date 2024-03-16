@@ -4,7 +4,7 @@ from vsg import parser
 from vsg.vhdlFile.extract import tokens
 
 
-def get_line_preceeding_line(iLine, lAllTokens, iNumLines, oTokenMap, bSkipComments=False):
+def get_line_preceding_line(iLine, lAllTokens, iNumLines, oTokenMap, bSkipComments=False):
     lCarriageReturns = oTokenMap.get_token_indexes(parser.carriage_return)
 
     if not bSkipComments:

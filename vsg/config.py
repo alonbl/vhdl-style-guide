@@ -258,8 +258,8 @@ dPragmas["single"].append("^\\s*--\\s+altera\\s+\\w+\\s*$")
 dPragmas["open"].append("^\\s*--\\s+RTL_SYNTHESIS\\s+OFF\\s*$")
 dPragmas["close"].append("^\\s*--\\s+RTL_SYNTHESIS\\s+ON\\s*$")
 
-dPragmas["single"].append("^\\s*--\\s+synopsys\\s+\\w+\\s*$")
-dPragmas["single"].append("^\\s*--\\s+synopsys\\s+\\w+\\s+\\w+\\s*$")
+dPragmas["single"].append("^\\s*--\\s+synopsis\\s+\\w+\\s*$")
+dPragmas["single"].append("^\\s*--\\s+synopsis\\s+\\w+\\s+\\w+\\s*$")
 dPragmas["single"].append("^\\s*--\\s+xilinx\\s+\\w+\\s*$")
 dPragmas["single"].append("^\\s*--\\s+xilinx\\s+\\w+\\s+\\w+\\s*$")
 

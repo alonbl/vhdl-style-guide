@@ -44,7 +44,7 @@ class test_entity_rule(unittest.TestCase):
         oRule.analyze(self.oFile)
         self.assertEqual(oRule.violations, [])
 
-    def test_rule_018_with_seperate_generic(self):
+    def test_rule_018_with_separate_generic(self):
         oRule = entity.rule_018()
         self.assertTrue(oRule)
         self.assertEqual(oRule.name, "entity")
@@ -55,14 +55,14 @@ class test_entity_rule(unittest.TestCase):
         oRule.analyze(self.oFile)
         self.assertEqual(lExpected, utils.extract_violation_lines_from_violation_object(oRule.violations))
 
-    def test_fix_rule_018_with_seperate_generic(self):
+    def test_fix_rule_018_with_separate_generic(self):
         oRule = entity.rule_018()
 
         oRule.fix(self.oFile)
 
         lExpected = []
         lExpected.append("")
-        utils.read_file(os.path.join(sTestDir, "rule_018_test_input.fixed_seperate_generic.vhd"), lExpected)
+        utils.read_file(os.path.join(sTestDir, "rule_018_test_input.fixed_separate_generic.vhd"), lExpected)
 
         lActual = self.oFile.get_lines()
 

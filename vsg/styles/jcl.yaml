@@ -69,7 +69,7 @@ rule :
     compact_alignment : false
     blank_line_ends_group : false
     comment_line_ends_group : false
-    seperate_generic_port_alignment : true
+    separate_generic_port_alignment : true
   process_034 :
     compact_alignment : false
     blank_line_ends_group : false

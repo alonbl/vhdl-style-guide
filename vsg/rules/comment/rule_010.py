@@ -18,7 +18,7 @@ class rule_010(token_indent_unless_between_tokens):
     .. code-block:: vhdl
 
            -- Libraries
-       libary ieee;
+       library ieee;
 
         -- Define architecture
        architecture rtl of fifo is
@@ -34,7 +34,7 @@ class rule_010(token_indent_unless_between_tokens):
     .. code-block:: vhdl
 
        -- Libraries
-       libary ieee;
+       library ieee;
 
        -- Define architecture
        architecture rtl of fifo is

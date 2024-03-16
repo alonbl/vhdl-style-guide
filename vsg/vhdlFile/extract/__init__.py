@@ -41,7 +41,7 @@ from .get_line_below_line_ending_with_token_with_hierarchy import (
     get_line_below_line_ending_with_token_with_hierarchy,
 )
 from .get_line_count_between_tokens import get_line_count_between_tokens
-from .get_line_preceeding_line import get_line_preceeding_line
+from .get_line_preceding_line import get_line_preceding_line
 from .get_line_succeeding_line import get_line_succeeding_line
 from .get_line_which_includes_tokens import get_line_which_includes_tokens
 from .get_lines_with_length_that_exceed_column import (

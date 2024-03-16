@@ -7,7 +7,7 @@ def detect(iToken, lObjects):
     """
     selected_waveform_assignment ::=
         with expression select [ ? ]
-            target <= [delay_machanism] selected_waveforms ;
+            target <= [delay_mechanism] selected_waveforms ;
     """
 
     if utils.is_next_token_one_of(["when", "if", "elsif", "else"], iToken, lObjects):

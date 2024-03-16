@@ -5,7 +5,7 @@ Configuring Pragmas
 -------------------
 
 Pragmas are comments with meta data used by various vendors.
-These pragmas communicate information which can change how vendor tools interprate code.
+These pragmas communicate information which can change how vendor tools interpret code.
 
 There does not appear to be a standard for defining pragmas.
 This presents a challenge to detecting them across all vendor tools.
@@ -51,8 +51,8 @@ The default expressions are defined as:
                - '^\\s*--\\s+pragma\\s+\\w+\\s*$'
                - '^\\s*--\\s+pragma\\s+\\w+\\s+\\w+\\s*$'
                - '^\\s*--\\s+altera\\s+\\w+\\s*$'
-               - '^\\s*--\\s+synopsys\\s+\\w+\\s*$'
-               - '^\\s*--\\s+synopsys\\s+\\w+\\s+\\w+\\s*$'
+               - '^\\s*--\\s+synopsis\\s+\\w+\\s*$'
+               - '^\\s*--\\s+synopsis\\s+\\w+\\s+\\w+\\s*$'
                - '^\\s*--\\s+xilinx\\s+\\w+\\s*$'
                - "^\\s*--\\s+xilinx\\s+\\w+\\s+\\w+\\s*$"
 
