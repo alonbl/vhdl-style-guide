@@ -57,7 +57,7 @@ repos:
           tests/vhdlFile/simple_waveform_assignment/classification_test_input\\.vhd|\
           tests/whitespace/.*\\.vhd\
           )$"
-      #- id: fix-encoding-pragma
+      - id: fix-encoding-pragma
 
   - repo: https://github.com/mgedmin/check-manifest
     rev: "0.49"
