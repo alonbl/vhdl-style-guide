@@ -1,5 +1,4 @@
 from vsg.token import mode as token
-
 from vsg.vhdlFile import utils
 
 

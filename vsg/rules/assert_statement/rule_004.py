@@ -1,6 +1,5 @@
-from vsg.rules import split_line_at_token_when_between_tokens_unless_token_is_found
-
 from vsg import token
+from vsg.rules import split_line_at_token_when_between_tokens_unless_token_is_found
 
 lTokens = []
 lTokens.append(token.assertion.severity_keyword)

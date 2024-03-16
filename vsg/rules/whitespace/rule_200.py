@@ -1,6 +1,4 @@
-from vsg import parser
-from vsg import violation
-
+from vsg import parser, violation
 from vsg.rule_group.blank_line import Rule
 from vsg.vhdlFile import utils
 

@@ -1,5 +1,4 @@
 from vsg.rules import previous_line
-
 from vsg.token import loop_statement as token
 
 lTokens = []

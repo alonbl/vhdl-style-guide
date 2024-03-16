@@ -1,5 +1,4 @@
 from vsg.rules.whitespace_after_token import Rule
-
 from vsg.token import conditional_waveforms as token
 
 

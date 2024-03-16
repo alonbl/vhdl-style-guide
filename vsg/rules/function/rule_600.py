@@ -1,6 +1,5 @@
-from vsg.rules import token_prefix
-
 from vsg import token
+from vsg.rules import token_prefix
 
 lTokens = []
 lTokens.append(token.function_specification.designator)

@@ -1,5 +1,4 @@
-from vsg.vhdlFile.classify import procedure_specification
-from vsg.vhdlFile.classify import function_specification
+from vsg.vhdlFile.classify import function_specification, procedure_specification
 
 
 def detect(iCurrent, lObjects):

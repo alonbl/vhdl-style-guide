@@ -1,6 +1,7 @@
-from vsg.rules import align_tokens_in_region_between_tokens_when_between_tokens_unless_between_tokens
-
 from vsg import token
+from vsg.rules import (
+    align_tokens_in_region_between_tokens_when_between_tokens_unless_between_tokens,
+)
 
 lAlign = []
 lAlign.append(token.full_type_declaration.identifier)

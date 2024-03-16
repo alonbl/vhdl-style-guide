@@ -1,6 +1,5 @@
-from vsg.rules import token_case as Rule
-
 from vsg import token
+from vsg.rules import token_case as Rule
 
 lTokens = []
 lTokens.append(token.conditional_waveforms.else_keyword)

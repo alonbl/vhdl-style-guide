@@ -1,5 +1,4 @@
 from vsg import token
-
 from vsg.rules.whitespace_after_tokens_in_between_tokens import Rule
 
 lTokens = []

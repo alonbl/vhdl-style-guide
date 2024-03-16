@@ -1,9 +1,5 @@
 import vsg
-
-from vsg import config
-from vsg import vhdlFile
-from vsg import rule_list
-from vsg import apply_rules
+from vsg import apply_rules, config, rule_list, vhdlFile
 
 
 class New:

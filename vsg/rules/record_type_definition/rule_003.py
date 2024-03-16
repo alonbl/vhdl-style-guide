@@ -1,6 +1,5 @@
-from vsg.rules import split_line_at_token as Rule
-
 from vsg import token
+from vsg.rules import split_line_at_token as Rule
 
 lTokens = []
 lTokens.append(token.record_type_definition.end_keyword)

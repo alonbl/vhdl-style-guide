@@ -1,7 +1,5 @@
 from vsg.token import return_statement as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import expression
 
 

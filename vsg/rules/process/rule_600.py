@@ -1,6 +1,5 @@
-from vsg.rules import token_suffix
-
 from vsg import token
+from vsg.rules import token_suffix
 
 lTokens = []
 lTokens.append(token.process_statement.process_label)

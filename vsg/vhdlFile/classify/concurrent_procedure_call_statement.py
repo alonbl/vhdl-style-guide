@@ -1,7 +1,5 @@
 from vsg.token import concurrent_procedure_call_statement as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import procedure_call
 
 

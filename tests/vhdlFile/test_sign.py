@@ -1,9 +1,8 @@
 import os
-
 import unittest
 
-from vsg import vhdlFile
 from tests import utils
+from vsg import vhdlFile
 
 sLrmUnit = utils.extract_lrm_unit_name(__name__)
 

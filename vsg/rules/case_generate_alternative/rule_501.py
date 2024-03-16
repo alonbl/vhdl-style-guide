@@ -1,6 +1,5 @@
-from vsg.rules import token_case_in_range_bounded_by_tokens as Rule
-
 from vsg import token
+from vsg.rules import token_case_in_range_bounded_by_tokens as Rule
 
 lTokens = []
 lTokens.append(token.choice.others_keyword)

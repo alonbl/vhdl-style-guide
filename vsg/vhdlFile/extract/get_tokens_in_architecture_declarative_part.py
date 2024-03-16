@@ -1,5 +1,4 @@
 from vsg.token import architecture_body as token
-
 from vsg.vhdlFile.extract.get_tokens_bounded_by import get_tokens_bounded_by
 
 oStart = token.is_keyword

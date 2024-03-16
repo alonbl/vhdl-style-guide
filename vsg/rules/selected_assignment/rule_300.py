@@ -1,6 +1,5 @@
-from vsg.rules import token_indent as Rule
-
 from vsg import token
+from vsg.rules import token_indent as Rule
 
 lTokens = []
 lTokens.append(token.concurrent_selected_signal_assignment.with_keyword)

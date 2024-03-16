@@ -1,9 +1,8 @@
 import os
-
 import unittest
 
-from vsg import vhdlFile
 from tests import utils
+from vsg import vhdlFile
 
 sLrmUnit = "context_clause"
 

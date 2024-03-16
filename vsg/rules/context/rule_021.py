@@ -1,5 +1,4 @@
 from vsg.rules import insert_token_right_of_token_if_it_does_not_exist_before_token
-
 from vsg.token import context_declaration as token
 
 

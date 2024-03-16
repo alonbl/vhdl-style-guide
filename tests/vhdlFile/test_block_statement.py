@@ -1,10 +1,8 @@
 import os
-
 import unittest
 
-from vsg import vhdlFile
 from tests import utils
-
+from vsg import vhdlFile
 
 lFile, eError = vhdlFile.utils.read_vhdlfile(os.path.join(os.path.dirname(__file__), "block_statement", "classification_test_input.vhd"))
 oFile = vhdlFile.vhdlFile(lFile)

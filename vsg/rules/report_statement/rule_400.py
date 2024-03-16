@@ -1,6 +1,7 @@
+from vsg.rules import (
+    align_consecutive_lines_after_line_starting_with_token_and_stopping_with_token as Rule,
+)
 from vsg.token import report_statement
-
-from vsg.rules import align_consecutive_lines_after_line_starting_with_token_and_stopping_with_token as Rule
 
 
 class rule_400(Rule):

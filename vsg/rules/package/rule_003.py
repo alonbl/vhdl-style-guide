@@ -1,6 +1,5 @@
-from vsg.rules import previous_line
-
 from vsg import token
+from vsg.rules import previous_line
 
 lTokens = []
 lTokens.append(token.package_declaration.package_keyword)

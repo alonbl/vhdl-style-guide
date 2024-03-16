@@ -1,9 +1,6 @@
 from vsg.token import unbounded_array_definition as token
-
 from vsg.vhdlFile import utils
-
-from vsg.vhdlFile.classify import index_subtype_definition
-from vsg.vhdlFile.classify import subtype_indication
+from vsg.vhdlFile.classify import index_subtype_definition, subtype_indication
 
 
 def detect(iToken, lObjects):

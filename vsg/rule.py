@@ -1,5 +1,4 @@
-from vsg import severity
-from vsg import utils
+from vsg import severity, utils
 
 
 class Rule:

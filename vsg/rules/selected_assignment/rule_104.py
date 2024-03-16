@@ -1,6 +1,5 @@
-from vsg.rules.whitespace_after_token import Rule
-
 from vsg import token
+from vsg.rules.whitespace_after_token import Rule
 
 lTokens = []
 lTokens.append(token.concurrent_selected_signal_assignment.assignment)

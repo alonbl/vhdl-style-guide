@@ -1,7 +1,5 @@
 from vsg.token import file_open_information as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import file_logical_name
 
 

@@ -1,9 +1,6 @@
 from vsg.token import constrained_array_definition as token
-
 from vsg.vhdlFile import utils
-
-from vsg.vhdlFile.classify import index_constraint
-from vsg.vhdlFile.classify import subtype_indication
+from vsg.vhdlFile.classify import index_constraint, subtype_indication
 
 
 def detect(iToken, lObjects):

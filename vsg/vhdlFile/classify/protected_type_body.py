@@ -1,7 +1,5 @@
 from vsg.token import protected_type_body as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import protected_type_body_declarative_part
 
 

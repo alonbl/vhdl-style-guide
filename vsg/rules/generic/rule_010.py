@@ -1,6 +1,5 @@
-from vsg.rules import move_token as Rule
-
 from vsg import token
+from vsg.rules import move_token as Rule
 
 oToken = token.generic_clause.close_parenthesis
 

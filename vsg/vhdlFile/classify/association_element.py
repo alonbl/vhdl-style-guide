@@ -1,7 +1,5 @@
 from vsg.token import association_element as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import formal_part
 
 

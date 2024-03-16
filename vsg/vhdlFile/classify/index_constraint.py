@@ -1,7 +1,5 @@
 from vsg.token import index_constraint as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import discrete_range
 
 

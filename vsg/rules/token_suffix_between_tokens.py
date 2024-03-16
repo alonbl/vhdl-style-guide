@@ -1,5 +1,4 @@
 from vsg import violation
-
 from vsg.rules import token_suffix as Rule
 
 

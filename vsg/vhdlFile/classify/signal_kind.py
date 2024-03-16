@@ -1,5 +1,4 @@
 from vsg.token import signal_kind as token
-
 from vsg.vhdlFile import utils
 
 

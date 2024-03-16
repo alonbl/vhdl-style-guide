@@ -1,9 +1,6 @@
-from vsg.vhdlFile import utils
-
 from vsg.token import simple_configuration_specification as token
-
-from vsg.vhdlFile.classify import component_specification
-from vsg.vhdlFile.classify import binding_indication
+from vsg.vhdlFile import utils
+from vsg.vhdlFile.classify import binding_indication, component_specification
 
 
 def detect(iToken, lObjects):

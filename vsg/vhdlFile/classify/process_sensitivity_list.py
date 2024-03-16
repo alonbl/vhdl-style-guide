@@ -1,7 +1,5 @@
 from vsg.token import process_sensitivity_list as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import sensitivity_list
 
 

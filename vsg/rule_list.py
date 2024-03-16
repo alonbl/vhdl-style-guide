@@ -1,14 +1,10 @@
-import os
 import importlib
 import inspect
+import os
 
 from vsg import exceptions
 
-from . import deprecated_rule
-from . import junit
-from . import report
-from . import utils
-from . import severity
+from . import deprecated_rule, junit, report, severity, utils
 
 
 def get_python_modules_from_directory(sDirectoryName, lModules):

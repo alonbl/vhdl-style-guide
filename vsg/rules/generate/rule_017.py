@@ -1,6 +1,5 @@
-from vsg.rules import token_prefix
-
 from vsg import token
+from vsg.rules import token_prefix
 
 lTokens = []
 lTokens.append(token.case_generate_statement.generate_label)

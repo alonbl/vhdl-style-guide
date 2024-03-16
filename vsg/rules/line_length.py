@@ -1,5 +1,5 @@
-from vsg.rule_group import length
 from vsg import violation
+from vsg.rule_group import length
 
 
 class line_length(length.Rule):

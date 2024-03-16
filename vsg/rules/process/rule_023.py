@@ -1,6 +1,5 @@
-from vsg.rules import blank_line_above_line_starting_with_token
-
 from vsg import token
+from vsg.rules import blank_line_above_line_starting_with_token
 
 lTokens = []
 lTokens.append(token.process_statement.end_keyword)

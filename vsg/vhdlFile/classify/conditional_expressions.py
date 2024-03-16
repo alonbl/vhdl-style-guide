@@ -1,9 +1,6 @@
 from vsg.token import conditional_expressions as token
-
 from vsg.vhdlFile import utils
-
-from vsg.vhdlFile.classify import condition
-from vsg.vhdlFile.classify import expression
+from vsg.vhdlFile.classify import condition, expression
 
 
 def classify_until(lUntils, iToken, lObjects):

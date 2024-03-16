@@ -1,5 +1,4 @@
 from vsg.rules import token_case as Rule
-
 from vsg.token import record_type_definition as token
 
 

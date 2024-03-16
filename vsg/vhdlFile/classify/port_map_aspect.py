@@ -1,7 +1,5 @@
 from vsg.token import port_map_aspect as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import association_list
 
 

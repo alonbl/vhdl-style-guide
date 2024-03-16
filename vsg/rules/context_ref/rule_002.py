@@ -1,5 +1,4 @@
 from vsg.rules.whitespace_between_token_pairs import Rule
-
 from vsg.token import context_reference as token
 
 lTokenPairs = []

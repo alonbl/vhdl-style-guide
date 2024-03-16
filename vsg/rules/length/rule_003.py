@@ -1,5 +1,4 @@
 from vsg import token
-
 from vsg.rules import number_of_lines_between_tokens
 
 oLeftToken = token.process_statement.process_keyword

@@ -1,5 +1,4 @@
-from vsg.vhdlFile.extract import tokens
-from vsg.vhdlFile.extract import utils
+from vsg.vhdlFile.extract import tokens, utils
 
 
 def get_token_and_n_tokens_before_it_in_between_tokens_unless_token_is_found(lTokens, iTokens, oStart, oEnd, oStop, lAllTokens, oTokenMap):

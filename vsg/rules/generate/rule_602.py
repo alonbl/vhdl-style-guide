@@ -1,6 +1,5 @@
-from vsg.rules import token_suffix_between_tokens
-
 from vsg import token
+from vsg.rules import token_suffix_between_tokens
 
 lTokens = []
 lTokens.append(token.parameter_specification.identifier)

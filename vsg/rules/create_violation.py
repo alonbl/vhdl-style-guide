@@ -1,7 +1,5 @@
 from vsg import violation
-
 from vsg.rules import tokens_of_interest as toi
-
 from vsg.vhdlFile import utils
 
 

@@ -1,6 +1,5 @@
-from vsg.rules import multiline_constraint_structure as Rule
-
 from vsg import token
+from vsg.rules import multiline_constraint_structure as Rule
 
 lTokenPairs = []
 lTokenPairs.append([token.signal_declaration.signal_keyword, token.signal_declaration.semicolon])

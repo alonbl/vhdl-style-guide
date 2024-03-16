@@ -1,9 +1,6 @@
-from vsg import parser
-from vsg import token
-from vsg import violation
-
-from vsg.vhdlFile import utils
+from vsg import parser, token, violation
 from vsg.rule_group import structure
+from vsg.vhdlFile import utils
 
 
 class rule_030(structure.Rule):

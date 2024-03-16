@@ -1,6 +1,5 @@
-from vsg.rules import multiline_array_alignment as Rule
-
 from vsg import token
+from vsg.rules import multiline_array_alignment as Rule
 
 lTokenPairs = []
 lTokenPairs.append([token.simple_waveform_assignment.assignment, token.simple_waveform_assignment.semicolon])

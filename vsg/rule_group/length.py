@@ -1,5 +1,4 @@
-from vsg import rule
-from vsg import severity
+from vsg import rule, severity
 
 
 class Rule(rule.Rule):

@@ -1,6 +1,5 @@
-from vsg.rules import blank_line_below_line_ending_with_several_possible_tokens
-
 from vsg import token
+from vsg.rules import blank_line_below_line_ending_with_several_possible_tokens
 
 lTokens = []
 lTokens.append(token.block_statement.block_keyword)

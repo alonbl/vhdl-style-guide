@@ -1,5 +1,4 @@
-from vsg.vhdlFile.extract import tokens
-from vsg.vhdlFile.extract import utils
+from vsg.vhdlFile.extract import tokens, utils
 
 
 def get_consecutive_lines_starting_with_token(search_token, min_num_lines, lAllTokens, oTokenMap):

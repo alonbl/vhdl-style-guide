@@ -1,5 +1,4 @@
 from vsg.rules.whitespace_between_tokens import Rule
-
 from vsg.token import file_declaration as token
 
 

@@ -1,7 +1,4 @@
-from vsg import parser
-from vsg import severity
-from vsg import violation
-
+from vsg import parser, severity, violation
 from vsg.rule_group import structure
 
 

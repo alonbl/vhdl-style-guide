@@ -1,6 +1,5 @@
-from vsg.rules.whitespace_after_token import Rule
-
 from vsg import token
+from vsg.rules.whitespace_after_token import Rule
 
 lTokens = []
 lTokens.append(token.constant_declaration.assignment_operator)

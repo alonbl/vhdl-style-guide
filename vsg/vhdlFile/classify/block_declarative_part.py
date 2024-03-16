@@ -1,5 +1,4 @@
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import block_declarative_item
 
 

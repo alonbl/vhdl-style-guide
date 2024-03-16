@@ -1,7 +1,5 @@
 from vsg.token import interface_package_generic_map_aspect as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import generic_map_aspect
 
 

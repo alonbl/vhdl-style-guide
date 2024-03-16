@@ -1,9 +1,6 @@
-from vsg.vhdlFile import utils
-
 from vsg.token import case_generate_statement as token
-
-from vsg.vhdlFile.classify import expression
-from vsg.vhdlFile.classify import case_generate_alternative
+from vsg.vhdlFile import utils
+from vsg.vhdlFile.classify import case_generate_alternative, expression
 
 
 def detect(iToken, lObjects):

@@ -1,5 +1,4 @@
 from vsg.token import subprogram_kind as token
-
 from vsg.vhdlFile import utils
 
 

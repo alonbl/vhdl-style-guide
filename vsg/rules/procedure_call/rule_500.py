@@ -1,6 +1,5 @@
-from vsg.rules import token_case
-
 from vsg import token
+from vsg.rules import token_case
 
 lTokens = []
 lTokens.append(token.concurrent_procedure_call_statement.label_name)

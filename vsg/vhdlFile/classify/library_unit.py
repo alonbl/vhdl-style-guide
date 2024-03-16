@@ -1,5 +1,4 @@
-from vsg.vhdlFile.classify import primary_unit
-from vsg.vhdlFile.classify import secondary_unit
+from vsg.vhdlFile.classify import primary_unit, secondary_unit
 
 
 def detect(iToken, lObjects):

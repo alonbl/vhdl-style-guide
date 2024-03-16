@@ -1,5 +1,4 @@
 from vsg.rules import move_token_next_to_another_token
-
 from vsg.token import architecture_body as token
 
 

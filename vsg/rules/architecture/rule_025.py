@@ -1,5 +1,4 @@
 from vsg.rules import is_token_value_one_of
-
 from vsg.token import architecture_body as token
 
 

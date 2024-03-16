@@ -1,5 +1,4 @@
 from vsg.rules import blank_line_below_line_ending_with_token
-
 from vsg.token import case_statement as token
 
 

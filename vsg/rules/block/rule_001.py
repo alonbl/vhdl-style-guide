@@ -1,7 +1,6 @@
 from vsg import parser
-from vsg.token import block_statement as token
-
 from vsg.rules import move_token_sequences_left_of_token
+from vsg.token import block_statement as token
 
 lSequences = []
 lSequences.append([token.block_label, token.label_colon, token.block_keyword])

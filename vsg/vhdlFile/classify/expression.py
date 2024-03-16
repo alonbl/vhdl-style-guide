@@ -1,8 +1,6 @@
 from vsg import parser
-
-from vsg.vhdlFile import utils
-
 from vsg.token import direction
+from vsg.vhdlFile import utils
 
 
 def classify(iToken, lObjects):

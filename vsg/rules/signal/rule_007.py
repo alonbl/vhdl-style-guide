@@ -1,6 +1,5 @@
-from vsg.rules import existence_of_tokens_which_should_not_occur
-
 from vsg import token
+from vsg.rules import existence_of_tokens_which_should_not_occur
 
 lTokens = []
 lTokens.append(token.signal_declaration.assignment_operator)

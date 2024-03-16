@@ -1,5 +1,4 @@
 from vsg.token import null_statement as token
-
 from vsg.vhdlFile import utils
 
 

@@ -1,7 +1,5 @@
 from vsg.token import port_clause as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import port_list
 
 

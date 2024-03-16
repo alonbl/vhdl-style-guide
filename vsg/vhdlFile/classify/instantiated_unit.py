@@ -1,5 +1,4 @@
 from vsg.token import instantiated_unit as token
-
 from vsg.vhdlFile import utils
 
 

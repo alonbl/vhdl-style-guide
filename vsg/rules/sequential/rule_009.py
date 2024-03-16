@@ -1,6 +1,5 @@
-from vsg.rules import multiline_structure as Rule
-
 from vsg import token
+from vsg.rules import multiline_structure as Rule
 
 lTokenPairs = []
 lTokenPairs.append([token.simple_waveform_assignment.target, token.simple_waveform_assignment.semicolon])

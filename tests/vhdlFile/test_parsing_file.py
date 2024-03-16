@@ -1,9 +1,8 @@
 import os
-
 import unittest
 
-from vsg import vhdlFile
 from tests import utils
+from vsg import vhdlFile
 
 try:
     sLrmUnit = os.environ["vsg_file_to_parse"]

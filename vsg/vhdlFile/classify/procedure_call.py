@@ -1,9 +1,6 @@
 from vsg.token import procedure_call as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import actual_parameter_part
-
 
 lExceptions = ["<=", "end", "map", "component", "entity", "configuration", "if"]
 

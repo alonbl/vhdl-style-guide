@@ -1,8 +1,6 @@
-from vsg import parser
-from vsg import violation
-
-from vsg.rules import utils
+from vsg import parser, violation
 from vsg.rule_group import whitespace
+from vsg.rules import utils
 
 
 class rule_100(whitespace.Rule):

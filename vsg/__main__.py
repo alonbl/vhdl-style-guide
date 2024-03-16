@@ -1,25 +1,27 @@
 #!/usr/bin/env python
 
-import sys
-import os
-import json
-import glob
-import yaml
 import functools
+import glob
+import json
 import multiprocessing
+import os
+import sys
 
-from . import apply_rules
-from . import cmd_line_args
-from . import config
-from . import utils
-
-from . import junit
-from . import rule_list
-from . import severity
-from . import version
-from . import vhdlFile
+import yaml
 
 from vsg.report import quality_report
+
+from . import (
+    apply_rules,
+    cmd_line_args,
+    config,
+    junit,
+    rule_list,
+    severity,
+    utils,
+    version,
+    vhdlFile,
+)
 
 
 def generate_output_configuration(commandLineArguments, oConfig):

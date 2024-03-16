@@ -1,5 +1,4 @@
 from vsg.rules import previous_line as Rule
-
 from vsg.token import record_type_definition as token
 
 

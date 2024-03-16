@@ -1,6 +1,5 @@
-from vsg.rules import split_line_at_token
-
 from vsg import token
+from vsg.rules import split_line_at_token
 
 lTokens = []
 lTokens.append(token.context_declaration.end_keyword)

@@ -1,5 +1,6 @@
-from vsg.rules import insert_carriage_return_after_token_if_it_is_not_followed_by_a_comment as Rule
-
+from vsg.rules import (
+    insert_carriage_return_after_token_if_it_is_not_followed_by_a_comment as Rule,
+)
 from vsg.token import record_type_definition as token
 
 lTokens = []

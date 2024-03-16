@@ -1,9 +1,6 @@
 from vsg.token import conditional_waveforms as token
-
 from vsg.vhdlFile import utils
-
-from vsg.vhdlFile.classify import waveform
-from vsg.vhdlFile.classify import condition
+from vsg.vhdlFile.classify import condition, waveform
 
 
 def classify_until(lUntils, iToken, lObjects):

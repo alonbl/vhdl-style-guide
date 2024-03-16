@@ -1,6 +1,5 @@
-from vsg.rules import token_case_in_range_bounded_by_tokens
-
 from vsg import token
+from vsg.rules import token_case_in_range_bounded_by_tokens
 
 lTokens = []
 lTokens.append(token.port_map_aspect.port_keyword)

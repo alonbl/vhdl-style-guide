@@ -1,6 +1,5 @@
-from vsg.rules import token_indent
-
 from vsg import token
+from vsg.rules import token_indent
 
 lTokens = []
 lTokens.append(token.port_clause.port_keyword)

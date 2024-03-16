@@ -1,9 +1,7 @@
-import shutil
 import os
-import subprocess
 import pathlib
-
-
+import shutil
+import subprocess
 import unittest
 
 from tests import utils

@@ -1,8 +1,6 @@
 from vsg import violation
-
-from vsg.token import port_clause as token
-from vsg.token import mode
 from vsg.rule_group import structure
+from vsg.token import mode, port_clause as token
 
 
 class rule_023(structure.Rule):

@@ -1,6 +1,5 @@
-from vsg.rules import blank_line_below_line_ending_with_token as Rule
-
 from vsg import token
+from vsg.rules import blank_line_below_line_ending_with_token as Rule
 
 lTokens = []
 lTokens.append(token.constant_declaration.semicolon)

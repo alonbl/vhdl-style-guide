@@ -1,6 +1,5 @@
-from vsg.rules import token_case
-
 from vsg import token
+from vsg.rules import token_case
 
 lTokens = []
 lTokens.append(token.context_reference.keyword)

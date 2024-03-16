@@ -1,5 +1,6 @@
-from vsg.rules import insert_token_right_of_possible_tokens_if_it_does_not_exist_before_token
-
+from vsg.rules import (
+    insert_token_right_of_possible_tokens_if_it_does_not_exist_before_token,
+)
 from vsg.token import process_statement as token
 
 oInsertToken = token.is_keyword("is")

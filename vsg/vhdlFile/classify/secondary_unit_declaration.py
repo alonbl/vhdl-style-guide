@@ -1,5 +1,4 @@
 from vsg.token import secondary_unit_declaration as token
-
 from vsg.vhdlFile import utils
 
 

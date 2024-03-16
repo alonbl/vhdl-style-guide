@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 
 import argparse
-import sys
 import os
+import sys
 
-from . import config
-from . import rule_list
-from . import vhdlFile
+from . import config, rule_list, vhdlFile
 
 
 def parse_command_line_arguments():

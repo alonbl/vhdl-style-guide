@@ -1,8 +1,7 @@
-from vsg.rules import align_tokens_in_region_between_tokens_unless_between_tokens as Rule
-
-from vsg import prerequisite
-
-from vsg import token
+from vsg import prerequisite, token
+from vsg.rules import (
+    align_tokens_in_region_between_tokens_unless_between_tokens as Rule,
+)
 
 lAlign = []
 lAlign.append(token.constant_declaration.assignment_operator)

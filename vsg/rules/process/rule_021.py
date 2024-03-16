@@ -1,12 +1,7 @@
-from vsg import parser
-from vsg import violation
-
-from vsg.token import process_statement as token
-
+from vsg import parser, violation
 from vsg.rule_group import blank_line
-
 from vsg.rules import utils as rules_utils
-
+from vsg.token import process_statement as token
 from vsg.vhdlFile import utils
 
 

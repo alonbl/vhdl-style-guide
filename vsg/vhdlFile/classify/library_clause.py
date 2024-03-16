@@ -1,7 +1,5 @@
 from vsg.token import library_clause as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import logical_name_list
 
 

@@ -1,8 +1,6 @@
 from vsg.token import context_declaration as token
-
-from vsg.vhdlFile.classify import context_clause
-
 from vsg.vhdlFile import utils
+from vsg.vhdlFile.classify import context_clause
 
 
 def detect(iToken, lObjects):

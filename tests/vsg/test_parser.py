@@ -1,7 +1,7 @@
+import argparse
 import sys
 import unittest
 from unittest.mock import MagicMock, patch
-import argparse
 
 from vsg import cmd_line_args
 

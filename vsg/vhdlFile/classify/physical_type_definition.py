@@ -1,10 +1,10 @@
 from vsg.token import physical_type_definition as token
-
 from vsg.vhdlFile import utils
-
-from vsg.vhdlFile.classify import primary_unit_declaration
-from vsg.vhdlFile.classify import range_constraint
-from vsg.vhdlFile.classify import secondary_unit_declaration
+from vsg.vhdlFile.classify import (
+    primary_unit_declaration,
+    range_constraint,
+    secondary_unit_declaration,
+)
 
 
 def detect(iToken, lObjects):

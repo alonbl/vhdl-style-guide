@@ -1,9 +1,6 @@
 from vsg.token import conditional_force_assignment as token
-
 from vsg.vhdlFile import utils
-
-from vsg.vhdlFile.classify import force_mode
-from vsg.vhdlFile.classify import conditional_expressions
+from vsg.vhdlFile.classify import conditional_expressions, force_mode
 
 
 def detect(iToken, lObjects):

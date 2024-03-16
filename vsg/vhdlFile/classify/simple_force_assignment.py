@@ -1,9 +1,6 @@
 from vsg.token import simple_force_assignment as token
-
 from vsg.vhdlFile import utils
-
-from vsg.vhdlFile.classify import expression
-from vsg.vhdlFile.classify import force_mode
+from vsg.vhdlFile.classify import expression, force_mode
 
 
 def detect(iToken, lObjects):

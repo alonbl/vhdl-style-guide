@@ -1,8 +1,6 @@
-from vsg.token import type_mark as token
-
-from vsg.vhdlFile import utils
-
 from vsg import parser
+from vsg.token import type_mark as token
+from vsg.vhdlFile import utils
 
 
 def classify(iToken, lObjects):

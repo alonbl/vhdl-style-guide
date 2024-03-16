@@ -1,9 +1,6 @@
 from vsg.token import interface_function_specification as token
-
 from vsg.vhdlFile import utils
-
-from vsg.vhdlFile.classify import formal_parameter_list
-from vsg.vhdlFile.classify import type_mark
+from vsg.vhdlFile.classify import formal_parameter_list, type_mark
 
 
 def detect(iToken, lObjects):

@@ -1,7 +1,5 @@
 from vsg import parser
-
-from vsg.vhdlFile.extract import tokens
-from vsg.vhdlFile.extract import utils
+from vsg.vhdlFile.extract import tokens, utils
 
 
 def get_tokens_at_beginning_of_line_matching_between_tokens(lTokens, oStart, oEnd, bInclusive, lAllTokens, oTokenMap):

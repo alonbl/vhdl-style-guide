@@ -1,6 +1,5 @@
-from vsg.rules import multiline_alignment_between_tokens
-
 from vsg import token
+from vsg.rules import multiline_alignment_between_tokens
 
 lTokenPairs = []
 lTokenPairs.append([token.concurrent_simple_signal_assignment.assignment, token.concurrent_simple_signal_assignment.semicolon])

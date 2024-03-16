@@ -1,6 +1,5 @@
-from vsg.rules import remove_comments_from_end_of_lines_bounded_by_tokens
-
 from vsg import token
+from vsg.rules import remove_comments_from_end_of_lines_bounded_by_tokens
 
 oStart = token.component_instantiation_statement.instantiation_label
 

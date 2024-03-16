@@ -1,5 +1,5 @@
-import unittest
 import platform
+import unittest
 
 from vsg import junit
 

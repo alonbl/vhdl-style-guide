@@ -1,7 +1,5 @@
 from vsg.token import interface_list as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import interface_element
 
 

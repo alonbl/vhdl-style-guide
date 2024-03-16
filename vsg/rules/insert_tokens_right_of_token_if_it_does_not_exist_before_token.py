@@ -1,8 +1,6 @@
-from vsg import parser
-from vsg import violation
-
-from vsg.vhdlFile import utils
+from vsg import parser, violation
 from vsg.rule_group import structure
+from vsg.vhdlFile import utils
 
 
 class insert_tokens_right_of_token_if_it_does_not_exist_before_token(structure.Rule):

@@ -1,5 +1,4 @@
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import protected_type_body_declarative_item
 
 

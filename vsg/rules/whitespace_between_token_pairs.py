@@ -1,8 +1,6 @@
 from vsg import parser
-
-from vsg.vhdlFile import utils
-
 from vsg.rules.whitespace_between_tokens import Rule as WhitespaceRule
+from vsg.vhdlFile import utils
 
 
 class Rule(WhitespaceRule):

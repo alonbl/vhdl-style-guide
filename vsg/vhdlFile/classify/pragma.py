@@ -1,5 +1,4 @@
 from vsg import parser
-
 from vsg.token import pragma
 
 

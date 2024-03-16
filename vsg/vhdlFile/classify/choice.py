@@ -1,7 +1,5 @@
 from vsg import parser
-
 from vsg.token import choice as token
-
 from vsg.vhdlFile import utils
 
 

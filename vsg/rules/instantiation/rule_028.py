@@ -1,6 +1,5 @@
-from vsg.rules import token_case_with_prefix_suffix as Rule
-
 from vsg import token
+from vsg.rules import token_case_with_prefix_suffix as Rule
 
 lTokens = []
 lTokens.append(token.instantiated_unit.entity_name)

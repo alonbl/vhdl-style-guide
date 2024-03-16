@@ -1,5 +1,4 @@
 from vsg.rules import previous_line as Rule
-
 from vsg.token import pragma as token
 
 

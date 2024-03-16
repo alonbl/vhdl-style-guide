@@ -1,6 +1,4 @@
-from vsg import token
-from vsg import violation
-
+from vsg import token, violation
 from vsg.rule_group import case
 
 lPortTokens = []

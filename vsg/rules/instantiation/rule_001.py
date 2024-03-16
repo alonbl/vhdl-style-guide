@@ -1,6 +1,5 @@
-from vsg.rules import token_indent_between_tokens
-
 from vsg import token
+from vsg.rules import token_indent_between_tokens
 
 lTokens = []
 lTokens.append(token.component_instantiation_statement.instantiation_label)

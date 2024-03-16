@@ -1,6 +1,5 @@
-from vsg.rules import split_line_at_token
-
 from vsg import token
+from vsg.rules import split_line_at_token
 
 lTokens = []
 lTokens.append(token.case_generate_statement.end_keyword)

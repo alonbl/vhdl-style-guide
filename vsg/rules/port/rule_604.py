@@ -1,8 +1,5 @@
-from vsg.rules import token_prefix as Rule
-
-from vsg.rules import utils
-
 from vsg import token
+from vsg.rules import token_prefix as Rule, utils
 
 lTokens = []
 

@@ -1,6 +1,5 @@
-from vsg.rules.whitespace_before_token import Rule
-
 from vsg import token
+from vsg.rules.whitespace_before_token import Rule
 
 lTokens = []
 lTokens.append(token.selected_expressions.when_keyword)

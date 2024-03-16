@@ -1,9 +1,6 @@
 from vsg.token import if_statement as token
-
 from vsg.vhdlFile import utils
-
-from vsg.vhdlFile.classify import condition
-from vsg.vhdlFile.classify import sequence_of_statements
+from vsg.vhdlFile.classify import condition, sequence_of_statements
 
 
 def detect(iToken, lObjects):

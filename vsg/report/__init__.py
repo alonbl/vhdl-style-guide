@@ -1,3 +1,1 @@
-from . import summary_stdout
-from . import syntastic_stdout
-from . import vsg_stdout
+from . import summary_stdout, syntastic_stdout, vsg_stdout

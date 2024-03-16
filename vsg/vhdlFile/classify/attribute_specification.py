@@ -1,9 +1,6 @@
 from vsg.token import attribute_specification as token
-
 from vsg.vhdlFile import utils
-
-from vsg.vhdlFile.classify import entity_specification
-from vsg.vhdlFile.classify import expression
+from vsg.vhdlFile.classify import entity_specification, expression
 
 
 def detect(iToken, lObjects):

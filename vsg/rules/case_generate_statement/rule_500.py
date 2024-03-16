@@ -1,5 +1,4 @@
 from vsg import token
-
 from vsg.rules import token_case as Rule
 
 lTokens = []

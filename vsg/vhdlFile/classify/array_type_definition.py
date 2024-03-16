@@ -1,5 +1,7 @@
-from vsg.vhdlFile.classify import constrained_array_definition
-from vsg.vhdlFile.classify import unbounded_array_definition
+from vsg.vhdlFile.classify import (
+    constrained_array_definition,
+    unbounded_array_definition,
+)
 
 
 def detect(iToken, lObjects):

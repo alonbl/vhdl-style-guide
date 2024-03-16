@@ -1,13 +1,9 @@
-import vsg
-
-import vsg.interfaces.notepad_pp
-
 import os
-
 import re
-
 import unittest
 
+import vsg
+import vsg.interfaces.notepad_pp
 from tests import utils
 
 lFile = []

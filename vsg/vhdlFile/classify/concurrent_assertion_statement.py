@@ -1,7 +1,5 @@
 from vsg.token import concurrent_assertion_statement as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import assertion
 
 

@@ -1,6 +1,5 @@
-from vsg.rules import token_suffix as Rule
-
 from vsg import token
+from vsg.rules import token_suffix as Rule
 
 lTokens = []
 lTokens.append(token.alias_declaration.alias_designator)

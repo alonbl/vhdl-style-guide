@@ -1,7 +1,5 @@
 from vsg.token import file_type_definition as token
-
 from vsg.vhdlFile import utils
-
 from vsg.vhdlFile.classify import type_mark
 
 

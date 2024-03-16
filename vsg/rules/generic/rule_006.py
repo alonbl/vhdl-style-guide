@@ -1,6 +1,4 @@
-from vsg import parser
-from vsg import token
-
+from vsg import parser, token
 from vsg.rules.whitespace_between_token_pairs_bounded_by_tokens import Rule
 
 lTokens = []

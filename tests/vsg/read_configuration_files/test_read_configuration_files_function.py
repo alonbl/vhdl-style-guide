@@ -1,5 +1,5 @@
-import unittest
 import os
+import unittest
 
 from vsg.config import read_configuration_files
 

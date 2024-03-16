@@ -1,5 +1,4 @@
-from vsg.vhdlFile.classify import full_type_declaration
-from vsg.vhdlFile.classify import incomplete_type_declaration
+from vsg.vhdlFile.classify import full_type_declaration, incomplete_type_declaration
 
 
 def detect(iToken, lObjects):

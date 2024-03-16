@@ -1,5 +1,4 @@
 from vsg.token import logical_name_list as token
-
 from vsg.vhdlFile import utils
 
 

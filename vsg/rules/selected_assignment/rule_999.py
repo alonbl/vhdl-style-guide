@@ -1,9 +1,5 @@
-from vsg.rules import experiment as Rule
-
-from vsg.rules import option
 from vsg import token
-from vsg.rules import analysis
-from vsg.rules import fix
+from vsg.rules import analysis, experiment as Rule, fix, option
 
 lTokenPairs = []
 lTokenPairs.append([token.concurrent_selected_signal_assignment.with_keyword, token.concurrent_selected_signal_assignment.semicolon])

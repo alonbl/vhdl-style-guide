@@ -1,6 +1,4 @@
-from vsg.vhdlFile.classify import range_constraint
-from vsg.vhdlFile.classify import array_constraint
-from vsg.vhdlFile.classify import record_constraint
+from vsg.vhdlFile.classify import array_constraint, range_constraint, record_constraint
 
 
 def detect(iToken, lObjects):
