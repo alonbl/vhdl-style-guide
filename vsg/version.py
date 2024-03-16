@@ -3,6 +3,7 @@ import functools
 import importlib.metadata
 from pathlib import Path
 
+
 @functools.cache
 def get_distribution() -> importlib.metadata.Distribution:
     try:

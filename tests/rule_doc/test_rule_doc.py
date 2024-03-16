@@ -3,11 +3,8 @@ import glob
 import os
 import unittest
 
-from vsg import __rule_doc_gen__
-from vsg import vhdlFile
-from vsg import rule_list
-
 from tests import utils
+from vsg import __rule_doc_gen__, rule_list, vhdlFile
 
 sExpectedDir = 'docs'
 sResultsDir = os.path.dirname(__file__)
