@@ -70,4 +70,3 @@ def header_detected(oToken, iComment):
         if block_rule.is_header(oToken.get_value()):
             return True
     return False
-

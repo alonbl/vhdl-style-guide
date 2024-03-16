@@ -54,7 +54,12 @@ repos:
       - id: destroyed-symlinks
       - id: detect-private-key
       - id: fix-byte-order-marker
-      #- id: end-of-file-fixer
+      - id: end-of-file-fixer
+        exclude: "^(\
+          .*\\.rst|\
+          .*\\.vhd|\
+          tests/tool_integration/quality_report/expected\\.json\
+          )$"
       - id: trailing-whitespace
         exclude: "^(\
           tests/styles/code_examples/trailing_whitespace\\.vhd|\
