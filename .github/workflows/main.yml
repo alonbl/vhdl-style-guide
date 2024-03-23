@@ -6,7 +6,6 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -114,7 +113,7 @@ jobs:
           python -m pip install tox
       - name: build
         run: |
-          tox
+          tox -vvvv
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
