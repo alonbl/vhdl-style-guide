@@ -145,7 +145,7 @@ class test_severity_using_main(unittest.TestCase):
         except subprocess.CalledProcessError as e:
             iExitStatus = e.returncode
 
-        lActual = pathlib.Path(self._sJUnitFileName).read_text().split("\n") + [""]  # TODO: understand why last element is required
+        lActual = pathlib.Path(self._sJUnitFileName).read_text().split("\n")
         lExpected = pathlib.Path(sJUnitFile).read_text().split("\n")
 
         self.assertEqual(iExitStatus, 1)
