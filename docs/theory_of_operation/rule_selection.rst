@@ -64,7 +64,7 @@ Everything else is another production:
 
 
 
-Rules targetting the :code:`architecture_body` will only include those elements at that level of the production.
+Rules targeting the :code:`architecture_body` will only include those elements at that level of the production.
 
 For example:
 
@@ -194,7 +194,7 @@ The following rules would be generated:
 * signal_declaration_400 = indent of signal keyword
 
 * signal_declaration_600 = case of signal keyword
-* signal_declaration_601 = case of idenfiers in identifier_list
+* signal_declaration_601 = case of identifiers in identifier_list
 
 * signal_declaration_700 = naming restrictions on signal identifiers
 
@@ -238,4 +238,3 @@ And the same for constraint:
 
 If the subtype_indication and constraint rules were moved out of signal_declaration, and where ever else they are location, that it would reduce the number of rules.
 VSG currently uses a base rule to handle constraints, which is extended where constraints are used.
-

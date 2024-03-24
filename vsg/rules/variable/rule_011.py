@@ -1,7 +1,6 @@
+# -*- coding: utf-8 -*-
 
-from vsg import parser
-from vsg import token
-
+from vsg import parser, token
 from vsg.rules import consistent_token_case as Rule
 
 lTokens = []
@@ -16,7 +15,7 @@ lNames.append(token.conditional_variable_assignment.target)
 
 
 class rule_011(Rule):
-    '''
+    """
     This rule checks for consistent capitalization of variable names.
 
     **Violation**
@@ -71,7 +70,7 @@ class rule_011(Rule):
          end if;
 
        end process proc_name;
-    '''
+    """
 
     def __init__(self):
-        Rule.__init__(self, lTokens, lNames)
+        super().__init__(lTokens, lNames)

@@ -1,8 +1,8 @@
+# -*- coding: utf-8 -*-
 
-
-from vsg.rules import move_token_right_to_next_non_whitespace_token as Rule
 
 from vsg import token
+from vsg.rules import move_token_right_to_next_non_whitespace_token as Rule
 
 lTokens = []
 lTokens.append(token.case_generate_statement.label_colon)
@@ -11,7 +11,7 @@ lTokens.append(token.if_generate_statement.label_colon)
 
 
 class rule_021(Rule):
-    '''
+    """
     This rule checks a label colon is on the same line as the **case**, **if**, and **for** keywords.
 
     **Violation**
@@ -27,8 +27,8 @@ class rule_021(Rule):
 
        label
        : case
-    '''
+    """
 
     def __init__(self):
-        Rule.__init__(self, lTokens)
+        super().__init__(lTokens)
         self.subphase = 2
